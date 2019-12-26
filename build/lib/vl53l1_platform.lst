@@ -1,0 +1,715 @@
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"vl53l1_platform.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.VL53L1_WriteMulti,"ax",%progbits
+  18              		.align	1
+  19              		.global	VL53L1_WriteMulti
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	VL53L1_WriteMulti:
+  27              	.LVL0:
+  28              	.LFB126:
+  29              		.file 1 "D:/Git/VL53L1/lib/platform/src/vl53l1_platform.c"
+   1:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+   2:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** /*
+   3:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * Copyright (c) 2017, STMicroelectronics - All Rights Reserved
+   4:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
+   5:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * This file is part of VL53L1 Core and is dual licensed,
+   6:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * either 'STMicroelectronics
+   7:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * Proprietary license'
+   8:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * or 'BSD 3-clause "New" or "Revised" License' , at your option.
+   9:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
+  10:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** ********************************************************************************
+  11:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
+  12:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * 'STMicroelectronics Proprietary license'
+  13:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
+  14:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** ********************************************************************************
+  15:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
+  16:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * License terms: STMicroelectronics Proprietary in accordance with licensing
+  17:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * terms at www.st.com/sla0081
+  18:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
+  19:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * STMicroelectronics confidential
+  20:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * Reproduction and Communication of this document is strictly prohibited unless
+  21:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * specifically authorized in writing by STMicroelectronics.
+  22:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
+  23:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
+  24:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** ********************************************************************************
+  25:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
+  26:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * Alternatively, VL53L1 Core may be distributed under the terms of
+  27:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * 'BSD 3-clause "New" or "Revised" License', in which case the following
+  28:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * provisions apply instead of the ones mentioned above :
+  29:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 2
+
+
+  30:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** ********************************************************************************
+  31:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
+  32:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * License terms: BSD 3-clause "New" or "Revised" License.
+  33:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
+  34:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * Redistribution and use in source and binary forms, with or without
+  35:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * modification, are permitted provided that the following conditions are met:
+  36:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
+  37:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * 1. Redistributions of source code must retain the above copyright notice, this
+  38:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * list of conditions and the following disclaimer.
+  39:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
+  40:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * 2. Redistributions in binary form must reproduce the above copyright notice,
+  41:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * this list of conditions and the following disclaimer in the documentation
+  42:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * and/or other materials provided with the distribution.
+  43:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
+  44:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * 3. Neither the name of the copyright holder nor the names of its contributors
+  45:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * may be used to endorse or promote products derived from this software
+  46:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * without specific prior written permission.
+  47:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
+  48:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  49:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  50:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  51:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  52:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  53:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  54:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  55:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  56:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  57:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  58:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
+  59:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
+  60:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** ********************************************************************************
+  61:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
+  62:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** */
+  63:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+  64:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+  65:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** #include "vl53l1_platform.h"
+  66:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #include "vl53l1_platform_log.h"
+  67:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** #include "vl53l1_api.h"
+  68:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+  69:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #include "stm32xxx_hal.h"
+  70:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** #include <string.h>
+  71:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #include <time.h>
+  72:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #include <math.h>
+  73:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+  74:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+  75:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #define I2C_TIME_OUT_BASE   10
+  76:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #define I2C_TIME_OUT_BYTE   1
+  77:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+  78:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #ifdef VL53L1_LOG_ENABLE
+  79:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #define trace_print(level, ...) VL53L1_trace_print_module_function(VL53L1_TRACE_MODULE_PLATFORM,
+  80:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #define trace_i2c(...) VL53L1_trace_print_module_function(VL53L1_TRACE_MODULE_NONE, VL53L1_TRACE
+  81:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #endif
+  82:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+  83:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #ifndef HAL_I2C_MODULE_ENABLED
+  84:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #warning "HAL I2C module must be enable "
+  85:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #endif
+  86:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 3
+
+
+  87:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** //extern I2C_HandleTypeDef hi2c1;
+  88:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** //#define VL53L0X_pI2cHandle    (&hi2c1)
+  89:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+  90:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** /* when not customized by application define dummy one */
+  91:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #ifndef VL53L1_GetI2cBus
+  92:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** /** This macro can be overloaded by user to enforce i2c sharing in RTOS context
+  93:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****  */
+  94:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #   define VL53L1_GetI2cBus(...) (void)0
+  95:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #endif
+  96:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+  97:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #ifndef VL53L1_PutI2cBus
+  98:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** /** This macro can be overloaded by user to enforce i2c sharing in RTOS context
+  99:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****  */
+ 100:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #   define VL53L1_PutI2cBus(...) (void)0
+ 101:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #endif
+ 102:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ 103:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // uint8_t _I2CBuffer[256];
+ 104:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ 105:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // int _I2CWrite(VL53L1_DEV Dev, uint8_t *pdata, uint32_t count) {
+ 106:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** //     int status = 0;
+ 107:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** //     return status;
+ 108:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // }
+ 109:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ 110:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // int _I2CRead(VL53L1_DEV Dev, uint8_t *pdata, uint32_t count) {
+ 111:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** //    int status = 0;
+ 112:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** //    return Status;
+ 113:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // }
+ 114:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ 115:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** VL53L1_Error VL53L1_WriteMulti(VL53L1_DEV Dev, uint16_t index, uint8_t *pdata, uint32_t count) {
+  30              		.loc 1 115 96 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+ 116:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****     VL53L1_Error Status = VL53L1_ERROR_NONE;
+  35              		.loc 1 116 5 view .LVU1
+ 117:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****     return Status;
+  36              		.loc 1 117 5 view .LVU2
+ 118:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** }
+  37              		.loc 1 118 1 is_stmt 0 view .LVU3
+  38 0000 0020     		movs	r0, #0
+  39              	.LVL1:
+  40              		.loc 1 118 1 view .LVU4
+  41 0002 7047     		bx	lr
+  42              		.cfi_endproc
+  43              	.LFE126:
+  45              		.section	.text.VL53L1_ReadMulti,"ax",%progbits
+  46              		.align	1
+  47              		.global	VL53L1_ReadMulti
+  48              		.syntax unified
+  49              		.thumb
+  50              		.thumb_func
+  51              		.fpu fpv4-sp-d16
+  53              	VL53L1_ReadMulti:
+  54              	.LVL2:
+  55              	.LFB127:
+ 119:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 4
+
+
+ 120:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // the ranging_sensor_comms.dll will take care of the page selection
+ 121:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** VL53L1_Error VL53L1_ReadMulti(VL53L1_DEV Dev, uint16_t index, uint8_t *pdata, uint32_t count) {
+  56              		.loc 1 121 95 is_stmt 1 view -0
+  57              		.cfi_startproc
+  58              		@ args = 0, pretend = 0, frame = 0
+  59              		@ frame_needed = 0, uses_anonymous_args = 0
+  60              		@ link register save eliminated.
+ 122:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****     VL53L1_Error Status = VL53L1_ERROR_NONE;
+  61              		.loc 1 122 5 view .LVU6
+ 123:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****     return Status;
+  62              		.loc 1 123 5 view .LVU7
+ 124:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** }
+  63              		.loc 1 124 1 is_stmt 0 view .LVU8
+  64 0000 0020     		movs	r0, #0
+  65              	.LVL3:
+  66              		.loc 1 124 1 view .LVU9
+  67 0002 7047     		bx	lr
+  68              		.cfi_endproc
+  69              	.LFE127:
+  71              		.section	.text.VL53L1_WrByte,"ax",%progbits
+  72              		.align	1
+  73              		.global	VL53L1_WrByte
+  74              		.syntax unified
+  75              		.thumb
+  76              		.thumb_func
+  77              		.fpu fpv4-sp-d16
+  79              	VL53L1_WrByte:
+  80              	.LVL4:
+  81              	.LFB128:
+ 125:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ 126:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** VL53L1_Error VL53L1_WrByte(VL53L1_DEV Dev, uint16_t index, uint8_t data) {
+  82              		.loc 1 126 74 is_stmt 1 view -0
+  83              		.cfi_startproc
+  84              		@ args = 0, pretend = 0, frame = 0
+  85              		@ frame_needed = 0, uses_anonymous_args = 0
+  86              		@ link register save eliminated.
+ 127:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****     VL53L1_Error Status = VL53L1_ERROR_NONE;
+  87              		.loc 1 127 5 view .LVU11
+ 128:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****     return Status;
+  88              		.loc 1 128 5 view .LVU12
+ 129:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** }
+  89              		.loc 1 129 1 is_stmt 0 view .LVU13
+  90 0000 0020     		movs	r0, #0
+  91              	.LVL5:
+  92              		.loc 1 129 1 view .LVU14
+  93 0002 7047     		bx	lr
+  94              		.cfi_endproc
+  95              	.LFE128:
+  97              		.section	.text.VL53L1_WrWord,"ax",%progbits
+  98              		.align	1
+  99              		.global	VL53L1_WrWord
+ 100              		.syntax unified
+ 101              		.thumb
+ 102              		.thumb_func
+ 103              		.fpu fpv4-sp-d16
+ 105              	VL53L1_WrWord:
+ 106              	.LVL6:
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 5
+
+
+ 107              	.LFB129:
+ 130:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ 131:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** VL53L1_Error VL53L1_WrWord(VL53L1_DEV Dev, uint16_t index, uint16_t data) {
+ 108              		.loc 1 131 75 is_stmt 1 view -0
+ 109              		.cfi_startproc
+ 110              		@ args = 0, pretend = 0, frame = 0
+ 111              		@ frame_needed = 0, uses_anonymous_args = 0
+ 112              		@ link register save eliminated.
+ 132:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****     VL53L1_Error Status = VL53L1_ERROR_NONE;
+ 113              		.loc 1 132 5 view .LVU16
+ 133:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****     return Status;
+ 114              		.loc 1 133 5 view .LVU17
+ 134:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** }
+ 115              		.loc 1 134 1 is_stmt 0 view .LVU18
+ 116 0000 0020     		movs	r0, #0
+ 117              	.LVL7:
+ 118              		.loc 1 134 1 view .LVU19
+ 119 0002 7047     		bx	lr
+ 120              		.cfi_endproc
+ 121              	.LFE129:
+ 123              		.section	.text.VL53L1_WrDWord,"ax",%progbits
+ 124              		.align	1
+ 125              		.global	VL53L1_WrDWord
+ 126              		.syntax unified
+ 127              		.thumb
+ 128              		.thumb_func
+ 129              		.fpu fpv4-sp-d16
+ 131              	VL53L1_WrDWord:
+ 132              	.LVL8:
+ 133              	.LFB130:
+ 135:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ 136:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** VL53L1_Error VL53L1_WrDWord(VL53L1_DEV Dev, uint16_t index, uint32_t data) {
+ 134              		.loc 1 136 76 is_stmt 1 view -0
+ 135              		.cfi_startproc
+ 136              		@ args = 0, pretend = 0, frame = 0
+ 137              		@ frame_needed = 0, uses_anonymous_args = 0
+ 138              		@ link register save eliminated.
+ 137:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****     VL53L1_Error Status = VL53L1_ERROR_NONE;
+ 139              		.loc 1 137 5 view .LVU21
+ 138:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****     return Status;
+ 140              		.loc 1 138 5 view .LVU22
+ 139:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** }
+ 141              		.loc 1 139 1 is_stmt 0 view .LVU23
+ 142 0000 0020     		movs	r0, #0
+ 143              	.LVL9:
+ 144              		.loc 1 139 1 view .LVU24
+ 145 0002 7047     		bx	lr
+ 146              		.cfi_endproc
+ 147              	.LFE130:
+ 149              		.section	.text.VL53L1_UpdateByte,"ax",%progbits
+ 150              		.align	1
+ 151              		.global	VL53L1_UpdateByte
+ 152              		.syntax unified
+ 153              		.thumb
+ 154              		.thumb_func
+ 155              		.fpu fpv4-sp-d16
+ 157              	VL53L1_UpdateByte:
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 6
+
+
+ 158              	.LVL10:
+ 159              	.LFB131:
+ 140:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ 141:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** VL53L1_Error VL53L1_UpdateByte(VL53L1_DEV Dev, uint16_t index, uint8_t AndData, uint8_t OrData) {
+ 160              		.loc 1 141 97 is_stmt 1 view -0
+ 161              		.cfi_startproc
+ 162              		@ args = 0, pretend = 0, frame = 0
+ 163              		@ frame_needed = 0, uses_anonymous_args = 0
+ 164              		@ link register save eliminated.
+ 142:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****     VL53L1_Error Status = VL53L1_ERROR_NONE;
+ 165              		.loc 1 142 5 view .LVU26
+ 143:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****     return Status;
+ 166              		.loc 1 143 5 view .LVU27
+ 144:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** }
+ 167              		.loc 1 144 1 is_stmt 0 view .LVU28
+ 168 0000 0020     		movs	r0, #0
+ 169              	.LVL11:
+ 170              		.loc 1 144 1 view .LVU29
+ 171 0002 7047     		bx	lr
+ 172              		.cfi_endproc
+ 173              	.LFE131:
+ 175              		.section	.text.VL53L1_RdByte,"ax",%progbits
+ 176              		.align	1
+ 177              		.global	VL53L1_RdByte
+ 178              		.syntax unified
+ 179              		.thumb
+ 180              		.thumb_func
+ 181              		.fpu fpv4-sp-d16
+ 183              	VL53L1_RdByte:
+ 184              	.LVL12:
+ 185              	.LFB132:
+ 145:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ 146:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** VL53L1_Error VL53L1_RdByte(VL53L1_DEV Dev, uint16_t index, uint8_t *data) {
+ 186              		.loc 1 146 75 is_stmt 1 view -0
+ 187              		.cfi_startproc
+ 188              		@ args = 0, pretend = 0, frame = 0
+ 189              		@ frame_needed = 0, uses_anonymous_args = 0
+ 190              		@ link register save eliminated.
+ 147:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****     VL53L1_Error Status = VL53L1_ERROR_NONE;
+ 191              		.loc 1 147 5 view .LVU31
+ 148:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****     return Status;
+ 192              		.loc 1 148 5 view .LVU32
+ 149:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** }
+ 193              		.loc 1 149 1 is_stmt 0 view .LVU33
+ 194 0000 0020     		movs	r0, #0
+ 195              	.LVL13:
+ 196              		.loc 1 149 1 view .LVU34
+ 197 0002 7047     		bx	lr
+ 198              		.cfi_endproc
+ 199              	.LFE132:
+ 201              		.section	.text.VL53L1_RdWord,"ax",%progbits
+ 202              		.align	1
+ 203              		.global	VL53L1_RdWord
+ 204              		.syntax unified
+ 205              		.thumb
+ 206              		.thumb_func
+ 207              		.fpu fpv4-sp-d16
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 7
+
+
+ 209              	VL53L1_RdWord:
+ 210              	.LVL14:
+ 211              	.LFB133:
+ 150:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ 151:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** VL53L1_Error VL53L1_RdWord(VL53L1_DEV Dev, uint16_t index, uint16_t *data) {
+ 212              		.loc 1 151 76 is_stmt 1 view -0
+ 213              		.cfi_startproc
+ 214              		@ args = 0, pretend = 0, frame = 0
+ 215              		@ frame_needed = 0, uses_anonymous_args = 0
+ 216              		@ link register save eliminated.
+ 152:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****     VL53L1_Error Status = VL53L1_ERROR_NONE;
+ 217              		.loc 1 152 5 view .LVU36
+ 153:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****     return Status;
+ 218              		.loc 1 153 5 view .LVU37
+ 154:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** }
+ 219              		.loc 1 154 1 is_stmt 0 view .LVU38
+ 220 0000 0020     		movs	r0, #0
+ 221              	.LVL15:
+ 222              		.loc 1 154 1 view .LVU39
+ 223 0002 7047     		bx	lr
+ 224              		.cfi_endproc
+ 225              	.LFE133:
+ 227              		.section	.text.VL53L1_RdDWord,"ax",%progbits
+ 228              		.align	1
+ 229              		.global	VL53L1_RdDWord
+ 230              		.syntax unified
+ 231              		.thumb
+ 232              		.thumb_func
+ 233              		.fpu fpv4-sp-d16
+ 235              	VL53L1_RdDWord:
+ 236              	.LVL16:
+ 237              	.LFB134:
+ 155:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ 156:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** VL53L1_Error VL53L1_RdDWord(VL53L1_DEV Dev, uint16_t index, uint32_t *data) {
+ 238              		.loc 1 156 77 is_stmt 1 view -0
+ 239              		.cfi_startproc
+ 240              		@ args = 0, pretend = 0, frame = 0
+ 241              		@ frame_needed = 0, uses_anonymous_args = 0
+ 242              		@ link register save eliminated.
+ 157:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****     VL53L1_Error Status = VL53L1_ERROR_NONE;
+ 243              		.loc 1 157 5 view .LVU41
+ 158:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c ****     return Status;
+ 244              		.loc 1 158 5 view .LVU42
+ 159:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** }
+ 245              		.loc 1 159 1 is_stmt 0 view .LVU43
+ 246 0000 0020     		movs	r0, #0
+ 247              	.LVL17:
+ 248              		.loc 1 159 1 view .LVU44
+ 249 0002 7047     		bx	lr
+ 250              		.cfi_endproc
+ 251              	.LFE134:
+ 253              		.section	.text.VL53L1_GetTickCount,"ax",%progbits
+ 254              		.align	1
+ 255              		.global	VL53L1_GetTickCount
+ 256              		.syntax unified
+ 257              		.thumb
+ 258              		.thumb_func
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 8
+
+
+ 259              		.fpu fpv4-sp-d16
+ 261              	VL53L1_GetTickCount:
+ 262              	.LVL18:
+ 263              	.LFB135:
+ 160:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ 161:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** VL53L1_Error VL53L1_GetTickCount(
+ 162:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 	uint32_t *ptick_count_ms)
+ 163:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** {
+ 264              		.loc 1 163 1 is_stmt 1 view -0
+ 265              		.cfi_startproc
+ 266              		@ args = 0, pretend = 0, frame = 0
+ 267              		@ frame_needed = 0, uses_anonymous_args = 0
+ 268              		@ link register save eliminated.
+ 164:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 	VL53L1_Error status  = VL53L1_ERROR_NONE;
+ 269              		.loc 1 164 2 view .LVU46
+ 165:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 	return status;
+ 270              		.loc 1 165 2 view .LVU47
+ 166:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** }
+ 271              		.loc 1 166 1 is_stmt 0 view .LVU48
+ 272 0000 0020     		movs	r0, #0
+ 273              	.LVL19:
+ 274              		.loc 1 166 1 view .LVU49
+ 275 0002 7047     		bx	lr
+ 276              		.cfi_endproc
+ 277              	.LFE135:
+ 279              		.section	.text.VL53L1_GetTimerFrequency,"ax",%progbits
+ 280              		.align	1
+ 281              		.global	VL53L1_GetTimerFrequency
+ 282              		.syntax unified
+ 283              		.thumb
+ 284              		.thumb_func
+ 285              		.fpu fpv4-sp-d16
+ 287              	VL53L1_GetTimerFrequency:
+ 288              	.LVL20:
+ 289              	.LFB136:
+ 167:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ 168:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** //#define trace_print(level, ...) \
+ 169:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** //	_LOG_TRACE_PRINT(VL53L1_TRACE_MODULE_PLATFORM, \
+ 170:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** //	level, VL53L1_TRACE_FUNCTION_NONE, ##__VA_ARGS__)
+ 171:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ 172:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** //#define trace_i2c(...) \
+ 173:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** //	_LOG_TRACE_PRINT(VL53L1_TRACE_MODULE_NONE, \
+ 174:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** //	VL53L1_TRACE_LEVEL_NONE, VL53L1_TRACE_FUNCTION_I2C, ##__VA_ARGS__)
+ 175:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ 176:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** VL53L1_Error VL53L1_GetTimerFrequency(int32_t *ptimer_freq_hz)
+ 177:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** {
+ 290              		.loc 1 177 1 is_stmt 1 view -0
+ 291              		.cfi_startproc
+ 292              		@ args = 0, pretend = 0, frame = 0
+ 293              		@ frame_needed = 0, uses_anonymous_args = 0
+ 294              		@ link register save eliminated.
+ 178:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 	VL53L1_Error status  = VL53L1_ERROR_NONE;
+ 295              		.loc 1 178 2 view .LVU51
+ 179:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 	return status;
+ 296              		.loc 1 179 2 view .LVU52
+ 180:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** }
+ 297              		.loc 1 180 1 is_stmt 0 view .LVU53
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 9
+
+
+ 298 0000 0020     		movs	r0, #0
+ 299              	.LVL21:
+ 300              		.loc 1 180 1 view .LVU54
+ 301 0002 7047     		bx	lr
+ 302              		.cfi_endproc
+ 303              	.LFE136:
+ 305              		.section	.text.VL53L1_WaitMs,"ax",%progbits
+ 306              		.align	1
+ 307              		.global	VL53L1_WaitMs
+ 308              		.syntax unified
+ 309              		.thumb
+ 310              		.thumb_func
+ 311              		.fpu fpv4-sp-d16
+ 313              	VL53L1_WaitMs:
+ 314              	.LVL22:
+ 315              	.LFB137:
+ 181:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ 182:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** VL53L1_Error VL53L1_WaitMs(VL53L1_Dev_t *pdev, int32_t wait_ms){
+ 316              		.loc 1 182 64 is_stmt 1 view -0
+ 317              		.cfi_startproc
+ 318              		@ args = 0, pretend = 0, frame = 0
+ 319              		@ frame_needed = 0, uses_anonymous_args = 0
+ 320              		@ link register save eliminated.
+ 183:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 	VL53L1_Error status  = VL53L1_ERROR_NONE;
+ 321              		.loc 1 183 2 view .LVU56
+ 184:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 	return status;
+ 322              		.loc 1 184 2 view .LVU57
+ 185:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** }
+ 323              		.loc 1 185 1 is_stmt 0 view .LVU58
+ 324 0000 0020     		movs	r0, #0
+ 325              	.LVL23:
+ 326              		.loc 1 185 1 view .LVU59
+ 327 0002 7047     		bx	lr
+ 328              		.cfi_endproc
+ 329              	.LFE137:
+ 331              		.section	.text.VL53L1_WaitUs,"ax",%progbits
+ 332              		.align	1
+ 333              		.global	VL53L1_WaitUs
+ 334              		.syntax unified
+ 335              		.thumb
+ 336              		.thumb_func
+ 337              		.fpu fpv4-sp-d16
+ 339              	VL53L1_WaitUs:
+ 340              	.LVL24:
+ 341              	.LFB138:
+ 186:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ 187:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** VL53L1_Error VL53L1_WaitUs(VL53L1_Dev_t *pdev, int32_t wait_us){
+ 342              		.loc 1 187 64 is_stmt 1 view -0
+ 343              		.cfi_startproc
+ 344              		@ args = 0, pretend = 0, frame = 0
+ 345              		@ frame_needed = 0, uses_anonymous_args = 0
+ 346              		@ link register save eliminated.
+ 188:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 	VL53L1_Error status  = VL53L1_ERROR_NONE;
+ 347              		.loc 1 188 2 view .LVU61
+ 189:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 	return status;
+ 348              		.loc 1 189 2 view .LVU62
+ 190:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** }
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 10
+
+
+ 349              		.loc 1 190 1 is_stmt 0 view .LVU63
+ 350 0000 0020     		movs	r0, #0
+ 351              	.LVL25:
+ 352              		.loc 1 190 1 view .LVU64
+ 353 0002 7047     		bx	lr
+ 354              		.cfi_endproc
+ 355              	.LFE138:
+ 357              		.section	.text.VL53L1_WaitValueMaskEx,"ax",%progbits
+ 358              		.align	1
+ 359              		.global	VL53L1_WaitValueMaskEx
+ 360              		.syntax unified
+ 361              		.thumb
+ 362              		.thumb_func
+ 363              		.fpu fpv4-sp-d16
+ 365              	VL53L1_WaitValueMaskEx:
+ 366              	.LVL26:
+ 367              	.LFB139:
+ 191:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
+ 192:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** VL53L1_Error VL53L1_WaitValueMaskEx(
+ 193:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 	VL53L1_Dev_t *pdev,
+ 194:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 	uint32_t      timeout_ms,
+ 195:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 	uint16_t      index,
+ 196:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 	uint8_t       value,
+ 197:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 	uint8_t       mask,
+ 198:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 	uint32_t      poll_delay_ms)
+ 199:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** {
+ 368              		.loc 1 199 1 is_stmt 1 view -0
+ 369              		.cfi_startproc
+ 370              		@ args = 8, pretend = 0, frame = 0
+ 371              		@ frame_needed = 0, uses_anonymous_args = 0
+ 372              		@ link register save eliminated.
+ 200:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 	VL53L1_Error status  = VL53L1_ERROR_NONE;
+ 373              		.loc 1 200 2 view .LVU66
+ 201:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 	return status;
+ 374              		.loc 1 201 2 view .LVU67
+ 202:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** }
+ 375              		.loc 1 202 1 is_stmt 0 view .LVU68
+ 376 0000 0020     		movs	r0, #0
+ 377              	.LVL27:
+ 378              		.loc 1 202 1 view .LVU69
+ 379 0002 7047     		bx	lr
+ 380              		.cfi_endproc
+ 381              	.LFE139:
+ 383              		.text
+ 384              	.Letext0:
+ 385              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 386              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 387              		.file 4 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\lib\\gcc\\arm-none-eab
+ 388              		.file 5 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 389              		.file 6 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 390              		.file 7 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 391              		.file 8 "D:/Git/VL53L1/lib/platform/inc/vl53l1_types.h"
+ 392              		.file 9 "D:/Git/VL53L1/lib/core/inc/vl53l1_ll_device.h"
+ 393              		.file 10 "D:/Git/VL53L1/lib/core/inc/vl53l1_error_codes.h"
+ 394              		.file 11 "D:/Git/VL53L1/lib/core/inc/vl53l1_register_structs.h"
+ 395              		.file 12 "D:/Git/VL53L1/lib/core/inc/vl53l1_ll_def.h"
+ 396              		.file 13 "cube/Drivers/CMSIS/Include/core_cm4.h"
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 11
+
+
+ 397              		.file 14 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
+ 398              		.file 15 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xc.h"
+ 399              		.file 16 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h"
+ 400              		.file 17 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_dma.h"
+ 401              		.file 18 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_i2c.h"
+ 402              		.file 19 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h"
+ 403              		.file 20 "D:/Git/VL53L1/lib/core/inc/vl53l1_def.h"
+ 404              		.file 21 "D:/Git/VL53L1/lib/platform/inc/vl53l1_platform_user_data.h"
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 vl53l1_platform.c
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:18     .text.VL53L1_WriteMulti:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:26     .text.VL53L1_WriteMulti:00000000 VL53L1_WriteMulti
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:46     .text.VL53L1_ReadMulti:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:53     .text.VL53L1_ReadMulti:00000000 VL53L1_ReadMulti
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:72     .text.VL53L1_WrByte:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:79     .text.VL53L1_WrByte:00000000 VL53L1_WrByte
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:98     .text.VL53L1_WrWord:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:105    .text.VL53L1_WrWord:00000000 VL53L1_WrWord
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:124    .text.VL53L1_WrDWord:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:131    .text.VL53L1_WrDWord:00000000 VL53L1_WrDWord
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:150    .text.VL53L1_UpdateByte:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:157    .text.VL53L1_UpdateByte:00000000 VL53L1_UpdateByte
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:176    .text.VL53L1_RdByte:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:183    .text.VL53L1_RdByte:00000000 VL53L1_RdByte
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:202    .text.VL53L1_RdWord:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:209    .text.VL53L1_RdWord:00000000 VL53L1_RdWord
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:228    .text.VL53L1_RdDWord:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:235    .text.VL53L1_RdDWord:00000000 VL53L1_RdDWord
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:254    .text.VL53L1_GetTickCount:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:261    .text.VL53L1_GetTickCount:00000000 VL53L1_GetTickCount
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:280    .text.VL53L1_GetTimerFrequency:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:287    .text.VL53L1_GetTimerFrequency:00000000 VL53L1_GetTimerFrequency
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:306    .text.VL53L1_WaitMs:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:313    .text.VL53L1_WaitMs:00000000 VL53L1_WaitMs
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:332    .text.VL53L1_WaitUs:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:339    .text.VL53L1_WaitUs:00000000 VL53L1_WaitUs
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:358    .text.VL53L1_WaitValueMaskEx:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:365    .text.VL53L1_WaitValueMaskEx:00000000 VL53L1_WaitValueMaskEx
+                           .group:00000000 wm4.0.a9549919c595c19c35ef13bc9ee4c8af
+                           .group:00000000 wm4.target_vl53l1_1.h.12.5039e74bcd507e129caba66ab5fc05af
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.d0b7f3cd6ee95f610104014bb3ed522a
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.stddef.h.39.a38874c8f8a57e66301090908ec2a69f
+                           .group:00000000 wm4.newlib.h.8.f6e543eac3f2f65163ba2ffe3b04987b
+                           .group:00000000 wm4.ieeefp.h.77.5499ed899a78229fbaf6d102924f4714
+                           .group:00000000 wm4.config.h.224.c701144a7b0518c6ee9b9b5465b79f81
+                           .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
+                           .group:00000000 wm4._types.h.20.dd0d04dca3800a0d2a6129b87f3adbb2
+                           .group:00000000 wm4.stddef.h.161.5349cb105733e8777bfb0cf53c4e3f34
+                           .group:00000000 wm4._types.h.127.34941de1b2539d59d5cac00e0dd27a45
+                           .group:00000000 wm4.reent.h.17.e292bf8b0bec6c96e131a54347145a30
+                           .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:00000000 wm4.reent.h.77.dcd6129ff07fe81bd5636db29abe53b2
+                           .group:00000000 wm4.cdefs.h.49.6260d97adb8d27534cbdc0f868b8ea87
+                           .group:00000000 wm4.string.h.15.dab3980bf35408a4c507182805e2de3a
+                           .group:00000000 wm4.stddef.h.161.19e15733342b50ead2919490b095303e
+                           .group:00000000 wm4.stdio.h.27.3fc80220048df77954e38daec3bb9670
+                           .group:00000000 wm4.stdarg.h.34.3a23a216c0c293b3d2ea2e89281481e6
+                           .group:00000000 wm4.types.h.40.c2dcbbb5c1f4f0e5cb716ebf7776da48
+                           .group:00000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
+                           .group:00000000 wm4.stdio.h.81.2a55589bfa3ee24eeb84e3c79458e4a9
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 13
+
+
+                           .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:00000000 wm4.stdlib.h.56.b4ddaf162082f284ba35b4444af99a9a
+                           .group:00000000 wm4.vl53l1_platform_user_config.h.71.4bbd3f655147d64657bb9c77e14249c2
+                           .group:00000000 wm4.vl53l1_ll_device.h.76.61a5c622dad24a36ae0651848b8ac7cb
+                           .group:00000000 wm4.vl53l1_error_codes.h.71.b6e90121c4542ed0428e2f06155d8266
+                           .group:00000000 wm4.vl53l1_register_map.h.69.ec259f417eacfeb4a1fe3b1107810d95
+                           .group:00000000 wm4.vl53l1_register_structs.h.74.11a89e7b4ec79fa5f24a8809948e429f
+                           .group:00000000 wm4.vl53l1_platform_user_defines.h.65.ba5bf58a2b92eb98a59c4d4834576b4d
+                           .group:00000000 wm4.vl53l1_error_exceptions.h.70.5b53c89ff28584d05d224dd03776b32e
+                           .group:00000000 wm4.vl53l1_ll_def.h.91.518239c514b35c896619678d2b7b75c9
+                           .group:00000000 wm4.vl53l1_platform_log.h.71.79ea17a42b4255ee5461fb53cd7aea3c
+                           .group:00000000 wm4.stm32f3xx_hal_conf.h.37.cb1c9cb802da867d86527a1477311c20
+                           .group:00000000 wm4.stm32f3xx.h.55.fe34e0340b06ab20c90f3cf1d792e0eb
+                           .group:00000000 wm4.stm32f303xc.h.51.75494ed92b93e6861874d99c51c92793
+                           .group:00000000 wm4.core_cm4.h.42.42f38327ee0970d80f60117e6a3ba2b0
+                           .group:00000000 wm4.cmsis_gcc.h.36.39970cb43ce4b53c82644a1f9bc2eab9
+                           .group:00000000 wm4.core_cm4.h.223.390ff9b0e06949b13520d8b6746f63e8
+                           .group:00000000 wm4.stm32f303xc.h.710.b77655c64e6ea7efdc9ab6a96701a5ae
+                           .group:00000000 wm4.stm32f3xx.h.191.245d83eb21a6c69e2950c577a7134277
+                           .group:00000000 wm4.stm32f3xx_hal_def.h.76.500c7c9bfcb8d4adebf82d1af27ff044
+                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.60ee232241a99e19acd27637eebe4f1c
+                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.1fba3945551953e78cf69c94a0383651
+                           .group:00000000 wm4.stm32f3xx_hal_gpio.h.38.11db931fcbf37182e25c3927ddf6e8ba
+                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.8d493744f4b7a4f7a0f4f97db0ccbd8e
+                           .group:00000000 wm4.stm32f3xx_hal_dma.h.38.61966c780efd486aa451ae49ca247997
+                           .group:00000000 wm4.stm32f3xx_hal_dma_ex.h.38.195e7d437d9280b9f4e6bae0fa00db04
+                           .group:00000000 wm4.stm32f3xx_hal_dma.h.423.83da80eb3e6ae96f050d0c5e4b55e4b9
+                           .group:00000000 wm4.stm32f3xx_hal_cortex.h.38.c5c1d06be9dad8e7837dbe16f3535233
+                           .group:00000000 wm4.stm32f3xx_hal_flash.h.38.2b4c202390dfbe69a578ce118ab4d799
+                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.36f8341b05728c01a88b7f1003837b1f
+                           .group:00000000 wm4.stm32f3xx_hal_i2c.h.38.e3750f5f029ebf729a7cf07e85cad615
+                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.74099379a9814ae4d6d1c8682fdde7ad
+                           .group:00000000 wm4.stm32f3xx_hal_i2c.h.626.05cba3c85b66bb4631bfd2ebbfab1b06
+                           .group:00000000 wm4.stm32f3xx_hal_pwr.h.38.efb6ce75a5c12d6b2c7c914e7a94ec2b
+                           .group:00000000 wm4.stm32f3xx_hal_pwr_ex.h.38.d228edc56905d96af2d831d3c8e0487a
+                           .group:00000000 wm4.stm32f3xx_hal.h.60.e1acc37932101d84a977b19b7a581169
+                           .group:00000000 wm4.vl53l1_def.h.87.ea1a10eae4f02dade0991856ca744364
+                           .group:00000000 wm4.vl53l1_platform_user_data.h.94.31d6fd49a37f98d182bed50c298f83ae
+                           .group:00000000 wm4.vl53l1_api_strings.h.151.55114e539843189df2f7fc9296ddbb29
+
+NO UNDEFINED SYMBOLS

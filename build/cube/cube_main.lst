@@ -1,0 +1,376 @@
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc4js8gd.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"cube_main.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.SystemClock_Config,"ax",%progbits
+  18              		.align	1
+  19              		.global	SystemClock_Config
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	SystemClock_Config:
+  27              	.LFB126:
+  28              		.file 1 "cube/Src/cube_main.c"
+   1:cube/Src/cube_main.c **** /* USER CODE BEGIN Header */
+   2:cube/Src/cube_main.c **** /**
+   3:cube/Src/cube_main.c ****   ******************************************************************************
+   4:cube/Src/cube_main.c ****   * @file           : main.c
+   5:cube/Src/cube_main.c ****   * @brief          : Main program body
+   6:cube/Src/cube_main.c ****   ******************************************************************************
+   7:cube/Src/cube_main.c ****   * @attention
+   8:cube/Src/cube_main.c ****   *
+   9:cube/Src/cube_main.c ****   * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics.
+  10:cube/Src/cube_main.c ****   * All rights reserved.</center></h2>
+  11:cube/Src/cube_main.c ****   *
+  12:cube/Src/cube_main.c ****   * This software component is licensed by ST under BSD 3-Clause license,
+  13:cube/Src/cube_main.c ****   * the "License"; You may not use this file except in compliance with the
+  14:cube/Src/cube_main.c ****   * License. You may obtain a copy of the License at:
+  15:cube/Src/cube_main.c ****   *                        opensource.org/licenses/BSD-3-Clause
+  16:cube/Src/cube_main.c ****   *
+  17:cube/Src/cube_main.c ****   ******************************************************************************
+  18:cube/Src/cube_main.c ****   */
+  19:cube/Src/cube_main.c **** /* USER CODE END Header */
+  20:cube/Src/cube_main.c **** 
+  21:cube/Src/cube_main.c **** /* Includes ------------------------------------------------------------------*/
+  22:cube/Src/cube_main.c **** #include "main.h"
+  23:cube/Src/cube_main.c **** #include "i2c.h"
+  24:cube/Src/cube_main.c **** #include "gpio.h"
+  25:cube/Src/cube_main.c **** 
+  26:cube/Src/cube_main.c **** /* Private includes ----------------------------------------------------------*/
+  27:cube/Src/cube_main.c **** /* USER CODE BEGIN Includes */
+  28:cube/Src/cube_main.c **** 
+  29:cube/Src/cube_main.c **** /* USER CODE END Includes */
+  30:cube/Src/cube_main.c **** 
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc4js8gd.s 			page 2
+
+
+  31:cube/Src/cube_main.c **** /* Private typedef -----------------------------------------------------------*/
+  32:cube/Src/cube_main.c **** /* USER CODE BEGIN PTD */
+  33:cube/Src/cube_main.c **** 
+  34:cube/Src/cube_main.c **** /* USER CODE END PTD */
+  35:cube/Src/cube_main.c **** 
+  36:cube/Src/cube_main.c **** /* Private define ------------------------------------------------------------*/
+  37:cube/Src/cube_main.c **** /* USER CODE BEGIN PD */
+  38:cube/Src/cube_main.c **** 
+  39:cube/Src/cube_main.c **** /* USER CODE END PD */
+  40:cube/Src/cube_main.c **** 
+  41:cube/Src/cube_main.c **** /* Private macro -------------------------------------------------------------*/
+  42:cube/Src/cube_main.c **** /* USER CODE BEGIN PM */
+  43:cube/Src/cube_main.c **** 
+  44:cube/Src/cube_main.c **** /* USER CODE END PM */
+  45:cube/Src/cube_main.c **** 
+  46:cube/Src/cube_main.c **** /* Private variables ---------------------------------------------------------*/
+  47:cube/Src/cube_main.c **** 
+  48:cube/Src/cube_main.c **** /* USER CODE BEGIN PV */
+  49:cube/Src/cube_main.c **** 
+  50:cube/Src/cube_main.c **** /* USER CODE END PV */
+  51:cube/Src/cube_main.c **** 
+  52:cube/Src/cube_main.c **** /* Private function prototypes -----------------------------------------------*/
+  53:cube/Src/cube_main.c **** void SystemClock_Config(void);
+  54:cube/Src/cube_main.c **** /* USER CODE BEGIN PFP */
+  55:cube/Src/cube_main.c **** 
+  56:cube/Src/cube_main.c **** /* USER CODE END PFP */
+  57:cube/Src/cube_main.c **** 
+  58:cube/Src/cube_main.c **** /* Private user code ---------------------------------------------------------*/
+  59:cube/Src/cube_main.c **** /* USER CODE BEGIN 0 */
+  60:cube/Src/cube_main.c **** 
+  61:cube/Src/cube_main.c **** /* USER CODE END 0 */
+  62:cube/Src/cube_main.c **** 
+  63:cube/Src/cube_main.c **** /**
+  64:cube/Src/cube_main.c ****   * @brief  The application entry point.
+  65:cube/Src/cube_main.c ****   * @retval int
+  66:cube/Src/cube_main.c ****   */
+  67:cube/Src/cube_main.c **** 
+  68:cube/Src/cube_main.c **** /**
+  69:cube/Src/cube_main.c ****   * @brief System Clock Configuration
+  70:cube/Src/cube_main.c ****   * @retval None
+  71:cube/Src/cube_main.c ****   */
+  72:cube/Src/cube_main.c **** void SystemClock_Config(void)
+  73:cube/Src/cube_main.c **** {
+  29              		.loc 1 73 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 120
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 30B5     		push	{r4, r5, lr}
+  34              		.cfi_def_cfa_offset 12
+  35              		.cfi_offset 4, -12
+  36              		.cfi_offset 5, -8
+  37              		.cfi_offset 14, -4
+  38 0002 9FB0     		sub	sp, sp, #124
+  39              		.cfi_def_cfa_offset 136
+  74:cube/Src/cube_main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+  40              		.loc 1 74 3 view .LVU1
+  41              		.loc 1 74 22 is_stmt 0 view .LVU2
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc4js8gd.s 			page 3
+
+
+  42 0004 2022     		movs	r2, #32
+  43 0006 0021     		movs	r1, #0
+  44 0008 15A8     		add	r0, sp, #84
+  45 000a FFF7FEFF 		bl	memset
+  46              	.LVL0:
+  75:cube/Src/cube_main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+  47              		.loc 1 75 3 is_stmt 1 view .LVU3
+  48              		.loc 1 75 22 is_stmt 0 view .LVU4
+  49 000e 0024     		movs	r4, #0
+  50 0010 0F94     		str	r4, [sp, #60]
+  51 0012 1094     		str	r4, [sp, #64]
+  52 0014 1194     		str	r4, [sp, #68]
+  53 0016 1294     		str	r4, [sp, #72]
+  54 0018 1394     		str	r4, [sp, #76]
+  76:cube/Src/cube_main.c ****   RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+  55              		.loc 1 76 3 is_stmt 1 view .LVU5
+  56              		.loc 1 76 28 is_stmt 0 view .LVU6
+  57 001a 3C22     		movs	r2, #60
+  58 001c 2146     		mov	r1, r4
+  59 001e 6846     		mov	r0, sp
+  60 0020 FFF7FEFF 		bl	memset
+  61              	.LVL1:
+  77:cube/Src/cube_main.c **** 
+  78:cube/Src/cube_main.c ****   /** Initializes the CPU, AHB and APB busses clocks 
+  79:cube/Src/cube_main.c ****   */
+  80:cube/Src/cube_main.c ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  62              		.loc 1 80 3 is_stmt 1 view .LVU7
+  63              		.loc 1 80 36 is_stmt 0 view .LVU8
+  64 0024 0225     		movs	r5, #2
+  65 0026 1495     		str	r5, [sp, #80]
+  81:cube/Src/cube_main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  66              		.loc 1 81 3 is_stmt 1 view .LVU9
+  67              		.loc 1 81 30 is_stmt 0 view .LVU10
+  68 0028 0123     		movs	r3, #1
+  69 002a 1893     		str	r3, [sp, #96]
+  82:cube/Src/cube_main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  70              		.loc 1 82 3 is_stmt 1 view .LVU11
+  71              		.loc 1 82 41 is_stmt 0 view .LVU12
+  72 002c 1023     		movs	r3, #16
+  73 002e 1993     		str	r3, [sp, #100]
+  83:cube/Src/cube_main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  74              		.loc 1 83 3 is_stmt 1 view .LVU13
+  75              		.loc 1 83 34 is_stmt 0 view .LVU14
+  76 0030 1B95     		str	r5, [sp, #108]
+  84:cube/Src/cube_main.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  77              		.loc 1 84 3 is_stmt 1 view .LVU15
+  85:cube/Src/cube_main.c ****   RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL16;
+  78              		.loc 1 85 3 view .LVU16
+  79              		.loc 1 85 32 is_stmt 0 view .LVU17
+  80 0032 4FF46013 		mov	r3, #3670016
+  81 0036 1D93     		str	r3, [sp, #116]
+  86:cube/Src/cube_main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+  82              		.loc 1 86 3 is_stmt 1 view .LVU18
+  83              		.loc 1 86 7 is_stmt 0 view .LVU19
+  84 0038 14A8     		add	r0, sp, #80
+  85 003a FFF7FEFF 		bl	HAL_RCC_OscConfig
+  86              	.LVL2:
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc4js8gd.s 			page 4
+
+
+  87:cube/Src/cube_main.c ****   {
+  88:cube/Src/cube_main.c ****     Error_Handler();
+  89:cube/Src/cube_main.c ****   }
+  90:cube/Src/cube_main.c ****   /** Initializes the CPU, AHB and APB busses clocks 
+  91:cube/Src/cube_main.c ****   */
+  92:cube/Src/cube_main.c ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+  87              		.loc 1 92 3 is_stmt 1 view .LVU20
+  88              		.loc 1 92 31 is_stmt 0 view .LVU21
+  89 003e 0F23     		movs	r3, #15
+  90 0040 0F93     		str	r3, [sp, #60]
+  93:cube/Src/cube_main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+  94:cube/Src/cube_main.c ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+  91              		.loc 1 94 3 is_stmt 1 view .LVU22
+  92              		.loc 1 94 34 is_stmt 0 view .LVU23
+  93 0042 1095     		str	r5, [sp, #64]
+  95:cube/Src/cube_main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+  94              		.loc 1 95 3 is_stmt 1 view .LVU24
+  95              		.loc 1 95 35 is_stmt 0 view .LVU25
+  96 0044 1194     		str	r4, [sp, #68]
+  96:cube/Src/cube_main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  97              		.loc 1 96 3 is_stmt 1 view .LVU26
+  98              		.loc 1 96 36 is_stmt 0 view .LVU27
+  99 0046 4FF48063 		mov	r3, #1024
+ 100 004a 1293     		str	r3, [sp, #72]
+  97:cube/Src/cube_main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 101              		.loc 1 97 3 is_stmt 1 view .LVU28
+ 102              		.loc 1 97 36 is_stmt 0 view .LVU29
+ 103 004c 1394     		str	r4, [sp, #76]
+  98:cube/Src/cube_main.c **** 
+  99:cube/Src/cube_main.c ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+ 104              		.loc 1 99 3 is_stmt 1 view .LVU30
+ 105              		.loc 1 99 7 is_stmt 0 view .LVU31
+ 106 004e 2946     		mov	r1, r5
+ 107 0050 0FA8     		add	r0, sp, #60
+ 108 0052 FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ 109              	.LVL3:
+ 100:cube/Src/cube_main.c ****   {
+ 101:cube/Src/cube_main.c ****     Error_Handler();
+ 102:cube/Src/cube_main.c ****   }
+ 103:cube/Src/cube_main.c ****   PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_I2C2;
+ 110              		.loc 1 103 3 is_stmt 1 view .LVU32
+ 111              		.loc 1 103 38 is_stmt 0 view .LVU33
+ 112 0056 4023     		movs	r3, #64
+ 113 0058 0093     		str	r3, [sp]
+ 104:cube/Src/cube_main.c ****   PeriphClkInit.I2c2ClockSelection = RCC_I2C2CLKSOURCE_HSI;
+ 114              		.loc 1 104 3 is_stmt 1 view .LVU34
+ 115              		.loc 1 104 36 is_stmt 0 view .LVU35
+ 116 005a 0894     		str	r4, [sp, #32]
+ 105:cube/Src/cube_main.c ****   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+ 117              		.loc 1 105 3 is_stmt 1 view .LVU36
+ 118              		.loc 1 105 7 is_stmt 0 view .LVU37
+ 119 005c 6846     		mov	r0, sp
+ 120 005e FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
+ 121              	.LVL4:
+ 106:cube/Src/cube_main.c ****   {
+ 107:cube/Src/cube_main.c ****     Error_Handler();
+ 108:cube/Src/cube_main.c ****   }
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc4js8gd.s 			page 5
+
+
+ 109:cube/Src/cube_main.c **** }
+ 122              		.loc 1 109 1 view .LVU38
+ 123 0062 1FB0     		add	sp, sp, #124
+ 124              		.cfi_def_cfa_offset 12
+ 125              		@ sp needed
+ 126 0064 30BD     		pop	{r4, r5, pc}
+ 127              		.cfi_endproc
+ 128              	.LFE126:
+ 130              		.section	.text.Error_Handler,"ax",%progbits
+ 131              		.align	1
+ 132              		.global	Error_Handler
+ 133              		.syntax unified
+ 134              		.thumb
+ 135              		.thumb_func
+ 136              		.fpu fpv4-sp-d16
+ 138              	Error_Handler:
+ 139              	.LFB127:
+ 110:cube/Src/cube_main.c **** 
+ 111:cube/Src/cube_main.c **** /* USER CODE BEGIN 4 */
+ 112:cube/Src/cube_main.c **** 
+ 113:cube/Src/cube_main.c **** /* USER CODE END 4 */
+ 114:cube/Src/cube_main.c **** 
+ 115:cube/Src/cube_main.c **** /**
+ 116:cube/Src/cube_main.c ****   * @brief  This function is executed in case of error occurrence.
+ 117:cube/Src/cube_main.c ****   * @retval None
+ 118:cube/Src/cube_main.c ****   */
+ 119:cube/Src/cube_main.c **** void Error_Handler(void)
+ 120:cube/Src/cube_main.c **** {
+ 140              		.loc 1 120 1 is_stmt 1 view -0
+ 141              		.cfi_startproc
+ 142              		@ args = 0, pretend = 0, frame = 0
+ 143              		@ frame_needed = 0, uses_anonymous_args = 0
+ 144              		@ link register save eliminated.
+ 121:cube/Src/cube_main.c ****   /* USER CODE BEGIN Error_Handler_Debug */
+ 122:cube/Src/cube_main.c ****   /* User can add his own implementation to report the HAL error return state */
+ 123:cube/Src/cube_main.c **** 
+ 124:cube/Src/cube_main.c ****   /* USER CODE END Error_Handler_Debug */
+ 125:cube/Src/cube_main.c **** }
+ 145              		.loc 1 125 1 view .LVU40
+ 146 0000 7047     		bx	lr
+ 147              		.cfi_endproc
+ 148              	.LFE127:
+ 150              		.text
+ 151              	.Letext0:
+ 152              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 153              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 154              		.file 4 "cube/Drivers/CMSIS/Include/core_cm4.h"
+ 155              		.file 5 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
+ 156              		.file 6 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xc.h"
+ 157              		.file 7 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\lib\\gcc\\arm-none-eab
+ 158              		.file 8 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 159              		.file 9 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 160              		.file 10 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\includ
+ 161              		.file 11 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h"
+ 162              		.file 12 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h"
+ 163              		.file 13 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc_ex.h"
+ 164              		.file 14 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_dma.h"
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc4js8gd.s 			page 6
+
+
+ 165              		.file 15 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_i2c.h"
+ 166              		.file 16 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h"
+ 167              		.file 17 "cube/Inc/i2c.h"
+ 168              		.file 18 "<built-in>"
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc4js8gd.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 cube_main.c
+C:\Users\Berbardo\AppData\Local\Temp\cc4js8gd.s:18     .text.SystemClock_Config:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cc4js8gd.s:26     .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\Berbardo\AppData\Local\Temp\cc4js8gd.s:131    .text.Error_Handler:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cc4js8gd.s:138    .text.Error_Handler:00000000 Error_Handler
+                           .group:00000000 wm4.0.a9549919c595c19c35ef13bc9ee4c8af
+                           .group:00000000 wm4.target_vl53l1_1.h.12.5039e74bcd507e129caba66ab5fc05af
+                           .group:00000000 wm4.stm32f3xx_hal_conf.h.37.cb1c9cb802da867d86527a1477311c20
+                           .group:00000000 wm4.stm32f3xx.h.55.fe34e0340b06ab20c90f3cf1d792e0eb
+                           .group:00000000 wm4.stm32f303xc.h.51.75494ed92b93e6861874d99c51c92793
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.d0b7f3cd6ee95f610104014bb3ed522a
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cm4.h.74.09ac1776756364a5a5d23084aa23e459
+                           .group:00000000 wm4.cmsis_gcc.h.36.39970cb43ce4b53c82644a1f9bc2eab9
+                           .group:00000000 wm4.core_cm4.h.223.390ff9b0e06949b13520d8b6746f63e8
+                           .group:00000000 wm4.stm32f303xc.h.710.b77655c64e6ea7efdc9ab6a96701a5ae
+                           .group:00000000 wm4.stm32f3xx.h.191.245d83eb21a6c69e2950c577a7134277
+                           .group:00000000 wm4.newlib.h.8.f6e543eac3f2f65163ba2ffe3b04987b
+                           .group:00000000 wm4.ieeefp.h.77.5499ed899a78229fbaf6d102924f4714
+                           .group:00000000 wm4.config.h.224.c701144a7b0518c6ee9b9b5465b79f81
+                           .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
+                           .group:00000000 wm4.stdio.h.31.7c0e28c411445f3f9c5b11accf882760
+                           .group:00000000 wm4.stddef.h.187.2ff233552538c6ff9b8575ca8ea52cb3
+                           .group:00000000 wm4.cdefs.h.49.6260d97adb8d27534cbdc0f868b8ea87
+                           .group:00000000 wm4.stddef.h.39.ec95e8feac892e292b69dc7ae75b0d64
+                           .group:00000000 wm4.stdarg.h.34.3a23a216c0c293b3d2ea2e89281481e6
+                           .group:00000000 wm4._types.h.20.dd0d04dca3800a0d2a6129b87f3adbb2
+                           .group:00000000 wm4.stddef.h.161.5349cb105733e8777bfb0cf53c4e3f34
+                           .group:00000000 wm4._types.h.127.34941de1b2539d59d5cac00e0dd27a45
+                           .group:00000000 wm4.reent.h.17.e292bf8b0bec6c96e131a54347145a30
+                           .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:00000000 wm4.reent.h.77.dcd6129ff07fe81bd5636db29abe53b2
+                           .group:00000000 wm4.types.h.40.c2dcbbb5c1f4f0e5cb716ebf7776da48
+                           .group:00000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
+                           .group:00000000 wm4.stdio.h.81.2a55589bfa3ee24eeb84e3c79458e4a9
+                           .group:00000000 wm4.stm32f3xx_hal_def.h.76.500c7c9bfcb8d4adebf82d1af27ff044
+                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.60ee232241a99e19acd27637eebe4f1c
+                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.1fba3945551953e78cf69c94a0383651
+                           .group:00000000 wm4.stm32f3xx_hal_gpio.h.38.11db931fcbf37182e25c3927ddf6e8ba
+                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.8d493744f4b7a4f7a0f4f97db0ccbd8e
+                           .group:00000000 wm4.stm32f3xx_hal_dma.h.38.61966c780efd486aa451ae49ca247997
+                           .group:00000000 wm4.stm32f3xx_hal_dma_ex.h.38.195e7d437d9280b9f4e6bae0fa00db04
+                           .group:00000000 wm4.stm32f3xx_hal_dma.h.423.83da80eb3e6ae96f050d0c5e4b55e4b9
+                           .group:00000000 wm4.stm32f3xx_hal_cortex.h.38.c5c1d06be9dad8e7837dbe16f3535233
+                           .group:00000000 wm4.stm32f3xx_hal_flash.h.38.2b4c202390dfbe69a578ce118ab4d799
+                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.36f8341b05728c01a88b7f1003837b1f
+                           .group:00000000 wm4.stm32f3xx_hal_i2c.h.38.e3750f5f029ebf729a7cf07e85cad615
+                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.74099379a9814ae4d6d1c8682fdde7ad
+                           .group:00000000 wm4.stm32f3xx_hal_i2c.h.626.05cba3c85b66bb4631bfd2ebbfab1b06
+                           .group:00000000 wm4.stm32f3xx_hal_pwr.h.38.efb6ce75a5c12d6b2c7c914e7a94ec2b
+                           .group:00000000 wm4.stm32f3xx_hal_pwr_ex.h.38.d228edc56905d96af2d831d3c8e0487a
+                           .group:00000000 wm4.stm32f3xx_hal.h.60.e1acc37932101d84a977b19b7a581169
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc4js8gd.s 			page 8
+
+
+
+UNDEFINED SYMBOLS
+memset
+HAL_RCC_OscConfig
+HAL_RCC_ClockConfig
+HAL_RCCEx_PeriphCLKConfig

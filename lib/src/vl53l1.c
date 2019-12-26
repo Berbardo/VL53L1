@@ -48,9 +48,6 @@ VL53L1_Error vl53l1_init(VL53L1_Dev_t* p_device, VL53L1_DeviceInfo_t device_info
     // Wait Device Booted
     VL53L1_WaitDeviceBooted(p_device);
 
-    // Set I2c Address
-    Status = VL53L1_SetDeviceAddress(p_device, p_device->I2cDevAddr);
-
     // Data initialization
     Status = VL53L1_DataInit(p_device);
 

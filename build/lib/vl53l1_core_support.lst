@@ -1,0 +1,711 @@
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"vl53l1_core_support.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.VL53L1_calc_pll_period_us,"ax",%progbits
+  18              		.align	1
+  19              		.global	VL53L1_calc_pll_period_us
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	VL53L1_calc_pll_period_us:
+  27              	.LVL0:
+  28              	.LFB126:
+  29              		.file 1 "D:/Git/VL53L1/lib/core/src/vl53l1_core_support.c"
+   1:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** /*
+   2:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * Copyright (c) 2017, STMicroelectronics - All Rights Reserved
+   3:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
+   4:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * This file is part of VL53L1 Core and is dual licensed,
+   5:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * either 'STMicroelectronics
+   6:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * Proprietary license'
+   7:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * or 'BSD 3-clause "New" or "Revised" License' , at your option.
+   8:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
+   9:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** ********************************************************************************
+  10:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
+  11:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * 'STMicroelectronics Proprietary license'
+  12:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
+  13:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** ********************************************************************************
+  14:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
+  15:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * License terms: STMicroelectronics Proprietary in accordance with licensing
+  16:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * terms at www.st.com/sla0081
+  17:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
+  18:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * STMicroelectronics confidential
+  19:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * Reproduction and Communication of this document is strictly prohibited unless
+  20:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * specifically authorized in writing by STMicroelectronics.
+  21:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
+  22:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
+  23:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** ********************************************************************************
+  24:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
+  25:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * Alternatively, VL53L1 Core may be distributed under the terms of
+  26:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * 'BSD 3-clause "New" or "Revised" License', in which case the following
+  27:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * provisions apply instead of the ones mentioned above :
+  28:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
+  29:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** ********************************************************************************
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 2
+
+
+  30:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
+  31:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * License terms: BSD 3-clause "New" or "Revised" License.
+  32:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
+  33:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * Redistribution and use in source and binary forms, with or without
+  34:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * modification, are permitted provided that the following conditions are met:
+  35:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
+  36:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * 1. Redistributions of source code must retain the above copyright notice, this
+  37:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * list of conditions and the following disclaimer.
+  38:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
+  39:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * 2. Redistributions in binary form must reproduce the above copyright notice,
+  40:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * this list of conditions and the following disclaimer in the documentation
+  41:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * and/or other materials provided with the distribution.
+  42:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
+  43:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * 3. Neither the name of the copyright holder nor the names of its contributors
+  44:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * may be used to endorse or promote products derived from this software
+  45:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * without specific prior written permission.
+  46:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
+  47:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  48:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  49:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  50:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  51:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  52:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  53:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  54:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  55:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  56:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  57:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
+  58:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
+  59:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** ********************************************************************************
+  60:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
+  61:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** */
+  62:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+  63:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** /**
+  64:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c ****  * @file  vl53l1_core_support.c
+  65:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c ****  *
+  66:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c ****  * @brief EwokPlus25 core function definition
+  67:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c ****  */
+  68:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+  69:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** #include "vl53l1_ll_def.h"
+  70:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** #include "vl53l1_ll_device.h"
+  71:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** #include "vl53l1_platform_log.h"
+  72:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** #include "vl53l1_core_support.h"
+  73:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** #include "vl53l1_platform_user_data.h"
+  74:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** #include "vl53l1_platform_user_defines.h"
+  75:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+  76:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** #ifdef VL53L1_LOGGING
+  77:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** #include "vl53l1_debug.h"
+  78:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** #include "vl53l1_register_debug.h"
+  79:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** #endif
+  80:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+  81:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** #define LOG_FUNCTION_START(fmt, ...) \
+  82:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	_LOG_FUNCTION_START(VL53L1_TRACE_MODULE_CORE, fmt, ##__VA_ARGS__)
+  83:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** #define LOG_FUNCTION_END(status, ...) \
+  84:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	_LOG_FUNCTION_END(VL53L1_TRACE_MODULE_CORE, status, ##__VA_ARGS__)
+  85:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** #define LOG_FUNCTION_END_FMT(status, fmt, ...) \
+  86:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	_LOG_FUNCTION_END_FMT(VL53L1_TRACE_MODULE_CORE, \
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 3
+
+
+  87:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		status, fmt, ##__VA_ARGS__)
+  88:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+  89:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** #define trace_print(level, ...) \
+  90:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	_LOG_TRACE_PRINT(VL53L1_TRACE_MODULE_CORE, \
+  91:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	level, VL53L1_TRACE_FUNCTION_NONE, ##__VA_ARGS__)
+  92:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+  93:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+  94:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** uint32_t VL53L1_calc_pll_period_us(
+  95:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint16_t  fast_osc_frequency)
+  96:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** {
+  30              		.loc 1 96 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  97:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/*  Calculates PLL frequency using NVM fast_osc_frequency
+  98:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *  Fast osc frequency fixed point format = unsigned 4.12
+  99:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *
+ 100:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *  PLL period fixed point format = unsigned 0.24
+ 101:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *  Min input fast osc frequency  = 1 MHz
+ 102:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *  PLL Multiplier = 64 (fixed)
+ 103:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *  Min PLL freq = 64.0MHz
+ 104:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *  -> max PLL period = 1/ 64
+ 105:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *  ->  only the 18 LS bits are used
+ 106:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *
+ 107:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *  2^30 = (2^24) (1.0us) * 4096 (2^12) / 64 (PLL Multiplier)
+ 108:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 109:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 110:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint32_t  pll_period_us        = 0;
+  35              		.loc 1 110 2 view .LVU1
+ 111:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 112:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	LOG_FUNCTION_START("");
+  36              		.loc 1 112 24 view .LVU2
+ 113:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 114:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	pll_period_us = (0x01 << 30) / fast_osc_frequency;
+  37              		.loc 1 114 2 view .LVU3
+ 115:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 116:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** #ifdef VL53L1_LOGGING
+ 117:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	trace_print(VL53L1_TRACE_LEVEL_DEBUG,
+ 118:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 			"    %-48s : %10u\n", "pll_period_us",
+ 119:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 			pll_period_us);
+ 120:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** #endif
+ 121:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 122:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	LOG_FUNCTION_END(0);
+  38              		.loc 1 122 21 view .LVU4
+ 123:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 124:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	return pll_period_us;
+  39              		.loc 1 124 2 view .LVU5
+ 125:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** }
+  40              		.loc 1 125 1 is_stmt 0 view .LVU6
+  41 0000 4FF08043 		mov	r3, #1073741824
+  42 0004 93FBF0F0 		sdiv	r0, r3, r0
+  43              	.LVL1:
+  44              		.loc 1 125 1 view .LVU7
+  45 0008 7047     		bx	lr
+  46              		.cfi_endproc
+  47              	.LFE126:
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 4
+
+
+  49              		.section	.text.VL53L1_decode_vcsel_period,"ax",%progbits
+  50              		.align	1
+  51              		.global	VL53L1_decode_vcsel_period
+  52              		.syntax unified
+  53              		.thumb
+  54              		.thumb_func
+  55              		.fpu fpv4-sp-d16
+  57              	VL53L1_decode_vcsel_period:
+  58              	.LVL2:
+  59              	.LFB127:
+ 126:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 127:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 128:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** #ifdef PAL_EXTENDED
+ 129:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** uint32_t  VL53L1_duration_maths(
+ 130:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint32_t  pll_period_us,
+ 131:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint32_t  vcsel_parm_pclks,
+ 132:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint32_t  window_vclks,
+ 133:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint32_t  elapsed_mclks)
+ 134:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** {
+ 135:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/*
+ 136:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * Generates the ranging duration in us
+ 137:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *
+ 138:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * duration_us = elapsed_mclks * vcsel_perm_pclks *
+ 139:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *                        window_vclks * pll_period_us
+ 140:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *
+ 141:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * returned value in [us] with no fraction bits
+ 142:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 143:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 144:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint64_t  tmp_long_int = 0;
+ 145:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint32_t  duration_us  = 0;
+ 146:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 147:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* PLL period us =  0.24  18 LS bits used
+ 148:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * window_vclks  =  12.0  (2304 max)
+ 149:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * output 30b (6.24)
+ 150:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 151:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	duration_us = window_vclks * pll_period_us;
+ 152:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 153:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* down shift by 12
+ 154:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * output 18b (6.12)
+ 155:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 156:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	duration_us = duration_us >> 12;
+ 157:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 158:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* Save first part of the calc (#1) */
+ 159:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	tmp_long_int = (uint64_t)duration_us;
+ 160:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 161:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* Multiply elapsed macro periods (22-bit)
+ 162:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *      by VCSEL parameter 6.4  (max 63.9999)
+ 163:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * output 32b (28.4)
+ 164:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 165:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	duration_us = elapsed_mclks * vcsel_parm_pclks;
+ 166:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 167:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* down shift by 4 to remove fractional bits (#2)
+ 168:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * output 28b (28.0)
+ 169:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 170:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	duration_us = duration_us >> 4;
+ 171:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 172:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* Multiply #1 18b (6.12) by #2  28b (28.0)
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 5
+
+
+ 173:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * output 46b (34.12)
+ 174:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 175:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	tmp_long_int = tmp_long_int * (uint64_t)duration_us;
+ 176:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 177:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* Remove fractional part
+ 178:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * output 34b (34.0)
+ 179:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 180:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	tmp_long_int = tmp_long_int >> 12;
+ 181:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 182:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* Clip to 32-bits */
+ 183:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	if (tmp_long_int > 0xFFFFFFFF) {
+ 184:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		tmp_long_int = 0xFFFFFFFF;
+ 185:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	}
+ 186:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 187:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	duration_us  = (uint32_t)tmp_long_int;
+ 188:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 189:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	return duration_us;
+ 190:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** }
+ 191:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 192:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 193:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** uint32_t VL53L1_isqrt(uint32_t num)
+ 194:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** {
+ 195:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 196:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/*
+ 197:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * Implements an integer square root
+ 198:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *
+ 199:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * From: http://en.wikipedia.org/wiki/Methods_of_computing_square_roots
+ 200:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 201:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 202:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint32_t  res = 0;
+ 203:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint32_t  bit = 1 << 30; /* The second-to-top bit is set: 1 << 14 for 16-bits, 1 << 30 for 32 bits
+ 204:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 205:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* "bit" starts at the highest power of four <= the argument. */
+ 206:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	while (bit > num) {
+ 207:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		bit >>= 2;
+ 208:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	}
+ 209:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 210:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	while (bit != 0) {
+ 211:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		if (num >= res + bit)  {
+ 212:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 			num -= res + bit;
+ 213:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 			res = (res >> 1) + bit;
+ 214:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		} else {
+ 215:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 			res >>= 1;
+ 216:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		}
+ 217:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		bit >>= 2;
+ 218:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	}
+ 219:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 220:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	return res;
+ 221:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** }
+ 222:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 223:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 224:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** uint16_t VL53L1_rate_maths(
+ 225:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	int32_t   events,
+ 226:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint32_t  time_us)
+ 227:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** {
+ 228:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/*
+ 229:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * Converts events into count rate
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 6
+
+
+ 230:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *
+ 231:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * Max events = 512 Mcps * 1sec
+ 232:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *            = 512,000,000 events
+ 233:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *            = 29b
+ 234:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *
+ 235:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * If events >  2^24 use  3-bit fractional bits is used internally
+ 236:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * otherwise  7-bit fractional bits are used
+ 237:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 238:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 239:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint32_t  tmp_int   = 0;
+ 240:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint32_t  frac_bits = 7;
+ 241:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint16_t  rate_mcps = 0; /* 9.7 format */
+ 242:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 243:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/*
+ 244:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *  Clip input event range
+ 245:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 246:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 247:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	if (events > VL53L1_SPAD_TOTAL_COUNT_MAX) {
+ 248:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		tmp_int = VL53L1_SPAD_TOTAL_COUNT_MAX;
+ 249:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	} else if (events > 0) {
+ 250:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		tmp_int = (uint32_t)events;
+ 251:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	}
+ 252:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 253:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/*
+ 254:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * if events > VL53L1_SPAD_TOTAL_COUNT_RES_THRES use 3 rather
+ 255:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *  than 7 fractional bits internal to function
+ 256:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 257:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 258:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	if (events > VL53L1_SPAD_TOTAL_COUNT_RES_THRES) {
+ 259:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		frac_bits = 3;
+ 260:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	} else {
+ 261:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		frac_bits = 7;
+ 262:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	}
+ 263:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 264:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/*
+ 265:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * Create 3 or 7 fractional bits
+ 266:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * output 32b (29.3 or 25.7)
+ 267:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * Divide by range duration in [us] - no fractional bits
+ 268:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 269:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	if (time_us > 0) {
+ 270:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		tmp_int = ((tmp_int << frac_bits) + (time_us / 2)) / time_us;
+ 271:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	}
+ 272:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 273:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/*
+ 274:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * Re align if reduced resolution
+ 275:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 276:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	if (events > VL53L1_SPAD_TOTAL_COUNT_RES_THRES) {
+ 277:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		tmp_int = tmp_int << 4;
+ 278:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	}
+ 279:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 280:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/*
+ 281:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * Firmware internal count is 17.7 (24b) but it this
+ 282:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * case clip to 16-bit value for reporting
+ 283:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 284:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 285:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	if (tmp_int > 0xFFFF) {
+ 286:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		tmp_int = 0xFFFF;
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 7
+
+
+ 287:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	}
+ 288:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 289:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	rate_mcps =  (uint16_t)tmp_int;
+ 290:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 291:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	return rate_mcps;
+ 292:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** }
+ 293:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 294:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** uint16_t VL53L1_rate_per_spad_maths(
+ 295:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint32_t  frac_bits,
+ 296:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint32_t  peak_count_rate,
+ 297:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint16_t  num_spads,
+ 298:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint32_t  max_output_value)
+ 299:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** {
+ 300:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 301:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint32_t  tmp_int   = 0;
+ 302:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 303:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* rate_per_spad Format varies with prog frac_bits */
+ 304:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint16_t  rate_per_spad = 0;
+ 305:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 306:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* Calculate rate per spad with variable fractional bits */
+ 307:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 308:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* Frac_bits should be programmed as final frac_bits - 7 as
+ 309:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * the pk_rate contains an inherent 7 bit resolution
+ 310:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 311:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 312:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	if (num_spads > 0) {
+ 313:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		tmp_int = (peak_count_rate << 8) << frac_bits;
+ 314:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		tmp_int = (tmp_int + ((uint32_t)num_spads / 2)) / (uint32_t)num_spads;
+ 315:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	} else {
+ 316:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		tmp_int = ((peak_count_rate) << frac_bits);
+ 317:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	}
+ 318:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 319:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* Clip in case of overwrap - special code */
+ 320:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 321:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	if (tmp_int > max_output_value) {
+ 322:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		tmp_int = max_output_value;
+ 323:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	}
+ 324:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 325:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	rate_per_spad = (uint16_t)tmp_int;
+ 326:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 327:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	return rate_per_spad;
+ 328:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** }
+ 329:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 330:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** int32_t VL53L1_range_maths(
+ 331:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint16_t  fast_osc_frequency,
+ 332:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint16_t  phase,
+ 333:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint16_t  zero_distance_phase,
+ 334:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint8_t   fractional_bits,
+ 335:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	int32_t   gain_factor,
+ 336:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	int32_t   range_offset_mm)
+ 337:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** {
+ 338:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/*
+ 339:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * Converts phase information into distance in [mm]
+ 340:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 341:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 342:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint32_t    pll_period_us = 0; /* 0.24 format */
+ 343:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	int64_t     tmp_long_int  = 0;
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 8
+
+
+ 344:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	int32_t     range_mm      = 0;
+ 345:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 346:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* Calculate PLL period in [ps] */
+ 347:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 348:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	pll_period_us  = VL53L1_calc_pll_period_us(fast_osc_frequency);
+ 349:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 350:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* Raw range in [mm]
+ 351:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *
+ 352:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * calculate the phase difference between return and reference phases
+ 353:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *
+ 354:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * phases 16b (5.11)
+ 355:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * output 17b including sign bit
+ 356:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 357:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 358:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	tmp_long_int = (int64_t)phase - (int64_t)zero_distance_phase;
+ 359:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 360:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/*
+ 361:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * multiply by the PLL period
+ 362:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *
+ 363:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * PLL period 24bit (0.24) but only 18 LS bits used
+ 364:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *
+ 365:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * Output  35b (0.35) (17b + 18b)
+ 366:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 367:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 368:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	tmp_long_int =  tmp_long_int * (int64_t)pll_period_us;
+ 369:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 370:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/*
+ 371:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * Down shift by 9 - Output 26b (0.26)
+ 372:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 373:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 374:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	tmp_long_int =  tmp_long_int / (0x01 << 9);
+ 375:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 376:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/*
+ 377:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *  multiply by speed of light in air divided by 8
+ 378:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *  Factor of 8 includes 2 for the round trip and 4 scaling
+ 379:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *
+ 380:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *  VL53L1_SPEED_OF_LIGHT_IN_AIR_DIV_8 = 16b (16.2)
+ 381:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *
+ 382:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *  Output 42b (18.24) (16b + 26b)
+ 383:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 384:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 385:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	tmp_long_int =  tmp_long_int * VL53L1_SPEED_OF_LIGHT_IN_AIR_DIV_8;
+ 386:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 387:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/*
+ 388:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * Down shift by 22 - Output 20b (18.2)
+ 389:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 390:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 391:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	tmp_long_int =  tmp_long_int / (0x01 << 22);
+ 392:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 393:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* Add range offset */
+ 394:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	range_mm  = (int32_t)tmp_long_int + range_offset_mm;
+ 395:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 396:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* apply correction gain */
+ 397:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	range_mm *= gain_factor;
+ 398:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	range_mm += 0x0400;
+ 399:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	range_mm /= 0x0800;
+ 400:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 9
+
+
+ 401:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* Remove fractional bits */
+ 402:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	if (fractional_bits == 0)
+ 403:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		range_mm = range_mm / (0x01 << 2);
+ 404:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	else if (fractional_bits == 1)
+ 405:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		range_mm = range_mm / (0x01 << 1);
+ 406:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 407:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	return range_mm;
+ 408:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** }
+ 409:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** #endif
+ 410:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 411:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** uint8_t VL53L1_decode_vcsel_period(uint8_t vcsel_period_reg)
+ 412:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** {
+  60              		.loc 1 412 1 is_stmt 1 view -0
+  61              		.cfi_startproc
+  62              		@ args = 0, pretend = 0, frame = 0
+  63              		@ frame_needed = 0, uses_anonymous_args = 0
+  64              		@ link register save eliminated.
+ 413:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/*
+ 414:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * Converts the encoded VCSEL period register value into
+ 415:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * the real period in PLL clocks
+ 416:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 417:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 418:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint8_t vcsel_period_pclks = 0;
+  65              		.loc 1 418 2 view .LVU9
+ 419:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 420:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	vcsel_period_pclks = (vcsel_period_reg + 1) << 1;
+  66              		.loc 1 420 2 view .LVU10
+  67              		.loc 1 420 41 is_stmt 0 view .LVU11
+  68 0000 0130     		adds	r0, r0, #1
+  69              	.LVL3:
+  70              		.loc 1 420 41 view .LVU12
+  71 0002 C0B2     		uxtb	r0, r0
+  72              		.loc 1 420 21 view .LVU13
+  73 0004 4000     		lsls	r0, r0, #1
+  74              	.LVL4:
+ 421:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 422:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	return vcsel_period_pclks;
+  75              		.loc 1 422 2 is_stmt 1 view .LVU14
+ 423:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** }
+  76              		.loc 1 423 1 is_stmt 0 view .LVU15
+  77 0006 00F0FE00 		and	r0, r0, #254
+  78              	.LVL5:
+  79              		.loc 1 423 1 view .LVU16
+  80 000a 7047     		bx	lr
+  81              		.cfi_endproc
+  82              	.LFE127:
+  84              		.section	.text.VL53L1_decode_row_col,"ax",%progbits
+  85              		.align	1
+  86              		.global	VL53L1_decode_row_col
+  87              		.syntax unified
+  88              		.thumb
+  89              		.thumb_func
+  90              		.fpu fpv4-sp-d16
+  92              	VL53L1_decode_row_col:
+  93              	.LVL6:
+  94              	.LFB128:
+ 424:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 10
+
+
+ 425:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 426:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** void VL53L1_decode_row_col(
+ 427:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint8_t  spad_number,
+ 428:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint8_t  *prow,
+ 429:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint8_t  *pcol)
+ 430:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** {
+  95              		.loc 1 430 1 is_stmt 1 view -0
+  96              		.cfi_startproc
+  97              		@ args = 0, pretend = 0, frame = 0
+  98              		@ frame_needed = 0, uses_anonymous_args = 0
+  99              		@ link register save eliminated.
+ 431:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 432:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/**
+ 433:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *  Decodes the array (row,col) location from
+ 434:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *  the input SPAD number
+ 435:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 */
+ 436:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
+ 437:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	if (spad_number > 127) {
+ 100              		.loc 1 437 2 view .LVU18
+ 101              		.loc 1 437 5 is_stmt 0 view .LVU19
+ 102 0000 10F0800F 		tst	r0, #128
+ 103 0004 07D1     		bne	.L6
+ 438:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		*prow = 8 + ((255-spad_number) & 0x07);
+ 439:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		*pcol = (spad_number-128) >> 3;
+ 440:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	} else {
+ 441:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		*prow = spad_number & 0x07;
+ 104              		.loc 1 441 3 is_stmt 1 view .LVU20
+ 105              		.loc 1 441 23 is_stmt 0 view .LVU21
+ 106 0006 00F00703 		and	r3, r0, #7
+ 107              		.loc 1 441 9 view .LVU22
+ 108 000a 0B70     		strb	r3, [r1]
+ 442:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		*pcol = (127-spad_number) >> 3;
+ 109              		.loc 1 442 3 is_stmt 1 view .LVU23
+ 110              		.loc 1 442 15 is_stmt 0 view .LVU24
+ 111 000c C0F17F00 		rsb	r0, r0, #127
+ 112              	.LVL7:
+ 113              		.loc 1 442 29 view .LVU25
+ 114 0010 C010     		asrs	r0, r0, #3
+ 115              		.loc 1 442 9 view .LVU26
+ 116 0012 1070     		strb	r0, [r2]
+ 443:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	}
+ 444:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** }
+ 117              		.loc 1 444 1 view .LVU27
+ 118 0014 7047     		bx	lr
+ 119              	.LVL8:
+ 120              	.L6:
+ 438:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		*pcol = (spad_number-128) >> 3;
+ 121              		.loc 1 438 3 is_stmt 1 view .LVU28
+ 438:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		*pcol = (spad_number-128) >> 3;
+ 122              		.loc 1 438 34 is_stmt 0 view .LVU29
+ 123 0016 C343     		mvns	r3, r0
+ 124 0018 03F00703 		and	r3, r3, #7
+ 438:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		*pcol = (spad_number-128) >> 3;
+ 125              		.loc 1 438 13 view .LVU30
+ 126 001c 0833     		adds	r3, r3, #8
+ 438:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		*pcol = (spad_number-128) >> 3;
+ 127              		.loc 1 438 9 view .LVU31
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 11
+
+
+ 128 001e 0B70     		strb	r3, [r1]
+ 439:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	} else {
+ 129              		.loc 1 439 3 is_stmt 1 view .LVU32
+ 439:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	} else {
+ 130              		.loc 1 439 23 is_stmt 0 view .LVU33
+ 131 0020 8038     		subs	r0, r0, #128
+ 132              	.LVL9:
+ 439:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	} else {
+ 133              		.loc 1 439 29 view .LVU34
+ 134 0022 C010     		asrs	r0, r0, #3
+ 439:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	} else {
+ 135              		.loc 1 439 9 view .LVU35
+ 136 0024 1070     		strb	r0, [r2]
+ 137 0026 7047     		bx	lr
+ 138              		.cfi_endproc
+ 139              	.LFE128:
+ 141              		.text
+ 142              	.Letext0:
+ 143              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 144              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 145              		.file 4 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\lib\\gcc\\arm-none-eab
+ 146              		.file 5 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 147              		.file 6 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 148              		.file 7 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 149              		.file 8 "cube/Drivers/CMSIS/Include/core_cm4.h"
+ 150              		.file 9 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
+ 151              		.file 10 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h"
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 vl53l1_core_support.c
+C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s:18     .text.VL53L1_calc_pll_period_us:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s:26     .text.VL53L1_calc_pll_period_us:00000000 VL53L1_calc_pll_period_us
+C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s:50     .text.VL53L1_decode_vcsel_period:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s:57     .text.VL53L1_decode_vcsel_period:00000000 VL53L1_decode_vcsel_period
+C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s:85     .text.VL53L1_decode_row_col:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s:92     .text.VL53L1_decode_row_col:00000000 VL53L1_decode_row_col
+                           .group:00000000 wm4.0.a9549919c595c19c35ef13bc9ee4c8af
+                           .group:00000000 wm4.target_vl53l1_1.h.12.5039e74bcd507e129caba66ab5fc05af
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.d0b7f3cd6ee95f610104014bb3ed522a
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.stddef.h.39.a38874c8f8a57e66301090908ec2a69f
+                           .group:00000000 wm4.newlib.h.8.f6e543eac3f2f65163ba2ffe3b04987b
+                           .group:00000000 wm4.ieeefp.h.77.5499ed899a78229fbaf6d102924f4714
+                           .group:00000000 wm4.config.h.224.c701144a7b0518c6ee9b9b5465b79f81
+                           .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
+                           .group:00000000 wm4._types.h.20.dd0d04dca3800a0d2a6129b87f3adbb2
+                           .group:00000000 wm4.stddef.h.161.5349cb105733e8777bfb0cf53c4e3f34
+                           .group:00000000 wm4._types.h.127.34941de1b2539d59d5cac00e0dd27a45
+                           .group:00000000 wm4.reent.h.17.e292bf8b0bec6c96e131a54347145a30
+                           .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:00000000 wm4.reent.h.77.dcd6129ff07fe81bd5636db29abe53b2
+                           .group:00000000 wm4.cdefs.h.49.6260d97adb8d27534cbdc0f868b8ea87
+                           .group:00000000 wm4.string.h.15.dab3980bf35408a4c507182805e2de3a
+                           .group:00000000 wm4.stddef.h.161.19e15733342b50ead2919490b095303e
+                           .group:00000000 wm4.stdio.h.27.3fc80220048df77954e38daec3bb9670
+                           .group:00000000 wm4.stdarg.h.34.3a23a216c0c293b3d2ea2e89281481e6
+                           .group:00000000 wm4.types.h.40.c2dcbbb5c1f4f0e5cb716ebf7776da48
+                           .group:00000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
+                           .group:00000000 wm4.stdio.h.81.2a55589bfa3ee24eeb84e3c79458e4a9
+                           .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:00000000 wm4.stdlib.h.56.b4ddaf162082f284ba35b4444af99a9a
+                           .group:00000000 wm4.vl53l1_platform_user_config.h.71.4bbd3f655147d64657bb9c77e14249c2
+                           .group:00000000 wm4.vl53l1_ll_device.h.76.61a5c622dad24a36ae0651848b8ac7cb
+                           .group:00000000 wm4.vl53l1_error_codes.h.71.b6e90121c4542ed0428e2f06155d8266
+                           .group:00000000 wm4.vl53l1_register_map.h.69.ec259f417eacfeb4a1fe3b1107810d95
+                           .group:00000000 wm4.vl53l1_register_structs.h.74.11a89e7b4ec79fa5f24a8809948e429f
+                           .group:00000000 wm4.vl53l1_platform_user_defines.h.65.ba5bf58a2b92eb98a59c4d4834576b4d
+                           .group:00000000 wm4.vl53l1_error_exceptions.h.70.5b53c89ff28584d05d224dd03776b32e
+                           .group:00000000 wm4.vl53l1_ll_def.h.91.518239c514b35c896619678d2b7b75c9
+                           .group:00000000 wm4.vl53l1_platform_log.h.71.79ea17a42b4255ee5461fb53cd7aea3c
+                           .group:00000000 wm4.stm32f3xx_hal_conf.h.37.cb1c9cb802da867d86527a1477311c20
+                           .group:00000000 wm4.stm32f3xx.h.55.fe34e0340b06ab20c90f3cf1d792e0eb
+                           .group:00000000 wm4.stm32f303xc.h.51.75494ed92b93e6861874d99c51c92793
+                           .group:00000000 wm4.core_cm4.h.42.42f38327ee0970d80f60117e6a3ba2b0
+                           .group:00000000 wm4.cmsis_gcc.h.36.39970cb43ce4b53c82644a1f9bc2eab9
+                           .group:00000000 wm4.core_cm4.h.223.390ff9b0e06949b13520d8b6746f63e8
+                           .group:00000000 wm4.stm32f303xc.h.710.b77655c64e6ea7efdc9ab6a96701a5ae
+                           .group:00000000 wm4.stm32f3xx.h.191.245d83eb21a6c69e2950c577a7134277
+                           .group:00000000 wm4.stm32f3xx_hal_def.h.76.500c7c9bfcb8d4adebf82d1af27ff044
+                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.60ee232241a99e19acd27637eebe4f1c
+                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.1fba3945551953e78cf69c94a0383651
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 13
+
+
+                           .group:00000000 wm4.stm32f3xx_hal_gpio.h.38.11db931fcbf37182e25c3927ddf6e8ba
+                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.8d493744f4b7a4f7a0f4f97db0ccbd8e
+                           .group:00000000 wm4.stm32f3xx_hal_dma.h.38.61966c780efd486aa451ae49ca247997
+                           .group:00000000 wm4.stm32f3xx_hal_dma_ex.h.38.195e7d437d9280b9f4e6bae0fa00db04
+                           .group:00000000 wm4.stm32f3xx_hal_dma.h.423.83da80eb3e6ae96f050d0c5e4b55e4b9
+                           .group:00000000 wm4.stm32f3xx_hal_cortex.h.38.c5c1d06be9dad8e7837dbe16f3535233
+                           .group:00000000 wm4.stm32f3xx_hal_flash.h.38.2b4c202390dfbe69a578ce118ab4d799
+                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.36f8341b05728c01a88b7f1003837b1f
+                           .group:00000000 wm4.stm32f3xx_hal_i2c.h.38.e3750f5f029ebf729a7cf07e85cad615
+                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.74099379a9814ae4d6d1c8682fdde7ad
+                           .group:00000000 wm4.stm32f3xx_hal_i2c.h.626.05cba3c85b66bb4631bfd2ebbfab1b06
+                           .group:00000000 wm4.stm32f3xx_hal_pwr.h.38.efb6ce75a5c12d6b2c7c914e7a94ec2b
+                           .group:00000000 wm4.stm32f3xx_hal_pwr_ex.h.38.d228edc56905d96af2d831d3c8e0487a
+                           .group:00000000 wm4.stm32f3xx_hal.h.60.e1acc37932101d84a977b19b7a581169
+                           .group:00000000 wm4.vl53l1_def.h.87.ea1a10eae4f02dade0991856ca744364
+                           .group:00000000 wm4.vl53l1_platform_user_data.h.94.31d6fd49a37f98d182bed50c298f83ae
+
+NO UNDEFINED SYMBOLS

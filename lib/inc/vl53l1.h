@@ -39,7 +39,7 @@
  * @retval "Other error code"   More details in @ref VL53L1_Error
  */
 VL53L1_Error vl53l1_init(VL53L1_Dev_t* p_device, VL53L1_DeviceInfo_t device_info,
-                           VL53L1_CalibrationData_t calibration);
+                           VL53L1_CalibrationData_t* calibration);
 
 /**
  * @brief Turns off device with the XSHUT pin

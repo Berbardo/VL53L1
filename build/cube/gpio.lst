@@ -1,0 +1,278 @@
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc0dp9sl.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"gpio.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.MX_GPIO_Init,"ax",%progbits
+  18              		.align	1
+  19              		.global	MX_GPIO_Init
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	MX_GPIO_Init:
+  27              	.LFB126:
+  28              		.file 1 "cube/Src/gpio.c"
+   1:cube/Src/gpio.c **** /**
+   2:cube/Src/gpio.c ****   ******************************************************************************
+   3:cube/Src/gpio.c ****   * File Name          : gpio.c
+   4:cube/Src/gpio.c ****   * Description        : This file provides code for the configuration
+   5:cube/Src/gpio.c ****   *                      of all used GPIO pins.
+   6:cube/Src/gpio.c ****   ******************************************************************************
+   7:cube/Src/gpio.c ****   * @attention
+   8:cube/Src/gpio.c ****   *
+   9:cube/Src/gpio.c ****   * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics.
+  10:cube/Src/gpio.c ****   * All rights reserved.</center></h2>
+  11:cube/Src/gpio.c ****   *
+  12:cube/Src/gpio.c ****   * This software component is licensed by ST under BSD 3-Clause license,
+  13:cube/Src/gpio.c ****   * the "License"; You may not use this file except in compliance with the
+  14:cube/Src/gpio.c ****   * License. You may obtain a copy of the License at:
+  15:cube/Src/gpio.c ****   *                        opensource.org/licenses/BSD-3-Clause
+  16:cube/Src/gpio.c ****   *
+  17:cube/Src/gpio.c ****   ******************************************************************************
+  18:cube/Src/gpio.c ****   */
+  19:cube/Src/gpio.c **** 
+  20:cube/Src/gpio.c **** /* Includes ------------------------------------------------------------------*/
+  21:cube/Src/gpio.c **** #include "gpio.h"
+  22:cube/Src/gpio.c **** /* USER CODE BEGIN 0 */
+  23:cube/Src/gpio.c **** 
+  24:cube/Src/gpio.c **** /* USER CODE END 0 */
+  25:cube/Src/gpio.c **** 
+  26:cube/Src/gpio.c **** /*----------------------------------------------------------------------------*/
+  27:cube/Src/gpio.c **** /* Configure GPIO                                                             */
+  28:cube/Src/gpio.c **** /*----------------------------------------------------------------------------*/
+  29:cube/Src/gpio.c **** /* USER CODE BEGIN 1 */
+  30:cube/Src/gpio.c **** 
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc0dp9sl.s 			page 2
+
+
+  31:cube/Src/gpio.c **** /* USER CODE END 1 */
+  32:cube/Src/gpio.c **** 
+  33:cube/Src/gpio.c **** /** Configure pins as 
+  34:cube/Src/gpio.c ****         * Analog 
+  35:cube/Src/gpio.c ****         * Input 
+  36:cube/Src/gpio.c ****         * Output
+  37:cube/Src/gpio.c ****         * EVENT_OUT
+  38:cube/Src/gpio.c ****         * EXTI
+  39:cube/Src/gpio.c **** */
+  40:cube/Src/gpio.c **** void MX_GPIO_Init(void)
+  41:cube/Src/gpio.c **** {
+  29              		.loc 1 41 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 32
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 30B5     		push	{r4, r5, lr}
+  34              		.cfi_def_cfa_offset 12
+  35              		.cfi_offset 4, -12
+  36              		.cfi_offset 5, -8
+  37              		.cfi_offset 14, -4
+  38 0002 89B0     		sub	sp, sp, #36
+  39              		.cfi_def_cfa_offset 48
+  42:cube/Src/gpio.c **** 
+  43:cube/Src/gpio.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+  40              		.loc 1 43 3 view .LVU1
+  41              		.loc 1 43 20 is_stmt 0 view .LVU2
+  42 0004 0024     		movs	r4, #0
+  43 0006 0394     		str	r4, [sp, #12]
+  44 0008 0494     		str	r4, [sp, #16]
+  45 000a 0594     		str	r4, [sp, #20]
+  46 000c 0694     		str	r4, [sp, #24]
+  47 000e 0794     		str	r4, [sp, #28]
+  44:cube/Src/gpio.c **** 
+  45:cube/Src/gpio.c ****   /* GPIO Ports Clock Enable */
+  46:cube/Src/gpio.c ****   __HAL_RCC_GPIOC_CLK_ENABLE();
+  48              		.loc 1 46 3 is_stmt 1 view .LVU3
+  49              	.LBB2:
+  50              		.loc 1 46 3 view .LVU4
+  51              		.loc 1 46 3 view .LVU5
+  52 0010 174B     		ldr	r3, .L3
+  53 0012 5A69     		ldr	r2, [r3, #20]
+  54 0014 42F40022 		orr	r2, r2, #524288
+  55 0018 5A61     		str	r2, [r3, #20]
+  56              		.loc 1 46 3 view .LVU6
+  57 001a 5A69     		ldr	r2, [r3, #20]
+  58 001c 02F40022 		and	r2, r2, #524288
+  59 0020 0092     		str	r2, [sp]
+  60              		.loc 1 46 3 view .LVU7
+  61 0022 009A     		ldr	r2, [sp]
+  62              	.LBE2:
+  47:cube/Src/gpio.c ****   __HAL_RCC_GPIOF_CLK_ENABLE();
+  63              		.loc 1 47 3 view .LVU8
+  64              	.LBB3:
+  65              		.loc 1 47 3 view .LVU9
+  66              		.loc 1 47 3 view .LVU10
+  67 0024 5A69     		ldr	r2, [r3, #20]
+  68 0026 42F48002 		orr	r2, r2, #4194304
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc0dp9sl.s 			page 3
+
+
+  69 002a 5A61     		str	r2, [r3, #20]
+  70              		.loc 1 47 3 view .LVU11
+  71 002c 5A69     		ldr	r2, [r3, #20]
+  72 002e 02F48002 		and	r2, r2, #4194304
+  73 0032 0192     		str	r2, [sp, #4]
+  74              		.loc 1 47 3 view .LVU12
+  75 0034 019A     		ldr	r2, [sp, #4]
+  76              	.LBE3:
+  48:cube/Src/gpio.c ****   __HAL_RCC_GPIOA_CLK_ENABLE();
+  77              		.loc 1 48 3 view .LVU13
+  78              	.LBB4:
+  79              		.loc 1 48 3 view .LVU14
+  80              		.loc 1 48 3 view .LVU15
+  81 0036 5A69     		ldr	r2, [r3, #20]
+  82 0038 42F40032 		orr	r2, r2, #131072
+  83 003c 5A61     		str	r2, [r3, #20]
+  84              		.loc 1 48 3 view .LVU16
+  85 003e 5B69     		ldr	r3, [r3, #20]
+  86 0040 03F40033 		and	r3, r3, #131072
+  87 0044 0293     		str	r3, [sp, #8]
+  88              		.loc 1 48 3 view .LVU17
+  89 0046 029B     		ldr	r3, [sp, #8]
+  90              	.LBE4:
+  49:cube/Src/gpio.c **** 
+  50:cube/Src/gpio.c ****   /*Configure GPIO pin Output Level */
+  51:cube/Src/gpio.c ****   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14|GPIO_PIN_0|GPIO_PIN_2, GPIO_PIN_RESET);
+  91              		.loc 1 51 3 view .LVU18
+  92 0048 0A4D     		ldr	r5, .L3+4
+  93 004a 2246     		mov	r2, r4
+  94 004c 44F20501 		movw	r1, #16389
+  95 0050 2846     		mov	r0, r5
+  96 0052 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  97              	.LVL0:
+  52:cube/Src/gpio.c **** 
+  53:cube/Src/gpio.c ****   /*Configure GPIO pins : PC14 PC0 PC2 */
+  54:cube/Src/gpio.c ****   GPIO_InitStruct.Pin = GPIO_PIN_14|GPIO_PIN_0|GPIO_PIN_2;
+  98              		.loc 1 54 3 view .LVU19
+  99              		.loc 1 54 23 is_stmt 0 view .LVU20
+ 100 0056 44F20503 		movw	r3, #16389
+ 101 005a 0393     		str	r3, [sp, #12]
+  55:cube/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 102              		.loc 1 55 3 is_stmt 1 view .LVU21
+ 103              		.loc 1 55 24 is_stmt 0 view .LVU22
+ 104 005c 0123     		movs	r3, #1
+ 105 005e 0493     		str	r3, [sp, #16]
+  56:cube/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 106              		.loc 1 56 3 is_stmt 1 view .LVU23
+ 107              		.loc 1 56 24 is_stmt 0 view .LVU24
+ 108 0060 0594     		str	r4, [sp, #20]
+  57:cube/Src/gpio.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 109              		.loc 1 57 3 is_stmt 1 view .LVU25
+ 110              		.loc 1 57 25 is_stmt 0 view .LVU26
+ 111 0062 0694     		str	r4, [sp, #24]
+  58:cube/Src/gpio.c ****   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+ 112              		.loc 1 58 3 is_stmt 1 view .LVU27
+ 113 0064 03A9     		add	r1, sp, #12
+ 114 0066 2846     		mov	r0, r5
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc0dp9sl.s 			page 4
+
+
+ 115 0068 FFF7FEFF 		bl	HAL_GPIO_Init
+ 116              	.LVL1:
+  59:cube/Src/gpio.c **** 
+  60:cube/Src/gpio.c **** }
+ 117              		.loc 1 60 1 is_stmt 0 view .LVU28
+ 118 006c 09B0     		add	sp, sp, #36
+ 119              		.cfi_def_cfa_offset 12
+ 120              		@ sp needed
+ 121 006e 30BD     		pop	{r4, r5, pc}
+ 122              	.L4:
+ 123              		.align	2
+ 124              	.L3:
+ 125 0070 00100240 		.word	1073876992
+ 126 0074 00080048 		.word	1207961600
+ 127              		.cfi_endproc
+ 128              	.LFE126:
+ 130              		.text
+ 131              	.Letext0:
+ 132              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 133              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 134              		.file 4 "cube/Drivers/CMSIS/Include/core_cm4.h"
+ 135              		.file 5 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
+ 136              		.file 6 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xc.h"
+ 137              		.file 7 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\lib\\gcc\\arm-none-eab
+ 138              		.file 8 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 139              		.file 9 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 140              		.file 10 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\includ
+ 141              		.file 11 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_gpio.h"
+ 142              		.file 12 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h"
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc0dp9sl.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 gpio.c
+C:\Users\Berbardo\AppData\Local\Temp\cc0dp9sl.s:18     .text.MX_GPIO_Init:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cc0dp9sl.s:26     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+C:\Users\Berbardo\AppData\Local\Temp\cc0dp9sl.s:125    .text.MX_GPIO_Init:00000070 $d
+                           .group:00000000 wm4.0.a9549919c595c19c35ef13bc9ee4c8af
+                           .group:00000000 wm4.target_vl53l1_1.h.12.5039e74bcd507e129caba66ab5fc05af
+                           .group:00000000 wm4.stm32f3xx_hal_conf.h.37.cb1c9cb802da867d86527a1477311c20
+                           .group:00000000 wm4.stm32f3xx.h.55.fe34e0340b06ab20c90f3cf1d792e0eb
+                           .group:00000000 wm4.stm32f303xc.h.51.75494ed92b93e6861874d99c51c92793
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.d0b7f3cd6ee95f610104014bb3ed522a
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cm4.h.74.09ac1776756364a5a5d23084aa23e459
+                           .group:00000000 wm4.cmsis_gcc.h.36.39970cb43ce4b53c82644a1f9bc2eab9
+                           .group:00000000 wm4.core_cm4.h.223.390ff9b0e06949b13520d8b6746f63e8
+                           .group:00000000 wm4.stm32f303xc.h.710.b77655c64e6ea7efdc9ab6a96701a5ae
+                           .group:00000000 wm4.stm32f3xx.h.191.245d83eb21a6c69e2950c577a7134277
+                           .group:00000000 wm4.newlib.h.8.f6e543eac3f2f65163ba2ffe3b04987b
+                           .group:00000000 wm4.ieeefp.h.77.5499ed899a78229fbaf6d102924f4714
+                           .group:00000000 wm4.config.h.224.c701144a7b0518c6ee9b9b5465b79f81
+                           .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
+                           .group:00000000 wm4.stdio.h.31.7c0e28c411445f3f9c5b11accf882760
+                           .group:00000000 wm4.stddef.h.187.2ff233552538c6ff9b8575ca8ea52cb3
+                           .group:00000000 wm4.cdefs.h.49.6260d97adb8d27534cbdc0f868b8ea87
+                           .group:00000000 wm4.stddef.h.39.ec95e8feac892e292b69dc7ae75b0d64
+                           .group:00000000 wm4.stdarg.h.34.3a23a216c0c293b3d2ea2e89281481e6
+                           .group:00000000 wm4._types.h.20.dd0d04dca3800a0d2a6129b87f3adbb2
+                           .group:00000000 wm4.stddef.h.161.5349cb105733e8777bfb0cf53c4e3f34
+                           .group:00000000 wm4._types.h.127.34941de1b2539d59d5cac00e0dd27a45
+                           .group:00000000 wm4.reent.h.17.e292bf8b0bec6c96e131a54347145a30
+                           .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:00000000 wm4.reent.h.77.dcd6129ff07fe81bd5636db29abe53b2
+                           .group:00000000 wm4.types.h.40.c2dcbbb5c1f4f0e5cb716ebf7776da48
+                           .group:00000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
+                           .group:00000000 wm4.stdio.h.81.2a55589bfa3ee24eeb84e3c79458e4a9
+                           .group:00000000 wm4.stm32f3xx_hal_def.h.76.500c7c9bfcb8d4adebf82d1af27ff044
+                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.60ee232241a99e19acd27637eebe4f1c
+                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.1fba3945551953e78cf69c94a0383651
+                           .group:00000000 wm4.stm32f3xx_hal_gpio.h.38.11db931fcbf37182e25c3927ddf6e8ba
+                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.8d493744f4b7a4f7a0f4f97db0ccbd8e
+                           .group:00000000 wm4.stm32f3xx_hal_dma.h.38.61966c780efd486aa451ae49ca247997
+                           .group:00000000 wm4.stm32f3xx_hal_dma_ex.h.38.195e7d437d9280b9f4e6bae0fa00db04
+                           .group:00000000 wm4.stm32f3xx_hal_dma.h.423.83da80eb3e6ae96f050d0c5e4b55e4b9
+                           .group:00000000 wm4.stm32f3xx_hal_cortex.h.38.c5c1d06be9dad8e7837dbe16f3535233
+                           .group:00000000 wm4.stm32f3xx_hal_flash.h.38.2b4c202390dfbe69a578ce118ab4d799
+                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.36f8341b05728c01a88b7f1003837b1f
+                           .group:00000000 wm4.stm32f3xx_hal_i2c.h.38.e3750f5f029ebf729a7cf07e85cad615
+                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.74099379a9814ae4d6d1c8682fdde7ad
+                           .group:00000000 wm4.stm32f3xx_hal_i2c.h.626.05cba3c85b66bb4631bfd2ebbfab1b06
+                           .group:00000000 wm4.stm32f3xx_hal_pwr.h.38.efb6ce75a5c12d6b2c7c914e7a94ec2b
+                           .group:00000000 wm4.stm32f3xx_hal_pwr_ex.h.38.d228edc56905d96af2d831d3c8e0487a
+                           .group:00000000 wm4.stm32f3xx_hal.h.60.e1acc37932101d84a977b19b7a581169
+
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc0dp9sl.s 			page 6
+
+
+UNDEFINED SYMBOLS
+HAL_GPIO_WritePin
+HAL_GPIO_Init

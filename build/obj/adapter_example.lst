@@ -1,0 +1,851 @@
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"adapter_example.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.distance_sensors_adapter_init,"ax",%progbits
+  18              		.align	1
+  19              		.global	distance_sensors_adapter_init
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	distance_sensors_adapter_init:
+  27              	.LFB126:
+  28              		.file 1 "src/adapter_example.c"
+   1:src/adapter_example.c **** /**
+   2:src/adapter_example.c ****  * @file adapter_example.c
+   3:src/adapter_example.c ****  *
+   4:src/adapter_example.c ****  * @brief Adapter example code for VL53L1 ToF sensors.
+   5:src/adapter_example.c ****  *
+   6:src/adapter_example.c ****  * @author Lucas Schneider <lucas.schneider@thunderatz.org>
+   7:src/adapter_example.c ****  * @author Bernardo Coutinho <bernardo.coutinho@thunderatz.org>
+   8:src/adapter_example.c ****  *
+   9:src/adapter_example.c ****  * @date 11/2019
+  10:src/adapter_example.c ****  */
+  11:src/adapter_example.c **** 
+  12:src/adapter_example.c **** #include <stdbool.h>
+  13:src/adapter_example.c **** #include <stdint.h>
+  14:src/adapter_example.c **** 
+  15:src/adapter_example.c **** #include "adapter_example.h"
+  16:src/adapter_example.c **** 
+  17:src/adapter_example.c **** #include "vl53l1.h"
+  18:src/adapter_example.c **** 
+  19:src/adapter_example.c **** #include "main.h"
+  20:src/adapter_example.c **** #include "i2c.h"
+  21:src/adapter_example.c **** 
+  22:src/adapter_example.c **** /*****************************************
+  23:src/adapter_example.c ****  * Private Constants
+  24:src/adapter_example.c ****  *****************************************/
+  25:src/adapter_example.c **** 
+  26:src/adapter_example.c **** #define VL53L1_DEFAULT_COMM_SPEED_KHZ 100
+  27:src/adapter_example.c **** 
+  28:src/adapter_example.c **** #define INIT_RESET_SLEEP_TIME_MS 10
+  29:src/adapter_example.c **** #define MAX_RANGE 2000
+  30:src/adapter_example.c **** 
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 2
+
+
+  31:src/adapter_example.c **** /*****************************************
+  32:src/adapter_example.c ****  * Private Variables
+  33:src/adapter_example.c ****  *****************************************/
+  34:src/adapter_example.c **** 
+  35:src/adapter_example.c **** static VL53L1_Dev_t sensors[] = {
+  36:src/adapter_example.c ****     { // 0
+  37:src/adapter_example.c ****         .I2cDevAddr = VL53L1_DEFAULT_ADDRESS,
+  38:src/adapter_example.c ****         .comms_type = 1, // I2C
+  39:src/adapter_example.c ****         .comms_speed_khz = VL53L1_DEFAULT_COMM_SPEED_KHZ,
+  40:src/adapter_example.c ****         .present = 0,
+  41:src/adapter_example.c ****         .calibrated = 0,
+  42:src/adapter_example.c ****         .I2cHandle = I2C_HANDLER,
+  43:src/adapter_example.c ****         .xshut_port = FIRST_SENSOR_GPIOx,
+  44:src/adapter_example.c ****         .xshut_pin = FIRST_SENSOR_GPIO_PIN
+  45:src/adapter_example.c ****     },
+  46:src/adapter_example.c ****     { // 1
+  47:src/adapter_example.c ****         .I2cDevAddr = VL53L1_DEFAULT_ADDRESS,
+  48:src/adapter_example.c ****         .comms_type = 1, // I2C
+  49:src/adapter_example.c ****         .comms_speed_khz = VL53L1_DEFAULT_COMM_SPEED_KHZ,
+  50:src/adapter_example.c ****         .present = 0,
+  51:src/adapter_example.c ****         .calibrated = 0,
+  52:src/adapter_example.c ****         .I2cHandle = I2C_HANDLER,
+  53:src/adapter_example.c ****         .xshut_port = SECOND_SENSOR_GPIOx,
+  54:src/adapter_example.c ****         .xshut_pin = SECOND_SENSOR_GPIO_PIN
+  55:src/adapter_example.c ****     },
+  56:src/adapter_example.c ****     { // 2
+  57:src/adapter_example.c ****         .I2cDevAddr = VL53L1_DEFAULT_ADDRESS,
+  58:src/adapter_example.c ****         .comms_type = 1, // I2C
+  59:src/adapter_example.c ****         .comms_speed_khz = VL53L1_DEFAULT_COMM_SPEED_KHZ,
+  60:src/adapter_example.c ****         .present = 0,
+  61:src/adapter_example.c ****         .calibrated = 0,
+  62:src/adapter_example.c ****         .I2cHandle = I2C_HANDLER,
+  63:src/adapter_example.c ****         .xshut_port = THIRD_SENSOR_GPIOx,
+  64:src/adapter_example.c ****         .xshut_pin = THIRD_SENSOR_GPIO_PIN
+  65:src/adapter_example.c ****     }
+  66:src/adapter_example.c **** };
+  67:src/adapter_example.c **** 
+  68:src/adapter_example.c **** static VL53L1_DeviceInfo_t sensors_info[DS_AMOUNT];
+  69:src/adapter_example.c **** static VL53L1_RangingMeasurementData_t sensors_measurement[DS_AMOUNT];
+  70:src/adapter_example.c **** static VL53L1_CalibrationData_t sensors_calibration[DS_AMOUNT];
+  71:src/adapter_example.c **** 
+  72:src/adapter_example.c **** static uint16_t actual_range[] = {MAX_RANGE, MAX_RANGE, MAX_RANGE};
+  73:src/adapter_example.c **** static const uint8_t used_sensors[] = {1, 1, 1};
+  74:src/adapter_example.c **** static const uint8_t i2c_addresses[] = {130, 134, 138};
+  75:src/adapter_example.c **** __attribute__((used)) static uint8_t sensors_status[] = {0, 0, 0};
+  76:src/adapter_example.c **** 
+  77:src/adapter_example.c **** /*****************************************
+  78:src/adapter_example.c ****  * Public Functions Bodies Definitions
+  79:src/adapter_example.c ****  *****************************************/
+  80:src/adapter_example.c **** 
+  81:src/adapter_example.c **** uint8_t distance_sensors_adapter_init(void) {
+  29              		.loc 1 81 45 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
+  34              		.cfi_def_cfa_offset 28
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 3
+
+
+  35              		.cfi_offset 4, -28
+  36              		.cfi_offset 5, -24
+  37              		.cfi_offset 6, -20
+  38              		.cfi_offset 7, -16
+  39              		.cfi_offset 8, -12
+  40              		.cfi_offset 9, -8
+  41              		.cfi_offset 14, -4
+  42 0004 99B0     		sub	sp, sp, #100
+  43              		.cfi_def_cfa_offset 128
+  82:src/adapter_example.c ****     TARGET_I2C_INIT();
+  44              		.loc 1 82 5 view .LVU1
+  45 0006 FFF7FEFF 		bl	MX_I2C2_Init
+  46              	.LVL0:
+  83:src/adapter_example.c **** 
+  84:src/adapter_example.c ****     VL53L1_Error global_status = VL53L1_ERROR_NONE;
+  47              		.loc 1 84 5 view .LVU2
+  85:src/adapter_example.c **** 
+  86:src/adapter_example.c ****     // desabilita todos, independente de quantos vai usar
+  87:src/adapter_example.c ****     for (int i = 0; i < DS_AMOUNT; i++) {
+  48              		.loc 1 87 5 view .LVU3
+  49              	.LBB2:
+  50              		.loc 1 87 10 view .LVU4
+  51              		.loc 1 87 14 is_stmt 0 view .LVU5
+  52 000a 0024     		movs	r4, #0
+  53              	.LVL1:
+  54              	.L2:
+  55              		.loc 1 87 5 discriminator 1 view .LVU6
+  56 000c 022C     		cmp	r4, #2
+  57 000e 08DC     		bgt	.L13
+  88:src/adapter_example.c ****         vl53l1_turn_off(&(sensors[i]));
+  58              		.loc 1 88 9 is_stmt 1 discriminator 3 view .LVU7
+  59 0010 324B     		ldr	r3, .L17
+  60 0012 4FF46C70 		mov	r0, #944
+  61 0016 00FB0430 		mla	r0, r0, r4, r3
+  62 001a FFF7FEFF 		bl	vl53l1_turn_off
+  63              	.LVL2:
+  87:src/adapter_example.c ****         vl53l1_turn_off(&(sensors[i]));
+  64              		.loc 1 87 37 is_stmt 0 discriminator 3 view .LVU8
+  65 001e 0134     		adds	r4, r4, #1
+  66              	.LVL3:
+  87:src/adapter_example.c ****         vl53l1_turn_off(&(sensors[i]));
+  67              		.loc 1 87 37 discriminator 3 view .LVU9
+  68 0020 F4E7     		b	.L2
+  69              	.L13:
+  87:src/adapter_example.c ****         vl53l1_turn_off(&(sensors[i]));
+  70              		.loc 1 87 37 discriminator 3 view .LVU10
+  71              	.LBE2:
+  89:src/adapter_example.c ****     }
+  90:src/adapter_example.c **** 
+  91:src/adapter_example.c ****     HAL_Delay(INIT_RESET_SLEEP_TIME_MS);
+  72              		.loc 1 91 5 is_stmt 1 view .LVU11
+  73 0022 0A20     		movs	r0, #10
+  74 0024 FFF7FEFF 		bl	HAL_Delay
+  75              	.LVL4:
+  92:src/adapter_example.c **** 
+  93:src/adapter_example.c ****     for (int i = 0; i < DS_AMOUNT; i++) {
+  76              		.loc 1 93 5 view .LVU12
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 4
+
+
+  77              	.LBB3:
+  78              		.loc 1 93 10 view .LVU13
+  79              		.loc 1 93 14 is_stmt 0 view .LVU14
+  80 0028 0024     		movs	r4, #0
+  81              	.LVL5:
+  82              		.loc 1 93 14 view .LVU15
+  83              	.LBE3:
+  84:src/adapter_example.c **** 
+  84              		.loc 1 84 18 view .LVU16
+  85 002a 2646     		mov	r6, r4
+  86              	.LBB6:
+  87              		.loc 1 93 5 view .LVU17
+  88 002c 2FE0     		b	.L4
+  89              	.LVL6:
+  90              	.L15:
+  91              	.LBB4:
+  94:src/adapter_example.c ****         if (!used_sensors[i]) {
+  95:src/adapter_example.c ****             continue;
+  96:src/adapter_example.c ****         }
+  97:src/adapter_example.c **** 
+  98:src/adapter_example.c ****         VL53L1_Error status = VL53L1_ERROR_NONE;
+  99:src/adapter_example.c ****         VL53L1_Dev_t* p_device = &(sensors[i]);
+ 100:src/adapter_example.c **** 
+ 101:src/adapter_example.c ****         status = VL53L1_WaitDeviceBooted(p_device);
+ 102:src/adapter_example.c **** 
+ 103:src/adapter_example.c ****         if (status == VL53L1_ERROR_NONE) {
+ 104:src/adapter_example.c ****             status = VL53L1_SetDeviceAddress(p_device, i2c_addresses[i]);
+  92              		.loc 1 104 13 is_stmt 1 view .LVU18
+  93              		.loc 1 104 22 is_stmt 0 view .LVU19
+  94 002e 2C4B     		ldr	r3, .L17+4
+  95 0030 195D     		ldrb	r1, [r3, r4]	@ zero_extendqisi2
+  96 0032 2846     		mov	r0, r5
+  97              	.LVL7:
+  98              		.loc 1 104 22 view .LVU20
+  99 0034 FFF7FEFF 		bl	VL53L1_SetDeviceAddress
+ 100              	.LVL8:
+ 101 0038 0346     		mov	r3, r0
+ 102              	.LVL9:
+ 103              		.loc 1 104 22 view .LVU21
+ 104 003a 39E0     		b	.L6
+ 105              	.L16:
+ 105:src/adapter_example.c ****         }
+ 106:src/adapter_example.c **** 
+ 107:src/adapter_example.c ****         if (status == VL53L1_ERROR_NONE) {
+ 108:src/adapter_example.c ****             p_device->I2cDevAddr = i2c_addresses[i];
+ 106              		.loc 1 108 13 is_stmt 1 view .LVU22
+ 107              		.loc 1 108 49 is_stmt 0 view .LVU23
+ 108 003c 284B     		ldr	r3, .L17+4
+ 109              	.LVL10:
+ 110              		.loc 1 108 49 view .LVU24
+ 111 003e 1A5D     		ldrb	r2, [r3, r4]	@ zero_extendqisi2
+ 112              		.loc 1 108 34 view .LVU25
+ 113 0040 2649     		ldr	r1, .L17
+ 114 0042 4FF46C73 		mov	r3, #944
+ 115 0046 03FB0413 		mla	r3, r3, r4, r1
+ 116 004a 83F89823 		strb	r2, [r3, #920]
+ 109:src/adapter_example.c ****             status = vl53l1_init(p_device, sensors_info[i], &sensors_calibration[i]);
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 5
+
+
+ 117              		.loc 1 109 13 is_stmt 1 view .LVU26
+ 118              		.loc 1 109 22 is_stmt 0 view .LVU27
+ 119 004e 04EB4401 		add	r1, r4, r4, lsl #1
+ 120 0052 01EB4113 		add	r3, r1, r1, lsl #5
+ 121 0056 2349     		ldr	r1, .L17+8
+ 122 0058 1944     		add	r1, r1, r3
+ 123 005a 234A     		ldr	r2, .L17+12
+ 124 005c 6823     		movs	r3, #104
+ 125 005e 03FB0423 		mla	r3, r3, r4, r2
+ 126 0062 1693     		str	r3, [sp, #88]
+ 127 0064 D1F80090 		ldr	r9, [r1]	@ unaligned
+ 128 0068 D1F80480 		ldr	r8, [r1, #4]	@ unaligned
+ 129 006c 8F68     		ldr	r7, [r1, #8]	@ unaligned
+ 130 006e 5722     		movs	r2, #87
+ 131 0070 0C31     		adds	r1, r1, #12
+ 132 0072 6846     		mov	r0, sp
+ 133 0074 FFF7FEFF 		bl	memcpy
+ 134              	.LVL11:
+ 135 0078 4946     		mov	r1, r9
+ 136 007a 4246     		mov	r2, r8
+ 137 007c 3B46     		mov	r3, r7
+ 138 007e 2846     		mov	r0, r5
+ 139 0080 FFF7FEFF 		bl	vl53l1_init
+ 140              	.LVL12:
+ 141 0084 0346     		mov	r3, r0
+ 142              	.LVL13:
+ 143              		.loc 1 109 22 view .LVU28
+ 144 0086 15E0     		b	.L7
+ 145              	.L8:
+ 110:src/adapter_example.c ****         }
+ 111:src/adapter_example.c **** 
+ 112:src/adapter_example.c ****         if (status == VL53L1_ERROR_NONE) {
+ 113:src/adapter_example.c ****             p_device->present = 1;
+ 114:src/adapter_example.c ****             p_device->calibrated = 1;
+ 115:src/adapter_example.c ****         }
+ 116:src/adapter_example.c **** 
+ 117:src/adapter_example.c ****         global_status |= status;
+ 146              		.loc 1 117 9 is_stmt 1 view .LVU29
+ 147              		.loc 1 117 23 is_stmt 0 view .LVU30
+ 148 0088 3343     		orrs	r3, r3, r6
+ 149              	.LVL14:
+ 150              		.loc 1 117 23 view .LVU31
+ 151 008a 5EB2     		sxtb	r6, r3
+ 152              	.LVL15:
+ 153              	.L5:
+ 154              		.loc 1 117 23 view .LVU32
+ 155              	.LBE4:
+  93:src/adapter_example.c ****         if (!used_sensors[i]) {
+ 156              		.loc 1 93 37 discriminator 2 view .LVU33
+ 157 008c 0134     		adds	r4, r4, #1
+ 158              	.LVL16:
+ 159              	.L4:
+  93:src/adapter_example.c ****         if (!used_sensors[i]) {
+ 160              		.loc 1 93 5 discriminator 1 view .LVU34
+ 161 008e 022C     		cmp	r4, #2
+ 162 0090 1DDC     		bgt	.L14
+ 163              	.LBB5:
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 6
+
+
+  94:src/adapter_example.c ****             continue;
+ 164              		.loc 1 94 9 is_stmt 1 view .LVU35
+  94:src/adapter_example.c ****             continue;
+ 165              		.loc 1 94 26 is_stmt 0 view .LVU36
+ 166 0092 164B     		ldr	r3, .L17+16
+ 167 0094 1B5D     		ldrb	r3, [r3, r4]	@ zero_extendqisi2
+  94:src/adapter_example.c ****             continue;
+ 168              		.loc 1 94 12 view .LVU37
+ 169 0096 002B     		cmp	r3, #0
+ 170 0098 F8D0     		beq	.L5
+  98:src/adapter_example.c ****         VL53L1_Dev_t* p_device = &(sensors[i]);
+ 171              		.loc 1 98 9 is_stmt 1 view .LVU38
+ 172              	.LVL17:
+  99:src/adapter_example.c **** 
+ 173              		.loc 1 99 9 view .LVU39
+  99:src/adapter_example.c **** 
+ 174              		.loc 1 99 23 is_stmt 0 view .LVU40
+ 175 009a 104B     		ldr	r3, .L17
+ 176 009c 4FF46C75 		mov	r5, #944
+ 177 00a0 05FB0435 		mla	r5, r5, r4, r3
+ 178              	.LVL18:
+ 101:src/adapter_example.c **** 
+ 179              		.loc 1 101 9 is_stmt 1 view .LVU41
+ 101:src/adapter_example.c **** 
+ 180              		.loc 1 101 18 is_stmt 0 view .LVU42
+ 181 00a4 2846     		mov	r0, r5
+ 182 00a6 FFF7FEFF 		bl	VL53L1_WaitDeviceBooted
+ 183              	.LVL19:
+ 103:src/adapter_example.c ****             status = VL53L1_SetDeviceAddress(p_device, i2c_addresses[i]);
+ 184              		.loc 1 103 9 is_stmt 1 view .LVU43
+ 103:src/adapter_example.c ****             status = VL53L1_SetDeviceAddress(p_device, i2c_addresses[i]);
+ 185              		.loc 1 103 12 is_stmt 0 view .LVU44
+ 186 00aa 0346     		mov	r3, r0
+ 187 00ac 0028     		cmp	r0, #0
+ 188 00ae BED0     		beq	.L15
+ 189              	.LVL20:
+ 190              	.L6:
+ 107:src/adapter_example.c ****             p_device->I2cDevAddr = i2c_addresses[i];
+ 191              		.loc 1 107 9 is_stmt 1 view .LVU45
+ 107:src/adapter_example.c ****             p_device->I2cDevAddr = i2c_addresses[i];
+ 192              		.loc 1 107 12 is_stmt 0 view .LVU46
+ 193 00b0 002B     		cmp	r3, #0
+ 194 00b2 C3D0     		beq	.L16
+ 195              	.L7:
+ 112:src/adapter_example.c ****             p_device->present = 1;
+ 196              		.loc 1 112 9 is_stmt 1 view .LVU47
+ 112:src/adapter_example.c ****             p_device->present = 1;
+ 197              		.loc 1 112 12 is_stmt 0 view .LVU48
+ 198 00b4 002B     		cmp	r3, #0
+ 199 00b6 E7D1     		bne	.L8
+ 113:src/adapter_example.c ****             p_device->calibrated = 1;
+ 200              		.loc 1 113 13 is_stmt 1 view .LVU49
+ 113:src/adapter_example.c ****             p_device->calibrated = 1;
+ 201              		.loc 1 113 31 is_stmt 0 view .LVU50
+ 202 00b8 0849     		ldr	r1, .L17
+ 203 00ba 4FF46C72 		mov	r2, #944
+ 204 00be 02FB0412 		mla	r2, r2, r4, r1
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 7
+
+
+ 205 00c2 0121     		movs	r1, #1
+ 206 00c4 82F89C13 		strb	r1, [r2, #924]
+ 114:src/adapter_example.c ****         }
+ 207              		.loc 1 114 13 is_stmt 1 view .LVU51
+ 114:src/adapter_example.c ****         }
+ 208              		.loc 1 114 34 is_stmt 0 view .LVU52
+ 209 00c8 82F89D13 		strb	r1, [r2, #925]
+ 210 00cc DCE7     		b	.L8
+ 211              	.LVL21:
+ 212              	.L14:
+ 114:src/adapter_example.c ****         }
+ 213              		.loc 1 114 34 view .LVU53
+ 214              	.LBE5:
+ 215              	.LBE6:
+ 118:src/adapter_example.c ****     }
+ 119:src/adapter_example.c **** 
+ 120:src/adapter_example.c ****     if (global_status == VL53L1_ERROR_NONE) {
+ 216              		.loc 1 120 5 is_stmt 1 view .LVU54
+ 217              		.loc 1 120 8 is_stmt 0 view .LVU55
+ 218 00ce 1EB1     		cbz	r6, .L11
+ 121:src/adapter_example.c ****         return 0;
+ 122:src/adapter_example.c ****     }
+ 123:src/adapter_example.c **** 
+ 124:src/adapter_example.c ****     return 1;
+ 219              		.loc 1 124 12 view .LVU56
+ 220 00d0 0120     		movs	r0, #1
+ 221              	.L10:
+ 125:src/adapter_example.c **** }
+ 222              		.loc 1 125 1 view .LVU57
+ 223 00d2 19B0     		add	sp, sp, #100
+ 224              		.cfi_remember_state
+ 225              		.cfi_def_cfa_offset 28
+ 226              		@ sp needed
+ 227 00d4 BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ 228              	.LVL22:
+ 229              	.L11:
+ 230              		.cfi_restore_state
+ 121:src/adapter_example.c ****         return 0;
+ 231              		.loc 1 121 16 view .LVU58
+ 232 00d8 0020     		movs	r0, #0
+ 233 00da FAE7     		b	.L10
+ 234              	.L18:
+ 235              		.align	2
+ 236              	.L17:
+ 237 00dc 00000000 		.word	.LANCHOR0
+ 238 00e0 00000000 		.word	.LANCHOR2
+ 239 00e4 00000000 		.word	.LANCHOR3
+ 240 00e8 00000000 		.word	.LANCHOR4
+ 241 00ec 00000000 		.word	.LANCHOR1
+ 242              		.cfi_endproc
+ 243              	.LFE126:
+ 245              		.section	.text.distance_sensors_adapter_update,"ax",%progbits
+ 246              		.align	1
+ 247              		.global	distance_sensors_adapter_update
+ 248              		.syntax unified
+ 249              		.thumb
+ 250              		.thumb_func
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 8
+
+
+ 251              		.fpu fpv4-sp-d16
+ 253              	distance_sensors_adapter_update:
+ 254              	.LFB127:
+ 126:src/adapter_example.c **** 
+ 127:src/adapter_example.c **** uint8_t distance_sensors_adapter_update(void) {
+ 255              		.loc 1 127 47 is_stmt 1 view -0
+ 256              		.cfi_startproc
+ 257              		@ args = 0, pretend = 0, frame = 0
+ 258              		@ frame_needed = 0, uses_anonymous_args = 0
+ 259 0000 70B5     		push	{r4, r5, r6, lr}
+ 260              		.cfi_def_cfa_offset 16
+ 261              		.cfi_offset 4, -16
+ 262              		.cfi_offset 5, -12
+ 263              		.cfi_offset 6, -8
+ 264              		.cfi_offset 14, -4
+ 128:src/adapter_example.c ****     uint8_t status = 0;
+ 265              		.loc 1 128 5 view .LVU60
+ 266              	.LVL23:
+ 129:src/adapter_example.c **** 
+ 130:src/adapter_example.c ****     for (int i = 0; i < DS_AMOUNT; i++) {
+ 267              		.loc 1 130 5 view .LVU61
+ 268              	.LBB7:
+ 269              		.loc 1 130 10 view .LVU62
+ 270              		.loc 1 130 14 is_stmt 0 view .LVU63
+ 271 0002 0024     		movs	r4, #0
+ 272              	.LBE7:
+ 128:src/adapter_example.c ****     uint8_t status = 0;
+ 273              		.loc 1 128 13 view .LVU64
+ 274 0004 2546     		mov	r5, r4
+ 275              	.LBB8:
+ 276              		.loc 1 130 5 view .LVU65
+ 277 0006 00E0     		b	.L20
+ 278              	.LVL24:
+ 279              	.L21:
+ 280              		.loc 1 130 37 discriminator 2 view .LVU66
+ 281 0008 0134     		adds	r4, r4, #1
+ 282              	.LVL25:
+ 283              	.L20:
+ 284              		.loc 1 130 5 discriminator 1 view .LVU67
+ 285 000a 022C     		cmp	r4, #2
+ 286 000c 1EDC     		bgt	.L24
+ 131:src/adapter_example.c ****         if (!used_sensors[i]) {
+ 287              		.loc 1 131 9 is_stmt 1 view .LVU68
+ 288              		.loc 1 131 26 is_stmt 0 view .LVU69
+ 289 000e 104B     		ldr	r3, .L25
+ 290 0010 1B5D     		ldrb	r3, [r3, r4]	@ zero_extendqisi2
+ 291              		.loc 1 131 12 view .LVU70
+ 292 0012 002B     		cmp	r3, #0
+ 293 0014 F8D0     		beq	.L21
+ 132:src/adapter_example.c ****             continue;
+ 133:src/adapter_example.c ****         }
+ 134:src/adapter_example.c **** 
+ 135:src/adapter_example.c ****         sensors_status[i] =
+ 294              		.loc 1 135 9 is_stmt 1 view .LVU71
+ 136:src/adapter_example.c ****             vl53l1_update_range(&(sensors[i]), &(sensors_measurement[i]), &(actual_range[i]), MAX_R
+ 295              		.loc 1 136 13 is_stmt 0 view .LVU72
+ 296 0016 C4EBC403 		rsb	r3, r4, r4, lsl #3
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 9
+
+
+ 297 001a 9900     		lsls	r1, r3, #2
+ 298 001c 4FF4FA63 		mov	r3, #2000
+ 299 0020 0C4A     		ldr	r2, .L25+4
+ 300 0022 02EB4402 		add	r2, r2, r4, lsl #1
+ 301 0026 0C48     		ldr	r0, .L25+8
+ 302 0028 0144     		add	r1, r1, r0
+ 303 002a 0C48     		ldr	r0, .L25+12
+ 304 002c 4FF46C76 		mov	r6, #944
+ 305 0030 06FB0400 		mla	r0, r6, r4, r0
+ 306 0034 FFF7FEFF 		bl	vl53l1_update_range
+ 307              	.LVL26:
+ 135:src/adapter_example.c ****             vl53l1_update_range(&(sensors[i]), &(sensors_measurement[i]), &(actual_range[i]), MAX_R
+ 308              		.loc 1 135 27 view .LVU73
+ 309 0038 094B     		ldr	r3, .L25+16
+ 310 003a 1855     		strb	r0, [r3, r4]
+ 137:src/adapter_example.c **** 
+ 138:src/adapter_example.c ****         if (sensors_status[i] != 0) {
+ 311              		.loc 1 138 9 is_stmt 1 view .LVU74
+ 312              		.loc 1 138 12 is_stmt 0 view .LVU75
+ 313 003c 0028     		cmp	r0, #0
+ 314 003e E3D0     		beq	.L21
+ 139:src/adapter_example.c ****             status |= 1 << (i + 1);
+ 315              		.loc 1 139 13 is_stmt 1 view .LVU76
+ 316              		.loc 1 139 31 is_stmt 0 view .LVU77
+ 317 0040 631C     		adds	r3, r4, #1
+ 318              		.loc 1 139 25 view .LVU78
+ 319 0042 0120     		movs	r0, #1
+ 320 0044 9840     		lsls	r0, r0, r3
+ 321              		.loc 1 139 20 view .LVU79
+ 322 0046 2843     		orrs	r0, r0, r5
+ 323 0048 C5B2     		uxtb	r5, r0
+ 324              	.LVL27:
+ 325              		.loc 1 139 20 view .LVU80
+ 326 004a DDE7     		b	.L21
+ 327              	.L24:
+ 328              		.loc 1 139 20 view .LVU81
+ 329              	.LBE8:
+ 140:src/adapter_example.c ****         }
+ 141:src/adapter_example.c ****     }
+ 142:src/adapter_example.c **** 
+ 143:src/adapter_example.c ****     return status;
+ 330              		.loc 1 143 5 is_stmt 1 view .LVU82
+ 144:src/adapter_example.c **** }
+ 331              		.loc 1 144 1 is_stmt 0 view .LVU83
+ 332 004c 2846     		mov	r0, r5
+ 333 004e 70BD     		pop	{r4, r5, r6, pc}
+ 334              	.LVL28:
+ 335              	.L26:
+ 336              		.loc 1 144 1 view .LVU84
+ 337              		.align	2
+ 338              	.L25:
+ 339 0050 00000000 		.word	.LANCHOR1
+ 340 0054 00000000 		.word	.LANCHOR5
+ 341 0058 00000000 		.word	.LANCHOR6
+ 342 005c 00000000 		.word	.LANCHOR0
+ 343 0060 00000000 		.word	.LANCHOR7
+ 344              		.cfi_endproc
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 10
+
+
+ 345              	.LFE127:
+ 347              		.section	.text.distance_sensors_adapter_get,"ax",%progbits
+ 348              		.align	1
+ 349              		.global	distance_sensors_adapter_get
+ 350              		.syntax unified
+ 351              		.thumb
+ 352              		.thumb_func
+ 353              		.fpu fpv4-sp-d16
+ 355              	distance_sensors_adapter_get:
+ 356              	.LVL29:
+ 357              	.LFB128:
+ 145:src/adapter_example.c **** 
+ 146:src/adapter_example.c **** uint16_t distance_sensors_adapter_get(distance_sensor_position_t sensor) {
+ 358              		.loc 1 146 74 is_stmt 1 view -0
+ 359              		.cfi_startproc
+ 360              		@ args = 0, pretend = 0, frame = 0
+ 361              		@ frame_needed = 0, uses_anonymous_args = 0
+ 362              		@ link register save eliminated.
+ 147:src/adapter_example.c ****     if ((sensors[(int) sensor]).present) {
+ 363              		.loc 1 147 5 view .LVU86
+ 364              		.loc 1 147 32 is_stmt 0 view .LVU87
+ 365 0000 074A     		ldr	r2, .L31
+ 366 0002 4FF46C73 		mov	r3, #944
+ 367 0006 03FB0023 		mla	r3, r3, r0, r2
+ 368 000a 93F89C33 		ldrb	r3, [r3, #924]	@ zero_extendqisi2
+ 369              		.loc 1 147 8 view .LVU88
+ 370 000e 13B9     		cbnz	r3, .L30
+ 148:src/adapter_example.c ****         return actual_range[(int) sensor];
+ 149:src/adapter_example.c ****     }
+ 150:src/adapter_example.c **** 
+ 151:src/adapter_example.c ****     return -1;
+ 371              		.loc 1 151 12 view .LVU89
+ 372 0010 4FF6FF70 		movw	r0, #65535
+ 373              	.LVL30:
+ 152:src/adapter_example.c **** }...
+ 374              		.loc 1 152 1 view .LVU90
+ 375 0014 7047     		bx	lr
+ 376              	.LVL31:
+ 377              	.L30:
+ 148:src/adapter_example.c ****         return actual_range[(int) sensor];
+ 378              		.loc 1 148 9 is_stmt 1 view .LVU91
+ 148:src/adapter_example.c ****         return actual_range[(int) sensor];
+ 379              		.loc 1 148 28 is_stmt 0 view .LVU92
+ 380 0016 034B     		ldr	r3, .L31+4
+ 381 0018 33F81000 		ldrh	r0, [r3, r0, lsl #1]
+ 382              	.LVL32:
+ 148:src/adapter_example.c ****         return actual_range[(int) sensor];
+ 383              		.loc 1 148 28 view .LVU93
+ 384 001c 7047     		bx	lr
+ 385              	.L32:
+ 386 001e 00BF     		.align	2
+ 387              	.L31:
+ 388 0020 00000000 		.word	.LANCHOR0
+ 389 0024 00000000 		.word	.LANCHOR5
+ 390              		.cfi_endproc
+ 391              	.LFE128:
+ 393              		.section	.bss.sensors_calibration,"aw",%nobits
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 11
+
+
+ 394              		.align	2
+ 395              		.set	.LANCHOR4,. + 0
+ 398              	sensors_calibration:
+ 399 0000 00000000 		.space	312
+ 399      00000000 
+ 399      00000000 
+ 399      00000000 
+ 399      00000000 
+ 400              		.section	.bss.sensors_measurement,"aw",%nobits
+ 401              		.align	2
+ 402              		.set	.LANCHOR6,. + 0
+ 405              	sensors_measurement:
+ 406 0000 00000000 		.space	84
+ 406      00000000 
+ 406      00000000 
+ 406      00000000 
+ 406      00000000 
+ 407              		.section	.bss.sensors_status,"aw",%nobits
+ 408              		.align	2
+ 409              		.set	.LANCHOR7,. + 0
+ 412              	sensors_status:
+ 413 0000 000000   		.space	3
+ 414              		.section	.data.actual_range,"aw"
+ 415              		.align	2
+ 416              		.set	.LANCHOR5,. + 0
+ 419              	actual_range:
+ 420 0000 D007     		.short	2000
+ 421 0002 D007     		.short	2000
+ 422 0004 D007     		.short	2000
+ 423              		.section	.data.sensors,"aw"
+ 424              		.align	2
+ 425              		.set	.LANCHOR0,. + 0
+ 428              	sensors:
+ 429 0000 00000000 		.space	920
+ 429      00000000 
+ 429      00000000 
+ 429      00000000 
+ 429      00000000 
+ 430 0398 98       		.byte	-104
+ 431 0399 01       		.byte	1
+ 432 039a 6400     		.short	100
+ 433 039c 00       		.byte	0
+ 434 039d 00       		.byte	0
+ 435 039e 00000000 		.space	6
+ 435      0000
+ 436 03a4 00000000 		.word	hi2c2
+ 437 03a8 00080048 		.word	1207961600
+ 438 03ac 0040     		.short	16384
+ 439 03ae 0000     		.space	2
+ 440 03b0 00000000 		.space	920
+ 440      00000000 
+ 440      00000000 
+ 440      00000000 
+ 440      00000000 
+ 441 0748 98       		.byte	-104
+ 442 0749 01       		.byte	1
+ 443 074a 6400     		.short	100
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 12
+
+
+ 444 074c 00       		.byte	0
+ 445 074d 00       		.byte	0
+ 446 074e 00000000 		.space	6
+ 446      0000
+ 447 0754 00000000 		.word	hi2c2
+ 448 0758 00080048 		.word	1207961600
+ 449 075c 0100     		.short	1
+ 450 075e 0000     		.space	2
+ 451 0760 00000000 		.space	920
+ 451      00000000 
+ 451      00000000 
+ 451      00000000 
+ 451      00000000 
+ 452 0af8 98       		.byte	-104
+ 453 0af9 01       		.byte	1
+ 454 0afa 6400     		.short	100
+ 455 0afc 00       		.byte	0
+ 456 0afd 00       		.byte	0
+ 457 0afe 00000000 		.space	6
+ 457      0000
+ 458 0b04 00000000 		.word	hi2c2
+ 459 0b08 00080048 		.word	1207961600
+ 460 0b0c 0400     		.short	4
+ 461 0b0e 0000     		.space	2
+ 462              		.section	.rodata.i2c_addresses,"a"
+ 463              		.align	2
+ 464              		.set	.LANCHOR2,. + 0
+ 467              	i2c_addresses:
+ 468 0000 82       		.byte	-126
+ 469 0001 86       		.byte	-122
+ 470 0002 8A       		.byte	-118
+ 471              		.section	.rodata.sensors_info,"a"
+ 472              		.align	2
+ 473              		.set	.LANCHOR3,. + 0
+ 476              	sensors_info:
+ 477 0000 00000000 		.space	297
+ 477      00000000 
+ 477      00000000 
+ 477      00000000 
+ 477      00000000 
+ 478              		.section	.rodata.used_sensors,"a"
+ 479              		.align	2
+ 480              		.set	.LANCHOR1,. + 0
+ 483              	used_sensors:
+ 484 0000 01       		.byte	1
+ 485 0001 01       		.byte	1
+ 486 0002 01       		.byte	1
+ 487              		.text
+ 488              	.Letext0:
+ 489              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 490              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 491              		.file 4 "inc/adapter_example.h"
+ 492              		.file 5 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\lib\\gcc\\arm-none-eab
+ 493              		.file 6 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 494              		.file 7 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 495              		.file 8 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 496              		.file 9 "D:/Git/VL53L1/lib/platform/inc/vl53l1_types.h"
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 13
+
+
+ 497              		.file 10 "D:/Git/VL53L1/lib/core/inc/vl53l1_ll_device.h"
+ 498              		.file 11 "D:/Git/VL53L1/lib/core/inc/vl53l1_error_codes.h"
+ 499              		.file 12 "D:/Git/VL53L1/lib/core/inc/vl53l1_register_structs.h"
+ 500              		.file 13 "D:/Git/VL53L1/lib/core/inc/vl53l1_ll_def.h"
+ 501              		.file 14 "D:/Git/VL53L1/lib/core/inc/vl53l1_def.h"
+ 502              		.file 15 "cube/Drivers/CMSIS/Include/core_cm4.h"
+ 503              		.file 16 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
+ 504              		.file 17 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xc.h"
+ 505              		.file 18 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h"
+ 506              		.file 19 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_dma.h"
+ 507              		.file 20 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_i2c.h"
+ 508              		.file 21 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h"
+ 509              		.file 22 "D:/Git/VL53L1/lib/platform/inc/vl53l1_platform_user_data.h"
+ 510              		.file 23 "cube/Inc/i2c.h"
+ 511              		.file 24 "D:/Git/VL53L1/lib/inc/vl53l1.h"
+ 512              		.file 25 "D:/Git/VL53L1/lib/core/inc/vl53l1_api.h"
+ 513              		.file 26 "<built-in>"
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 14
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 adapter_example.c
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:18     .text.distance_sensors_adapter_init:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:26     .text.distance_sensors_adapter_init:00000000 distance_sensors_adapter_init
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:237    .text.distance_sensors_adapter_init:000000dc $d
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:246    .text.distance_sensors_adapter_update:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:253    .text.distance_sensors_adapter_update:00000000 distance_sensors_adapter_update
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:339    .text.distance_sensors_adapter_update:00000050 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:348    .text.distance_sensors_adapter_get:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:355    .text.distance_sensors_adapter_get:00000000 distance_sensors_adapter_get
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:388    .text.distance_sensors_adapter_get:00000020 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:394    .bss.sensors_calibration:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:398    .bss.sensors_calibration:00000000 sensors_calibration
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:401    .bss.sensors_measurement:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:405    .bss.sensors_measurement:00000000 sensors_measurement
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:408    .bss.sensors_status:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:412    .bss.sensors_status:00000000 sensors_status
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:415    .data.actual_range:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:419    .data.actual_range:00000000 actual_range
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:424    .data.sensors:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:428    .data.sensors:00000000 sensors
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:463    .rodata.i2c_addresses:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:467    .rodata.i2c_addresses:00000000 i2c_addresses
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:472    .rodata.sensors_info:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:476    .rodata.sensors_info:00000000 sensors_info
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:479    .rodata.used_sensors:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:483    .rodata.used_sensors:00000000 used_sensors
+                           .group:00000000 wm4.0.a9549919c595c19c35ef13bc9ee4c8af
+                           .group:00000000 wm4.target_vl53l1_1.h.12.5039e74bcd507e129caba66ab5fc05af
+                           .group:00000000 wm4.stdbool.h.29.07dce69c3b78884144b7f7bd19483461
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.d0b7f3cd6ee95f610104014bb3ed522a
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.stddef.h.39.a38874c8f8a57e66301090908ec2a69f
+                           .group:00000000 wm4.newlib.h.8.f6e543eac3f2f65163ba2ffe3b04987b
+                           .group:00000000 wm4.ieeefp.h.77.5499ed899a78229fbaf6d102924f4714
+                           .group:00000000 wm4.config.h.224.c701144a7b0518c6ee9b9b5465b79f81
+                           .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
+                           .group:00000000 wm4._types.h.20.dd0d04dca3800a0d2a6129b87f3adbb2
+                           .group:00000000 wm4.stddef.h.161.5349cb105733e8777bfb0cf53c4e3f34
+                           .group:00000000 wm4._types.h.127.34941de1b2539d59d5cac00e0dd27a45
+                           .group:00000000 wm4.reent.h.17.e292bf8b0bec6c96e131a54347145a30
+                           .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:00000000 wm4.reent.h.77.dcd6129ff07fe81bd5636db29abe53b2
+                           .group:00000000 wm4.cdefs.h.49.6260d97adb8d27534cbdc0f868b8ea87
+                           .group:00000000 wm4.string.h.15.dab3980bf35408a4c507182805e2de3a
+                           .group:00000000 wm4.stddef.h.161.19e15733342b50ead2919490b095303e
+                           .group:00000000 wm4.stdio.h.27.3fc80220048df77954e38daec3bb9670
+                           .group:00000000 wm4.stdarg.h.34.3a23a216c0c293b3d2ea2e89281481e6
+                           .group:00000000 wm4.types.h.40.c2dcbbb5c1f4f0e5cb716ebf7776da48
+                           .group:00000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
+                           .group:00000000 wm4.stdio.h.81.2a55589bfa3ee24eeb84e3c79458e4a9
+                           .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:00000000 wm4.stdlib.h.56.b4ddaf162082f284ba35b4444af99a9a
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 15
+
+
+                           .group:00000000 wm4.vl53l1_platform_user_config.h.71.4bbd3f655147d64657bb9c77e14249c2
+                           .group:00000000 wm4.vl53l1_ll_device.h.76.61a5c622dad24a36ae0651848b8ac7cb
+                           .group:00000000 wm4.vl53l1_error_codes.h.71.b6e90121c4542ed0428e2f06155d8266
+                           .group:00000000 wm4.vl53l1_register_map.h.69.ec259f417eacfeb4a1fe3b1107810d95
+                           .group:00000000 wm4.vl53l1_register_structs.h.74.11a89e7b4ec79fa5f24a8809948e429f
+                           .group:00000000 wm4.vl53l1_platform_user_defines.h.65.ba5bf58a2b92eb98a59c4d4834576b4d
+                           .group:00000000 wm4.vl53l1_error_exceptions.h.70.5b53c89ff28584d05d224dd03776b32e
+                           .group:00000000 wm4.vl53l1_ll_def.h.91.518239c514b35c896619678d2b7b75c9
+                           .group:00000000 wm4.vl53l1_def.h.87.ea1a10eae4f02dade0991856ca744364
+                           .group:00000000 wm4.vl53l1_api_strings.h.151.55114e539843189df2f7fc9296ddbb29
+                           .group:00000000 wm4.vl53l1_platform_log.h.71.79ea17a42b4255ee5461fb53cd7aea3c
+                           .group:00000000 wm4.stm32f3xx_hal_conf.h.37.cb1c9cb802da867d86527a1477311c20
+                           .group:00000000 wm4.stm32f3xx.h.55.fe34e0340b06ab20c90f3cf1d792e0eb
+                           .group:00000000 wm4.stm32f303xc.h.51.75494ed92b93e6861874d99c51c92793
+                           .group:00000000 wm4.core_cm4.h.42.42f38327ee0970d80f60117e6a3ba2b0
+                           .group:00000000 wm4.cmsis_gcc.h.36.39970cb43ce4b53c82644a1f9bc2eab9
+                           .group:00000000 wm4.core_cm4.h.223.390ff9b0e06949b13520d8b6746f63e8
+                           .group:00000000 wm4.stm32f303xc.h.710.b77655c64e6ea7efdc9ab6a96701a5ae
+                           .group:00000000 wm4.stm32f3xx.h.191.245d83eb21a6c69e2950c577a7134277
+                           .group:00000000 wm4.stm32f3xx_hal_def.h.76.500c7c9bfcb8d4adebf82d1af27ff044
+                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.60ee232241a99e19acd27637eebe4f1c
+                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.1fba3945551953e78cf69c94a0383651
+                           .group:00000000 wm4.stm32f3xx_hal_gpio.h.38.11db931fcbf37182e25c3927ddf6e8ba
+                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.8d493744f4b7a4f7a0f4f97db0ccbd8e
+                           .group:00000000 wm4.stm32f3xx_hal_dma.h.38.61966c780efd486aa451ae49ca247997
+                           .group:00000000 wm4.stm32f3xx_hal_dma_ex.h.38.195e7d437d9280b9f4e6bae0fa00db04
+                           .group:00000000 wm4.stm32f3xx_hal_dma.h.423.83da80eb3e6ae96f050d0c5e4b55e4b9
+                           .group:00000000 wm4.stm32f3xx_hal_cortex.h.38.c5c1d06be9dad8e7837dbe16f3535233
+                           .group:00000000 wm4.stm32f3xx_hal_flash.h.38.2b4c202390dfbe69a578ce118ab4d799
+                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.36f8341b05728c01a88b7f1003837b1f
+                           .group:00000000 wm4.stm32f3xx_hal_i2c.h.38.e3750f5f029ebf729a7cf07e85cad615
+                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.74099379a9814ae4d6d1c8682fdde7ad
+                           .group:00000000 wm4.stm32f3xx_hal_i2c.h.626.05cba3c85b66bb4631bfd2ebbfab1b06
+                           .group:00000000 wm4.stm32f3xx_hal_pwr.h.38.efb6ce75a5c12d6b2c7c914e7a94ec2b
+                           .group:00000000 wm4.stm32f3xx_hal_pwr_ex.h.38.d228edc56905d96af2d831d3c8e0487a
+                           .group:00000000 wm4.stm32f3xx_hal.h.60.e1acc37932101d84a977b19b7a581169
+                           .group:00000000 wm4.vl53l1_platform_user_data.h.94.31d6fd49a37f98d182bed50c298f83ae
+
+UNDEFINED SYMBOLS
+MX_I2C2_Init
+vl53l1_turn_off
+HAL_Delay
+VL53L1_SetDeviceAddress
+memcpy
+vl53l1_init
+VL53L1_WaitDeviceBooted
+vl53l1_update_range
+hi2c2

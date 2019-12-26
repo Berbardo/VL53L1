@@ -1,0 +1,450 @@
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvBuQ4L.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"vl53l1_error_strings.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.VL53L1_get_pal_error_string,"ax",%progbits
+  18              		.align	1
+  19              		.global	VL53L1_get_pal_error_string
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	VL53L1_get_pal_error_string:
+  27              	.LVL0:
+  28              	.LFB3:
+  29              		.file 1 "D:/Git/VL53L1/lib/core/src/vl53l1_error_strings.c"
+   1:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** /*
+   2:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * Copyright (c) 2017, STMicroelectronics - All Rights Reserved
+   3:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** *
+   4:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * This file is part of VL53L1 Core and is dual licensed,
+   5:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * either 'STMicroelectronics
+   6:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * Proprietary license'
+   7:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * or 'BSD 3-clause "New" or "Revised" License' , at your option.
+   8:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** *
+   9:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** ********************************************************************************
+  10:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** *
+  11:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * 'STMicroelectronics Proprietary license'
+  12:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** *
+  13:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** ********************************************************************************
+  14:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** *
+  15:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * License terms: STMicroelectronics Proprietary in accordance with licensing
+  16:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * terms at www.st.com/sla0081
+  17:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** *
+  18:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * STMicroelectronics confidential
+  19:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * Reproduction and Communication of this document is strictly prohibited unless
+  20:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * specifically authorized in writing by STMicroelectronics.
+  21:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** *
+  22:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** *
+  23:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** ********************************************************************************
+  24:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** *
+  25:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * Alternatively, VL53L1 Core may be distributed under the terms of
+  26:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * 'BSD 3-clause "New" or "Revised" License', in which case the following
+  27:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * provisions apply instead of the ones mentioned above :
+  28:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** *
+  29:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** ********************************************************************************
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvBuQ4L.s 			page 2
+
+
+  30:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** *
+  31:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * License terms: BSD 3-clause "New" or "Revised" License.
+  32:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** *
+  33:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * Redistribution and use in source and binary forms, with or without
+  34:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * modification, are permitted provided that the following conditions are met:
+  35:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** *
+  36:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * 1. Redistributions of source code must retain the above copyright notice, this
+  37:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * list of conditions and the following disclaimer.
+  38:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** *
+  39:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * 2. Redistributions in binary form must reproduce the above copyright notice,
+  40:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * this list of conditions and the following disclaimer in the documentation
+  41:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * and/or other materials provided with the distribution.
+  42:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** *
+  43:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * 3. Neither the name of the copyright holder nor the names of its contributors
+  44:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * may be used to endorse or promote products derived from this software
+  45:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * without specific prior written permission.
+  46:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** *
+  47:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  48:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  49:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  50:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  51:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  52:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  53:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  54:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  55:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  56:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  57:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** *
+  58:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** *
+  59:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** ********************************************************************************
+  60:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** *
+  61:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** */
+  62:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+  63:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** /**
+  64:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c ****  * @file   vl53l1_error_strings.c
+  65:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c ****  * @brief  VL53L1 API functions for decoding error codes to a text string
+  66:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c ****  */
+  67:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+  68:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** #include "vl53l1_error_codes.h"
+  69:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** #include "vl53l1_error_strings.h"
+  70:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** #include "vl53l1_platform_log.h"
+  71:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** #include "vl53l1_ll_def.h"
+  72:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+  73:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** #define LOG_FUNCTION_START(fmt, ...) \
+  74:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	_LOG_FUNCTION_START(VL53L1_TRACE_MODULE_API, fmt, ##__VA_ARGS__)
+  75:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** #define LOG_FUNCTION_END(status, ...) \
+  76:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	_LOG_FUNCTION_END(VL53L1_TRACE_MODULE_API, status, ##__VA_ARGS__)
+  77:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** #define LOG_FUNCTION_END_FMT(status, fmt, ...) \
+  78:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	_LOG_FUNCTION_END_FMT(VL53L1_TRACE_MODULE_API, \
+  79:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		status, fmt, ##__VA_ARGS__)
+  80:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+  81:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+  82:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** #ifndef VL53L1_DEBUG
+  83:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	#define VL53L1_USE_EMPTY_STRING
+  84:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** #endif
+  85:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+  86:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** VL53L1_Error VL53L1_get_pal_error_string(
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvBuQ4L.s 			page 3
+
+
+  87:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	VL53L1_Error   PalErrorCode,
+  88:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	char          *pPalErrorString)
+  89:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** {
+  30              		.loc 1 89 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		.loc 1 89 1 is_stmt 0 view .LVU1
+  35 0000 08B5     		push	{r3, lr}
+  36              		.cfi_def_cfa_offset 8
+  37              		.cfi_offset 3, -8
+  38              		.cfi_offset 14, -4
+  39 0002 0846     		mov	r0, r1
+  40              	.LVL1:
+  90:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	VL53L1_Error Status = VL53L1_ERROR_NONE;
+  41              		.loc 1 90 2 is_stmt 1 view .LVU2
+  91:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+  92:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** #ifdef VL53L1_USE_EMPTY_STRING
+  93:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	SUPPRESS_UNUSED_WARNING(PalErrorCode);
+  42              		.loc 1 93 2 view .LVU3
+  94:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** #endif
+  95:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+  96:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	LOG_FUNCTION_START("");
+  43              		.loc 1 96 24 view .LVU4
+  97:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+  98:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** #ifdef VL53L1_USE_EMPTY_STRING
+  99:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	VL53L1_COPYSTRING(pPalErrorString, "");
+  44              		.loc 1 99 2 view .LVU5
+  45 0004 40F2FF12 		movw	r2, #511
+  46 0008 0249     		ldr	r1, .L3
+  47              	.LVL2:
+  48              		.loc 1 99 2 is_stmt 0 view .LVU6
+  49 000a FFF7FEFF 		bl	strncpy
+  50              	.LVL3:
+ 100:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** #else
+ 101:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+ 102:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	switch (PalErrorCode) {
+ 103:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_NONE:
+ 104:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 105:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_NONE);
+ 106:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 107:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_CALIBRATION_WARNING:
+ 108:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 109:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_CALIBRATION_WARNING);
+ 110:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 111:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_MIN_CLIPPED:
+ 112:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 113:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_MIN_CLIPPED);
+ 114:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 115:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_UNDEFINED:
+ 116:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 117:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_UNDEFINED);
+ 118:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 119:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_INVALID_PARAMS:
+ 120:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 121:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_INVALID_PARAMS);
+ 122:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvBuQ4L.s 			page 4
+
+
+ 123:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_NOT_SUPPORTED:
+ 124:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 125:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_NOT_SUPPORTED);
+ 126:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 127:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_RANGE_ERROR:
+ 128:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 129:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_RANGE_ERROR);
+ 130:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 131:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_TIME_OUT:
+ 132:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 133:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_TIME_OUT);
+ 134:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 135:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_MODE_NOT_SUPPORTED:
+ 136:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 137:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_MODE_NOT_SUPPORTED);
+ 138:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 139:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_BUFFER_TOO_SMALL:
+ 140:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 141:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_BUFFER_TOO_SMALL);
+ 142:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 143:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_COMMS_BUFFER_TOO_SMALL:
+ 144:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 145:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_COMMS_BUFFER_TOO_SMALL);
+ 146:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 147:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_GPIO_NOT_EXISTING:
+ 148:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 149:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_GPIO_NOT_EXISTING);
+ 150:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 151:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_GPIO_FUNCTIONALITY_NOT_SUPPORTED:
+ 152:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 153:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_GPIO_FUNCTIONALITY_NOT_SUPPORTED);
+ 154:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 155:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_CONTROL_INTERFACE:
+ 156:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 157:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_CONTROL_INTERFACE);
+ 158:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 159:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_INVALID_COMMAND:
+ 160:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 161:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_INVALID_COMMAND);
+ 162:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 163:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_DIVISION_BY_ZERO:
+ 164:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 165:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_DIVISION_BY_ZERO);
+ 166:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 167:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_REF_SPAD_INIT:
+ 168:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 169:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_REF_SPAD_INIT);
+ 170:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 171:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_GPH_SYNC_CHECK_FAIL:
+ 172:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 173:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_GPH_SYNC_CHECK_FAIL);
+ 174:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 175:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_STREAM_COUNT_CHECK_FAIL:
+ 176:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 177:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_STREAM_COUNT_CHECK_FAIL);
+ 178:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 179:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_GPH_ID_CHECK_FAIL:
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvBuQ4L.s 			page 5
+
+
+ 180:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 181:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_GPH_ID_CHECK_FAIL);
+ 182:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 183:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_ZONE_STREAM_COUNT_CHECK_FAIL:
+ 184:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 185:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_ZONE_STREAM_COUNT_CHECK_FAIL);
+ 186:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 187:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_ZONE_GPH_ID_CHECK_FAIL:
+ 188:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 189:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_ZONE_GPH_ID_CHECK_FAIL);
+ 190:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 191:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+ 192:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_XTALK_EXTRACTION_NO_SAMPLE_FAIL:
+ 193:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 194:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_XTALK_EXTRACTION_NO_SAMPLES_FAIL);
+ 195:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 196:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_XTALK_EXTRACTION_SIGMA_LIMIT_FAIL:
+ 197:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 198:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_XTALK_EXTRACTION_SIGMA_LIMIT_FAIL);
+ 199:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 200:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+ 201:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_OFFSET_CAL_NO_SAMPLE_FAIL:
+ 202:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 203:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_OFFSET_CAL_NO_SAMPLE_FAIL);
+ 204:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 205:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_OFFSET_CAL_NO_SPADS_ENABLED_FAIL:
+ 206:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 207:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_OFFSET_CAL_NO_SPADS_ENABLED_FAIL);
+ 208:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 209:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_ZONE_CAL_NO_SAMPLE_FAIL:
+ 210:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 211:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_ZONE_CAL_NO_SAMPLE_FAIL);
+ 212:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 213:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+ 214:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_WARNING_OFFSET_CAL_MISSING_SAMPLES:
+ 215:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 216:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_WARNING_OFFSET_CAL_MISSING_SAMPLES);
+ 217:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 218:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_WARNING_OFFSET_CAL_SIGMA_TOO_HIGH:
+ 219:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 220:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_WARNING_OFFSET_CAL_SIGMA_TOO_HIGH);
+ 221:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 222:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_WARNING_OFFSET_CAL_RATE_TOO_HIGH:
+ 223:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 224:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_WARNING_OFFSET_CAL_RATE_TOO_HIGH);
+ 225:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 226:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_WARNING_OFFSET_CAL_SPAD_COUNT_TOO_LOW:
+ 227:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 228:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_WARNING_OFFSET_CAL_SPAD_COUNT_TOO_LOW);
+ 229:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 230:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+ 231:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_WARNING_ZONE_CAL_MISSING_SAMPLES:
+ 232:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 233:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_WARNING_ZONE_CAL_MISSING_SAMPLES);
+ 234:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 235:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_WARNING_ZONE_CAL_SIGMA_TOO_HIGH:
+ 236:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvBuQ4L.s 			page 6
+
+
+ 237:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_WARNING_ZONE_CAL_SIGMA_TOO_HIGH);
+ 238:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 239:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_WARNING_ZONE_CAL_RATE_TOO_HIGH:
+ 240:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 241:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_WARNING_ZONE_CAL_RATE_TOO_HIGH);
+ 242:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 243:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+ 244:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_WARNING_REF_SPAD_CHAR_NOT_ENOUGH_SPADS:
+ 245:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 246:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_WARNING_REF_SPAD_CHAR_NOT_ENOUGH_SPADS);
+ 247:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 248:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_WARNING_REF_SPAD_CHAR_RATE_TOO_HIGH:
+ 249:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 250:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_WARNING_REF_SPAD_CHAR_RATE_TOO_HIGH);
+ 251:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 252:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_WARNING_REF_SPAD_CHAR_RATE_TOO_LOW:
+ 253:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 254:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_WARNING_REF_SPAD_CHAR_RATE_TOO_LOW);
+ 255:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 256:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+ 257:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_WARNING_XTALK_MISSING_SAMPLES:
+ 258:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_COPYSTRING(pPalErrorString,
+ 259:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 				VL53L1_STRING_WARNING_XTALK_MISSING_SAMPLES);
+ 260:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			break;
+ 261:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_WARNING_XTALK_NO_SAMPLES_FOR_GRADIENT:
+ 262:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_COPYSTRING(pPalErrorString,
+ 263:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 				VL53L1_STRING_WARNING_XTALK_NO_SAMPLES_FOR_GRADIENT);
+ 264:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			break;
+ 265:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_WARNING_XTALK_SIGMA_LIMIT_FOR_GRADIENT:
+ 266:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_COPYSTRING(pPalErrorString,
+ 267:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 				VL53L1_STRING_WARNING_XTALK_SIGMA_LIMIT_FOR_GRADIENT);
+ 268:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			break;
+ 269:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+ 270:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_DEVICE_FIRMWARE_TOO_OLD:
+ 271:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 272:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_DEVICE_FIRMWARE_TOO_OLD);
+ 273:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 274:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_DEVICE_FIRMWARE_TOO_NEW:
+ 275:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 276:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_DEVICE_FIRMWARE_TOO_NEW);
+ 277:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 278:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_UNIT_TEST_FAIL:
+ 279:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 280:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_UNIT_TEST_FAIL);
+ 281:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 282:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_FILE_READ_FAIL:
+ 283:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 284:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_FILE_READ_FAIL);
+ 285:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 286:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_FILE_WRITE_FAIL:
+ 287:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 288:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_FILE_WRITE_FAIL);
+ 289:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ 290:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	case VL53L1_ERROR_NOT_IMPLEMENTED:
+ 291:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 292:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 			VL53L1_STRING_ERROR_NOT_IMPLEMENTED);
+ 293:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		break;
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvBuQ4L.s 			page 7
+
+
+ 294:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	default:
+ 295:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 		VL53L1_COPYSTRING(pPalErrorString,
+ 296:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 				VL53L1_STRING_UNKNOW_ERROR_CODE);
+ 297:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	}
+ 298:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+ 299:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** #endif
+ 300:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+ 301:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	LOG_FUNCTION_END(Status);
+  51              		.loc 1 301 26 is_stmt 1 view .LVU7
+ 302:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 
+ 303:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** 	return Status;
+  52              		.loc 1 303 2 view .LVU8
+ 304:D:/Git/VL53L1/lib/core/src\vl53l1_error_strings.c **** }
+  53              		.loc 1 304 1 is_stmt 0 view .LVU9
+  54 000e 0020     		movs	r0, #0
+  55 0010 08BD     		pop	{r3, pc}
+  56              	.L4:
+  57 0012 00BF     		.align	2
+  58              	.L3:
+  59 0014 00000000 		.word	.LC0
+  60              		.cfi_endproc
+  61              	.LFE3:
+  63              		.section	.rodata.VL53L1_get_pal_error_string.str1.4,"aMS",%progbits,1
+  64              		.align	2
+  65              	.LC0:
+  66 0000 00       		.ascii	"\000"
+  67              		.text
+  68              	.Letext0:
+  69              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+  70              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+  71              		.file 4 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\lib\\gcc\\arm-none-eab
+  72              		.file 5 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+  73              		.file 6 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+  74              		.file 7 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+  75              		.file 8 "D:/Git/VL53L1/lib/core/inc/vl53l1_error_codes.h"
+  76              		.file 9 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvBuQ4L.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 vl53l1_error_strings.c
+C:\Users\Berbardo\AppData\Local\Temp\ccvBuQ4L.s:18     .text.VL53L1_get_pal_error_string:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccvBuQ4L.s:26     .text.VL53L1_get_pal_error_string:00000000 VL53L1_get_pal_error_string
+C:\Users\Berbardo\AppData\Local\Temp\ccvBuQ4L.s:59     .text.VL53L1_get_pal_error_string:00000014 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccvBuQ4L.s:64     .rodata.VL53L1_get_pal_error_string.str1.4:00000000 $d
+                           .group:00000000 wm4.0.a9549919c595c19c35ef13bc9ee4c8af
+                           .group:00000000 wm4.target_vl53l1_1.h.12.5039e74bcd507e129caba66ab5fc05af
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.d0b7f3cd6ee95f610104014bb3ed522a
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.stddef.h.39.a38874c8f8a57e66301090908ec2a69f
+                           .group:00000000 wm4.newlib.h.8.f6e543eac3f2f65163ba2ffe3b04987b
+                           .group:00000000 wm4.ieeefp.h.77.5499ed899a78229fbaf6d102924f4714
+                           .group:00000000 wm4.config.h.224.c701144a7b0518c6ee9b9b5465b79f81
+                           .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
+                           .group:00000000 wm4._types.h.20.dd0d04dca3800a0d2a6129b87f3adbb2
+                           .group:00000000 wm4.stddef.h.161.5349cb105733e8777bfb0cf53c4e3f34
+                           .group:00000000 wm4._types.h.127.34941de1b2539d59d5cac00e0dd27a45
+                           .group:00000000 wm4.reent.h.17.e292bf8b0bec6c96e131a54347145a30
+                           .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:00000000 wm4.reent.h.77.dcd6129ff07fe81bd5636db29abe53b2
+                           .group:00000000 wm4.cdefs.h.49.6260d97adb8d27534cbdc0f868b8ea87
+                           .group:00000000 wm4.string.h.15.dab3980bf35408a4c507182805e2de3a
+                           .group:00000000 wm4.stddef.h.161.19e15733342b50ead2919490b095303e
+                           .group:00000000 wm4.stdio.h.27.3fc80220048df77954e38daec3bb9670
+                           .group:00000000 wm4.stdarg.h.34.3a23a216c0c293b3d2ea2e89281481e6
+                           .group:00000000 wm4.types.h.40.c2dcbbb5c1f4f0e5cb716ebf7776da48
+                           .group:00000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
+                           .group:00000000 wm4.stdio.h.81.2a55589bfa3ee24eeb84e3c79458e4a9
+                           .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:00000000 wm4.stdlib.h.56.b4ddaf162082f284ba35b4444af99a9a
+                           .group:00000000 wm4.vl53l1_error_codes.h.91.ebd28e2f00ac46b3821c523e6e8dca28
+                           .group:00000000 wm4.vl53l1_error_strings.h.98.5cebdacce0cee7582dbaa853fb4fb351
+                           .group:00000000 wm4.vl53l1_platform_log.h.71.79ea17a42b4255ee5461fb53cd7aea3c
+                           .group:00000000 wm4.vl53l1_platform_user_config.h.71.4bbd3f655147d64657bb9c77e14249c2
+                           .group:00000000 wm4.vl53l1_ll_device.h.76.61a5c622dad24a36ae0651848b8ac7cb
+                           .group:00000000 wm4.vl53l1_register_map.h.69.ec259f417eacfeb4a1fe3b1107810d95
+                           .group:00000000 wm4.vl53l1_register_structs.h.74.11a89e7b4ec79fa5f24a8809948e429f
+                           .group:00000000 wm4.vl53l1_platform_user_defines.h.65.ba5bf58a2b92eb98a59c4d4834576b4d
+                           .group:00000000 wm4.vl53l1_error_exceptions.h.70.5b53c89ff28584d05d224dd03776b32e
+                           .group:00000000 wm4.vl53l1_ll_def.h.91.518239c514b35c896619678d2b7b75c9
+
+UNDEFINED SYMBOLS
+strncpy

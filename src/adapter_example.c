@@ -39,7 +39,7 @@ static VL53L1_Dev_t sensors[] = {
         .comms_speed_khz = VL53L1_DEFAULT_COMM_SPEED_KHZ,
         .present = 0,
         .calibrated = 0,
-        .I2cHandle = I2C_HANDLER,
+        .I2cHandle = I2C_HANDLE,
         .xshut_port = FIRST_SENSOR_GPIOx,
         .xshut_pin = FIRST_SENSOR_GPIO_PIN
     },
@@ -49,7 +49,7 @@ static VL53L1_Dev_t sensors[] = {
         .comms_speed_khz = VL53L1_DEFAULT_COMM_SPEED_KHZ,
         .present = 0,
         .calibrated = 0,
-        .I2cHandle = I2C_HANDLER,
+        .I2cHandle = I2C_HANDLE,
         .xshut_port = SECOND_SENSOR_GPIOx,
         .xshut_pin = SECOND_SENSOR_GPIO_PIN
     },
@@ -59,7 +59,7 @@ static VL53L1_Dev_t sensors[] = {
         .comms_speed_khz = VL53L1_DEFAULT_COMM_SPEED_KHZ,
         .present = 0,
         .calibrated = 0,
-        .I2cHandle = I2C_HANDLER,
+        .I2cHandle = I2C_HANDLE,
         .xshut_port = THIRD_SENSOR_GPIOx,
         .xshut_pin = THIRD_SENSOR_GPIO_PIN
     }

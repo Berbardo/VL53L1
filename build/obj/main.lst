@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccANuCDg.s 			page 1
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc4sB6b3.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccANuCDg.s 			page 1
   20:src/main.c    ****     distance_sensors_adapter_init();
   37              		.loc 1 20 5 view .LVU1
   38 0002 FFF7FEFF 		bl	distance_sensors_adapter_init
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccANuCDg.s 			page 2
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc4sB6b3.s 			page 2
 
 
   39              	.LVL0:
@@ -107,15 +107,15 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccANuCDg.s 			page 1
   74              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
   75              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
   76              		.file 4 "inc/adapter_example.h"
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccANuCDg.s 			page 3
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc4sB6b3.s 			page 3
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\Berbardo\AppData\Local\Temp\ccANuCDg.s:18     .text.main:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccANuCDg.s:26     .text.main:00000000 main
-                           .group:00000000 wm4.0.a9549919c595c19c35ef13bc9ee4c8af
-                           .group:00000000 wm4.target_vl53l1_1.h.12.5039e74bcd507e129caba66ab5fc05af
+C:\Users\Berbardo\AppData\Local\Temp\cc4sB6b3.s:18     .text.main:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cc4sB6b3.s:26     .text.main:00000000 main
+                           .group:00000000 wm4.0.cbadcd7125b439f63d13d43ae17ce4cb
+                           .group:00000000 wm4.target_vl53l1_1.h.12.551c1b90918b951c5224feb9b75565bd
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.d0b7f3cd6ee95f610104014bb3ed522a
                            .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935

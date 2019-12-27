@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 1
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 1
   28:src/adapter_example.c **** #define INIT_RESET_SLEEP_TIME_MS 10
   29:src/adapter_example.c **** #define MAX_RANGE 2000
   30:src/adapter_example.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 2
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s 			page 2
 
 
   31:src/adapter_example.c **** /*****************************************
@@ -72,7 +72,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 1
   39:src/adapter_example.c ****         .comms_speed_khz = VL53L1_DEFAULT_COMM_SPEED_KHZ,
   40:src/adapter_example.c ****         .present = 0,
   41:src/adapter_example.c ****         .calibrated = 0,
-  42:src/adapter_example.c ****         .I2cHandle = I2C_HANDLER,
+  42:src/adapter_example.c ****         .I2cHandle = I2C_HANDLE,
   43:src/adapter_example.c ****         .xshut_port = FIRST_SENSOR_GPIOx,
   44:src/adapter_example.c ****         .xshut_pin = FIRST_SENSOR_GPIO_PIN
   45:src/adapter_example.c ****     },
@@ -82,7 +82,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 1
   49:src/adapter_example.c ****         .comms_speed_khz = VL53L1_DEFAULT_COMM_SPEED_KHZ,
   50:src/adapter_example.c ****         .present = 0,
   51:src/adapter_example.c ****         .calibrated = 0,
-  52:src/adapter_example.c ****         .I2cHandle = I2C_HANDLER,
+  52:src/adapter_example.c ****         .I2cHandle = I2C_HANDLE,
   53:src/adapter_example.c ****         .xshut_port = SECOND_SENSOR_GPIOx,
   54:src/adapter_example.c ****         .xshut_pin = SECOND_SENSOR_GPIO_PIN
   55:src/adapter_example.c ****     },
@@ -92,7 +92,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 1
   59:src/adapter_example.c ****         .comms_speed_khz = VL53L1_DEFAULT_COMM_SPEED_KHZ,
   60:src/adapter_example.c ****         .present = 0,
   61:src/adapter_example.c ****         .calibrated = 0,
-  62:src/adapter_example.c ****         .I2cHandle = I2C_HANDLER,
+  62:src/adapter_example.c ****         .I2cHandle = I2C_HANDLE,
   63:src/adapter_example.c ****         .xshut_port = THIRD_SENSOR_GPIOx,
   64:src/adapter_example.c ****         .xshut_pin = THIRD_SENSOR_GPIO_PIN
   65:src/adapter_example.c ****     }
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 1
   32              		@ frame_needed = 0, uses_anonymous_args = 0
   33 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
   34              		.cfi_def_cfa_offset 28
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 3
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s 			page 3
 
 
   35              		.cfi_offset 4, -28
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 1
   92:src/adapter_example.c **** 
   93:src/adapter_example.c ****     for (int i = 0; i < DS_AMOUNT; i++) {
   76              		.loc 1 93 5 view .LVU12
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 4
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s 			page 4
 
 
   77              	.LBB3:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 1
  115 0046 03FB0413 		mla	r3, r3, r4, r1
  116 004a 83F89823 		strb	r2, [r3, #920]
  109:src/adapter_example.c ****             status = vl53l1_init(p_device, sensors_info[i], &sensors_calibration[i]);
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 5
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s 			page 5
 
 
  117              		.loc 1 109 13 is_stmt 1 view .LVU26
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 1
  161 008e 022C     		cmp	r4, #2
  162 0090 1DDC     		bgt	.L14
  163              	.LBB5:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 6
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s 			page 6
 
 
   94:src/adapter_example.c ****             continue;
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 1
  202 00b8 0849     		ldr	r1, .L17
  203 00ba 4FF46C72 		mov	r2, #944
  204 00be 02FB0412 		mla	r2, r2, r4, r1
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 7
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s 			page 7
 
 
  205 00c2 0121     		movs	r1, #1
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 1
  248              		.syntax unified
  249              		.thumb
  250              		.thumb_func
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 8
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s 			page 8
 
 
  251              		.fpu fpv4-sp-d16
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 1
  136:src/adapter_example.c ****             vl53l1_update_range(&(sensors[i]), &(sensors_measurement[i]), &(actual_range[i]), MAX_R
  295              		.loc 1 136 13 is_stmt 0 view .LVU72
  296 0016 C4EBC403 		rsb	r3, r4, r4, lsl #3
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 9
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s 			page 9
 
 
  297 001a 9900     		lsls	r1, r3, #2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 1
  342 005c 00000000 		.word	.LANCHOR0
  343 0060 00000000 		.word	.LANCHOR7
  344              		.cfi_endproc
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 10
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s 			page 10
 
 
  345              	.LFE127:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 1
  390              		.cfi_endproc
  391              	.LFE128:
  393              		.section	.bss.sensors_calibration,"aw",%nobits
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 11
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s 			page 11
 
 
  394              		.align	2
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 1
  441 0748 98       		.byte	-104
  442 0749 01       		.byte	1
  443 074a 6400     		.short	100
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 12
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s 			page 12
 
 
  444 074c 00       		.byte	0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 1
  494              		.file 7 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
  495              		.file 8 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
  496              		.file 9 "D:/Git/VL53L1/lib/platform/inc/vl53l1_types.h"
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 13
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s 			page 13
 
 
  497              		.file 10 "D:/Git/VL53L1/lib/core/inc/vl53l1_ll_device.h"
@@ -728,7 +728,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 1
  501              		.file 14 "D:/Git/VL53L1/lib/core/inc/vl53l1_def.h"
  502              		.file 15 "cube/Drivers/CMSIS/Include/core_cm4.h"
  503              		.file 16 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
- 504              		.file 17 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xc.h"
+ 504              		.file 17 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xe.h"
  505              		.file 18 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h"
  506              		.file 19 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_dma.h"
  507              		.file 20 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_i2c.h"
@@ -738,38 +738,38 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 1
  511              		.file 24 "D:/Git/VL53L1/lib/inc/vl53l1.h"
  512              		.file 25 "D:/Git/VL53L1/lib/core/inc/vl53l1_api.h"
  513              		.file 26 "<built-in>"
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 14
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 adapter_example.c
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:18     .text.distance_sensors_adapter_init:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:26     .text.distance_sensors_adapter_init:00000000 distance_sensors_adapter_init
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:237    .text.distance_sensors_adapter_init:000000dc $d
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:246    .text.distance_sensors_adapter_update:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:253    .text.distance_sensors_adapter_update:00000000 distance_sensors_adapter_update
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:339    .text.distance_sensors_adapter_update:00000050 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:348    .text.distance_sensors_adapter_get:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:355    .text.distance_sensors_adapter_get:00000000 distance_sensors_adapter_get
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:388    .text.distance_sensors_adapter_get:00000020 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:394    .bss.sensors_calibration:00000000 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:398    .bss.sensors_calibration:00000000 sensors_calibration
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:401    .bss.sensors_measurement:00000000 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:405    .bss.sensors_measurement:00000000 sensors_measurement
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:408    .bss.sensors_status:00000000 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:412    .bss.sensors_status:00000000 sensors_status
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:415    .data.actual_range:00000000 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:419    .data.actual_range:00000000 actual_range
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:424    .data.sensors:00000000 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:428    .data.sensors:00000000 sensors
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:463    .rodata.i2c_addresses:00000000 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:467    .rodata.i2c_addresses:00000000 i2c_addresses
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:472    .rodata.sensors_info:00000000 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:476    .rodata.sensors_info:00000000 sensors_info
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:479    .rodata.used_sensors:00000000 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:483    .rodata.used_sensors:00000000 used_sensors
-                           .group:00000000 wm4.0.a9549919c595c19c35ef13bc9ee4c8af
-                           .group:00000000 wm4.target_vl53l1_1.h.12.5039e74bcd507e129caba66ab5fc05af
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:18     .text.distance_sensors_adapter_init:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:26     .text.distance_sensors_adapter_init:00000000 distance_sensors_adapter_init
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:237    .text.distance_sensors_adapter_init:000000dc $d
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:246    .text.distance_sensors_adapter_update:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:253    .text.distance_sensors_adapter_update:00000000 distance_sensors_adapter_update
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:339    .text.distance_sensors_adapter_update:00000050 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:348    .text.distance_sensors_adapter_get:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:355    .text.distance_sensors_adapter_get:00000000 distance_sensors_adapter_get
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:388    .text.distance_sensors_adapter_get:00000020 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:394    .bss.sensors_calibration:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:398    .bss.sensors_calibration:00000000 sensors_calibration
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:401    .bss.sensors_measurement:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:405    .bss.sensors_measurement:00000000 sensors_measurement
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:408    .bss.sensors_status:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:412    .bss.sensors_status:00000000 sensors_status
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:415    .data.actual_range:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:419    .data.actual_range:00000000 actual_range
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:424    .data.sensors:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:428    .data.sensors:00000000 sensors
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:463    .rodata.i2c_addresses:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:467    .rodata.i2c_addresses:00000000 i2c_addresses
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:472    .rodata.sensors_info:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:476    .rodata.sensors_info:00000000 sensors_info
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:479    .rodata.used_sensors:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s:483    .rodata.used_sensors:00000000 used_sensors
+                           .group:00000000 wm4.0.cbadcd7125b439f63d13d43ae17ce4cb
+                           .group:00000000 wm4.target_vl53l1_1.h.12.551c1b90918b951c5224feb9b75565bd
                            .group:00000000 wm4.stdbool.h.29.07dce69c3b78884144b7f7bd19483461
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.d0b7f3cd6ee95f610104014bb3ed522a
@@ -798,7 +798,7 @@ C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:483    .rodata.used_sensors:0000
                            .group:00000000 wm4.stdio.h.81.2a55589bfa3ee24eeb84e3c79458e4a9
                            .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
                            .group:00000000 wm4.stdlib.h.56.b4ddaf162082f284ba35b4444af99a9a
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s 			page 15
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccsNE4F3.s 			page 15
 
 
                            .group:00000000 wm4.vl53l1_platform_user_config.h.71.4bbd3f655147d64657bb9c77e14249c2
@@ -814,29 +814,29 @@ C:\Users\Berbardo\AppData\Local\Temp\ccy77zsd.s:483    .rodata.used_sensors:0000
                            .group:00000000 wm4.vl53l1_platform_log.h.71.79ea17a42b4255ee5461fb53cd7aea3c
                            .group:00000000 wm4.stm32f3xx_hal_conf.h.37.cb1c9cb802da867d86527a1477311c20
                            .group:00000000 wm4.stm32f3xx.h.55.fe34e0340b06ab20c90f3cf1d792e0eb
-                           .group:00000000 wm4.stm32f303xc.h.51.75494ed92b93e6861874d99c51c92793
+                           .group:00000000 wm4.stm32f303xe.h.51.65501469ddbb8a3dac94b2f9d61c4e79
                            .group:00000000 wm4.core_cm4.h.42.42f38327ee0970d80f60117e6a3ba2b0
                            .group:00000000 wm4.cmsis_gcc.h.36.39970cb43ce4b53c82644a1f9bc2eab9
                            .group:00000000 wm4.core_cm4.h.223.390ff9b0e06949b13520d8b6746f63e8
-                           .group:00000000 wm4.stm32f303xc.h.710.b77655c64e6ea7efdc9ab6a96701a5ae
+                           .group:00000000 wm4.stm32f303xe.h.787.6957ba193b5d3b55f4f9c444bc42cb63
                            .group:00000000 wm4.stm32f3xx.h.191.245d83eb21a6c69e2950c577a7134277
                            .group:00000000 wm4.stm32f3xx_hal_def.h.76.500c7c9bfcb8d4adebf82d1af27ff044
-                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.60ee232241a99e19acd27637eebe4f1c
-                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.1fba3945551953e78cf69c94a0383651
+                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.06cc24fd94394ddd03725d84823331b1
+                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.96615d6f3e5897bb79454968f7fc6c86
                            .group:00000000 wm4.stm32f3xx_hal_gpio.h.38.11db931fcbf37182e25c3927ddf6e8ba
-                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.8d493744f4b7a4f7a0f4f97db0ccbd8e
+                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.46a6c05d651e2a032ac66cebe63916b8
                            .group:00000000 wm4.stm32f3xx_hal_dma.h.38.61966c780efd486aa451ae49ca247997
                            .group:00000000 wm4.stm32f3xx_hal_dma_ex.h.38.195e7d437d9280b9f4e6bae0fa00db04
                            .group:00000000 wm4.stm32f3xx_hal_dma.h.423.83da80eb3e6ae96f050d0c5e4b55e4b9
                            .group:00000000 wm4.stm32f3xx_hal_cortex.h.38.c5c1d06be9dad8e7837dbe16f3535233
                            .group:00000000 wm4.stm32f3xx_hal_flash.h.38.2b4c202390dfbe69a578ce118ab4d799
-                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.36f8341b05728c01a88b7f1003837b1f
+                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.65931ad4b848f69ba672eb38b2753615
                            .group:00000000 wm4.stm32f3xx_hal_i2c.h.38.e3750f5f029ebf729a7cf07e85cad615
-                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.74099379a9814ae4d6d1c8682fdde7ad
+                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.bdd47c8bc2d21749d9fd72e6b8484890
                            .group:00000000 wm4.stm32f3xx_hal_i2c.h.626.05cba3c85b66bb4631bfd2ebbfab1b06
                            .group:00000000 wm4.stm32f3xx_hal_pwr.h.38.efb6ce75a5c12d6b2c7c914e7a94ec2b
                            .group:00000000 wm4.stm32f3xx_hal_pwr_ex.h.38.d228edc56905d96af2d831d3c8e0487a
-                           .group:00000000 wm4.stm32f3xx_hal.h.60.e1acc37932101d84a977b19b7a581169
+                           .group:00000000 wm4.stm32f3xx_hal.h.60.11e72be277d7cf245b56360bacde3327
                            .group:00000000 wm4.vl53l1_platform_user_data.h.94.31d6fd49a37f98d182bed50c298f83ae
 
 UNDEFINED SYMBOLS

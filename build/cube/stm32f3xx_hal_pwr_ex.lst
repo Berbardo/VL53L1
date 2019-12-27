@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 1
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 1
   27:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c ****   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
   28:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c ****   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
   29:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c ****   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 2
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s 			page 2
 
 
   30:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c ****   * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 1
   84:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c ****  ===============================================================================
   85:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c ****     *** PVD configuration (present on all other devices than STM32F3x8 devices) ***
   86:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c ****     =========================
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 3
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s 			page 3
 
 
   87:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c ****     [..]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 1
  141:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c ****   *         more details about the voltage threshold corresponding to each
  142:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c ****   *         detection level.
  143:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c ****   * @retval None
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 4
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s 			page 4
 
 
  144:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c ****   */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 1
  161:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c ****   {
  162:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c ****     __HAL_PWR_PVD_EXTI_ENABLE_IT();
   67              		.loc 1 162 5 is_stmt 1 view .LVU11
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 5
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s 			page 5
 
 
   68 0038 114A     		ldr	r2, .L6+4
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 1
  105 0070 D368     		ldr	r3, [r2, #12]
  106 0072 43F48033 		orr	r3, r3, #65536
  107 0076 D360     		str	r3, [r2, #12]
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 6
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s 			page 6
 
 
  108              	.L1:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 1
  154              		.fpu fpv4-sp-d16
  156              	HAL_PWR_DisablePVD:
  157              	.LFB128:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 7
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s 			page 7
 
 
  191:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 1
  218:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c **** 
  219:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c **** /**
  220:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c ****   * @brief PWR PVD interrupt callback
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 8
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s 			page 8
 
 
  221:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c ****   * @retval None
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 1
  215:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c ****   }
  229              		.loc 1 215 5 view .LVU39
  230 0012 024B     		ldr	r3, .L19
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 9
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s 			page 9
 
 
  231 0014 4FF48032 		mov	r2, #65536
@@ -498,7 +498,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 1
  245              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
  246              		.file 4 "cube/Drivers/CMSIS/Include/core_cm4.h"
  247              		.file 5 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
- 248              		.file 6 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xc.h"
+ 248              		.file 6 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xe.h"
  249              		.file 7 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\lib\\gcc\\arm-none-eab
  250              		.file 8 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
  251              		.file 9 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
@@ -506,30 +506,30 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 1
  253              		.file 11 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_pwr_ex.h"
  254              		.file 12 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h"
  255              		.file 13 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h"
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 10
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f3xx_hal_pwr_ex.c
-C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s:18     .text.HAL_PWR_ConfigPVD:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s:26     .text.HAL_PWR_ConfigPVD:00000000 HAL_PWR_ConfigPVD
-C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s:114    .text.HAL_PWR_ConfigPVD:0000007c $d
-C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s:120    .text.HAL_PWR_EnablePVD:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s:127    .text.HAL_PWR_EnablePVD:00000000 HAL_PWR_EnablePVD
-C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s:144    .text.HAL_PWR_EnablePVD:0000000c $d
-C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s:149    .text.HAL_PWR_DisablePVD:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s:156    .text.HAL_PWR_DisablePVD:00000000 HAL_PWR_DisablePVD
-C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s:173    .text.HAL_PWR_DisablePVD:0000000c $d
-C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s:178    .text.HAL_PWR_PVDCallback:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s:185    .text.HAL_PWR_PVDCallback:00000000 HAL_PWR_PVDCallback
-C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s:198    .text.HAL_PWR_PVD_IRQHandler:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s:205    .text.HAL_PWR_PVD_IRQHandler:00000000 HAL_PWR_PVD_IRQHandler
-C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s:238    .text.HAL_PWR_PVD_IRQHandler:0000001c $d
-                           .group:00000000 wm4.0.a9549919c595c19c35ef13bc9ee4c8af
-                           .group:00000000 wm4.target_vl53l1_1.h.12.5039e74bcd507e129caba66ab5fc05af
+C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s:18     .text.HAL_PWR_ConfigPVD:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s:26     .text.HAL_PWR_ConfigPVD:00000000 HAL_PWR_ConfigPVD
+C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s:114    .text.HAL_PWR_ConfigPVD:0000007c $d
+C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s:120    .text.HAL_PWR_EnablePVD:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s:127    .text.HAL_PWR_EnablePVD:00000000 HAL_PWR_EnablePVD
+C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s:144    .text.HAL_PWR_EnablePVD:0000000c $d
+C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s:149    .text.HAL_PWR_DisablePVD:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s:156    .text.HAL_PWR_DisablePVD:00000000 HAL_PWR_DisablePVD
+C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s:173    .text.HAL_PWR_DisablePVD:0000000c $d
+C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s:178    .text.HAL_PWR_PVDCallback:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s:185    .text.HAL_PWR_PVDCallback:00000000 HAL_PWR_PVDCallback
+C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s:198    .text.HAL_PWR_PVD_IRQHandler:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s:205    .text.HAL_PWR_PVD_IRQHandler:00000000 HAL_PWR_PVD_IRQHandler
+C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s:238    .text.HAL_PWR_PVD_IRQHandler:0000001c $d
+                           .group:00000000 wm4.0.cbadcd7125b439f63d13d43ae17ce4cb
+                           .group:00000000 wm4.target_vl53l1_1.h.12.551c1b90918b951c5224feb9b75565bd
                            .group:00000000 wm4.stm32f3xx_hal_conf.h.37.cb1c9cb802da867d86527a1477311c20
                            .group:00000000 wm4.stm32f3xx.h.55.fe34e0340b06ab20c90f3cf1d792e0eb
-                           .group:00000000 wm4.stm32f303xc.h.51.75494ed92b93e6861874d99c51c92793
+                           .group:00000000 wm4.stm32f303xe.h.51.65501469ddbb8a3dac94b2f9d61c4e79
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.d0b7f3cd6ee95f610104014bb3ed522a
                            .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
@@ -539,7 +539,7 @@ C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s:238    .text.HAL_PWR_PVD_IRQHand
                            .group:00000000 wm4.core_cm4.h.74.09ac1776756364a5a5d23084aa23e459
                            .group:00000000 wm4.cmsis_gcc.h.36.39970cb43ce4b53c82644a1f9bc2eab9
                            .group:00000000 wm4.core_cm4.h.223.390ff9b0e06949b13520d8b6746f63e8
-                           .group:00000000 wm4.stm32f303xc.h.710.b77655c64e6ea7efdc9ab6a96701a5ae
+                           .group:00000000 wm4.stm32f303xe.h.787.6957ba193b5d3b55f4f9c444bc42cb63
                            .group:00000000 wm4.stm32f3xx.h.191.245d83eb21a6c69e2950c577a7134277
                            .group:00000000 wm4.newlib.h.8.f6e543eac3f2f65163ba2ffe3b04987b
                            .group:00000000 wm4.ieeefp.h.77.5499ed899a78229fbaf6d102924f4714
@@ -560,24 +560,24 @@ C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s:238    .text.HAL_PWR_PVD_IRQHand
                            .group:00000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
                            .group:00000000 wm4.stdio.h.81.2a55589bfa3ee24eeb84e3c79458e4a9
                            .group:00000000 wm4.stm32f3xx_hal_def.h.76.500c7c9bfcb8d4adebf82d1af27ff044
-                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.60ee232241a99e19acd27637eebe4f1c
-                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.1fba3945551953e78cf69c94a0383651
+                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.06cc24fd94394ddd03725d84823331b1
+                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.96615d6f3e5897bb79454968f7fc6c86
                            .group:00000000 wm4.stm32f3xx_hal_gpio.h.38.11db931fcbf37182e25c3927ddf6e8ba
-                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.8d493744f4b7a4f7a0f4f97db0ccbd8e
+                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.46a6c05d651e2a032ac66cebe63916b8
                            .group:00000000 wm4.stm32f3xx_hal_dma.h.38.61966c780efd486aa451ae49ca247997
                            .group:00000000 wm4.stm32f3xx_hal_dma_ex.h.38.195e7d437d9280b9f4e6bae0fa00db04
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccR7QZvr.s 			page 11
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccz4ajc5.s 			page 11
 
 
                            .group:00000000 wm4.stm32f3xx_hal_dma.h.423.83da80eb3e6ae96f050d0c5e4b55e4b9
                            .group:00000000 wm4.stm32f3xx_hal_cortex.h.38.c5c1d06be9dad8e7837dbe16f3535233
                            .group:00000000 wm4.stm32f3xx_hal_flash.h.38.2b4c202390dfbe69a578ce118ab4d799
-                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.36f8341b05728c01a88b7f1003837b1f
+                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.65931ad4b848f69ba672eb38b2753615
                            .group:00000000 wm4.stm32f3xx_hal_i2c.h.38.e3750f5f029ebf729a7cf07e85cad615
-                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.74099379a9814ae4d6d1c8682fdde7ad
+                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.bdd47c8bc2d21749d9fd72e6b8484890
                            .group:00000000 wm4.stm32f3xx_hal_i2c.h.626.05cba3c85b66bb4631bfd2ebbfab1b06
                            .group:00000000 wm4.stm32f3xx_hal_pwr.h.38.efb6ce75a5c12d6b2c7c914e7a94ec2b
                            .group:00000000 wm4.stm32f3xx_hal_pwr_ex.h.38.d228edc56905d96af2d831d3c8e0487a
-                           .group:00000000 wm4.stm32f3xx_hal.h.60.e1acc37932101d84a977b19b7a581169
+                           .group:00000000 wm4.stm32f3xx_hal.h.60.11e72be277d7cf245b56360bacde3327
 
 NO UNDEFINED SYMBOLS

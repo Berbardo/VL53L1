@@ -11,12 +11,12 @@ TARGET_BOARD := target_$(PROJECT_NAME)_$(VERSION)
 
 DEVICE_FAMILY  := STM32F3xx
 DEVICE_TYPE    := STM32F303xx
-DEVICE_DEF     := STM32F303xC
-DEVICE         := STM32F303RC
+DEVICE_DEF     := STM32F303xE
+DEVICE         := STM32F303RE
 
 # Linker script file without .ld extension
 # Find it on cube folder after code generation
-DEVICE_LD_FILE := STM32F303RCTx_FLASH
+DEVICE_LD_FILE := STM32F303RETx_FLASH
 
 # Lib dir
 LIB_DIR  := lib

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
   29:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** *
   30:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** ********************************************************************************
   31:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** *
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 2
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 2
 
 
   32:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** * License terms: BSD 3-clause "New" or "Revised" License.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
   86:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
   87:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** #ifndef VL53L1_NOCALIB
   88:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** #define OFFSET_CALIB
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 3
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 3
 
 
   89:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** #endif
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  143:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
  144:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** static VL53L1_Error VL53L1_nvm_enable(
  145:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_DEV      Dev,
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 4
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 4
 
 
  146:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	uint16_t        nvm_ctrl_pulse_width,
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  200:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	/* Wait the required time for NVM to power up*/
  201:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
  202:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	if (status == VL53L1_ERROR_NONE)
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 5
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 5
 
 
  203:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		status = VL53L1_WaitUs(
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  257:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
  258:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		/* Step 2 : trigger reading of data */
  259:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 6
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 6
 
 
  260:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		if (status == VL53L1_ERROR_NONE)
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  314:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 					0x01);
  315:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
  316:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	/* Power down NVM */
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 7
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 7
 
 
  317:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  371:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		status = VL53L1_nvm_read(
  372:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			Dev,
  373:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			start_address,
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 8
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 8
 
 
  374:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			count,
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  428:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	}
  429:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
  430:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	/* disable crosstalk calibration */
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 9
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 9
 
 
  431:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	Status = VL53L1_disable_xtalk_compensation(Dev);
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  485:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			XTalkCompensationRateMegaCps = 0;
  486:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		} else {
  487:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			/* Apply division by mean spad count early in the
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 10
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 10
 
 
  488:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			 * calculation to keep the numbers small.
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  542:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** {
   28              		.loc 1 542 1 view -0
   29              		.cfi_startproc
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 11
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 11
 
 
   30              		@ args = 0, pretend = 0, frame = 8
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
   72 002e 9342     		cmp	r3, r2
   73 0030 10D8     		bhi	.L8
   74              		.loc 1 552 44 discriminator 1 view .LVU17
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 12
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 12
 
 
   75 0032 9DF80520 		ldrb	r2, [sp, #5]	@ zero_extendqisi2
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  120              		.section	.text.ConvertModeToLLD,"ax",%progbits
  121              		.align	1
  122              		.syntax unified
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 13
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 13
 
 
  123              		.thumb
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  150              		.loc 1 580 3 view .LVU35
  580:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	}
  151              		.loc 1 580 12 is_stmt 0 view .LVU36
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 14
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 14
 
 
  152 0008 FC23     		movs	r3, #252
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  607:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	}
  608:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	return Mode;
  183              		.loc 1 608 2 view .LVU42
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 15
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 15
 
 
  609:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** }
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  630:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	uint8_t *pProductRevisionMajor, uint8_t *pProductRevisionMinor)
  631:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** {
  632:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_Error Status = VL53L1_ERROR_NONE;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 16
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 16
 
 
  633:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	uint8_t revision_id;
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  687:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** }
  688:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
  689:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 17
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 17
 
 
  690:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** VL53L1_Error VL53L1_GetRangeStatusString(uint8_t RangeStatus,
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  744:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** /* Group PAL Init Functions */
  745:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** VL53L1_Error VL53L1_SetDeviceAddress(VL53L1_DEV Dev, uint8_t DeviceAddress)
  746:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** {
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 18
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 18
 
 
  747:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_Error Status = VL53L1_ERROR_NONE;
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  801:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			VL53L1_CHECKENABLE_SIGNAL_RATE_FINAL_RANGE,
  802:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 				(FixPoint1616_t)(25 * 65536 / 100));
  803:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 				/* 0.25 * 65536 */
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 19
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 19
 
 
  804:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	}
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  858:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		VL53L1_DistanceModes DistanceMode,
  859:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		VL53L1_DevicePresetModes *pDevicePresetMode)
  860:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** {
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 20
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 20
 
 
  214              		.loc 1 860 1 is_stmt 1 view -0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  248              		.loc 1 880 21 is_stmt 0 view .LVU61
  249 002a 0123     		movs	r3, #1
  250 002c 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 21
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 21
 
 
  881:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  272              		.loc 1 913 1 is_stmt 0 view .LVU67
  273 0048 05B0     		add	sp, sp, #20
  274              		.cfi_remember_state
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 22
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 22
 
 
  275              		.cfi_def_cfa_offset 4
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  316              		.loc 1 900 34 view .LVU80
  317 0068 0B44     		add	r3, r3, r1
  318              	.LVL29:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 23
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 23
 
 
  900:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		break;
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  362              	ComputeRQL:
  363              	.LVL35:
  364              	.LFB176:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 24
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 24
 
 
  914:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  968:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** VL53L1_Error VL53L1_SetPresetMode(VL53L1_DEV Dev, VL53L1_PresetModes PresetMode)
  969:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** {
  970:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_Error Status = VL53L1_ERROR_NONE;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 25
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 25
 
 
  971:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_DistanceModes DistanceMode = VL53L1_DISTANCEMODE_LONG;
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1025:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_Error Status = VL53L1_ERROR_NONE;
 1026:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_PresetModes PresetMode;
 1027:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_DistanceModes InternalDistanceMode;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 26
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 26
 
 
 1028:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	uint32_t inter_measurement_period_ms;
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1082:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	}
 1083:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
 1084:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	if (Status == VL53L1_ERROR_NONE) {
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 27
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 27
 
 
 1085:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		Status = VL53L1_set_timeouts_us(Dev, PhaseCalTimeoutUs,
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1139:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		Status = VL53L1_GetSequenceStepEnable(Dev,
 1140:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			VL53L1_SEQUENCESTEP_MM1, &Mm1Enabled);
 1141:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	}
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 28
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 28
 
 
 1142:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1196:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
 1197:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		if (MeasurementTimingBudgetMicroSeconds <= TimingGuard)
 1198:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			Status = VL53L1_ERROR_INVALID_PARAMS;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 29
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 29
 
 
 1199:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		else {
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1253:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		Status = VL53L1_GetSequenceStepEnable(Dev,
 1254:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			VL53L1_SEQUENCESTEP_MM1, &Mm1Enabled);
 1255:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 30
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 30
 
 
 1256:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	if (Status == VL53L1_ERROR_NONE)
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1310:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	return Status;
 1311:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** }
 1312:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 31
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 31
 
 
 1313:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1367:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	return Status;
 1368:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** }
 1369:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 32
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 32
 
 
 1370:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** VL53L1_Error VL53L1_GetLimitCheckInfo(uint16_t LimitCheckId,
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1424:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
 1425:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	LOG_FUNCTION_END(Status);
 1426:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	return Status;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 33
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 33
 
 
 1427:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** }
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1481:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
 1482:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	LOG_FUNCTION_END(Status);
 1483:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	return Status;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 34
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 34
 
 
 1484:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** }
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1538:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	case VL53L1_CHECKENABLE_SIGNAL_RATE_FINAL_RANGE:
 1539:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		Status = VL53L1_get_lite_min_count_rate(Dev, &MinCountRate);
 1540:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		TempFix1616 = VL53L1_FIXPOINT97TOFIXPOINT1616(MinCountRate);
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 35
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 35
 
 
 1541:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		break;
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1595:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** /* Group ROI Functions */
 1596:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
 1597:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** VL53L1_Error VL53L1_SetUserROI(VL53L1_DEV Dev,
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 36
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 36
 
 
 1598:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		VL53L1_UserRoi_t *pRoi)
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1652:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
 1653:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	*pNumberOfSequenceSteps = VL53L1_SEQUENCESTEP_NUMBER_OF_ITEMS;
 1654:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 37
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 37
 
 
 1655:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	LOG_FUNCTION_END(Status);
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1709:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_SequenceStepId SequenceStepId, uint8_t *pSequenceStepEnabled)
 1710:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** {
 1711:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_Error Status = VL53L1_ERROR_NONE;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 38
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 38
 
 
 1712:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1766:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		(DeviceMeasurementMode == VL53L1_DEVICEMEASUREMENTMODE_TIMED)) {
 1767:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		lStatus = VL53L1_GetMeasurementTimingBudgetMicroSeconds(Dev,
 1768:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 				&MTBus);
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 39
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 39
 
 
 1769:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		/* convert timing budget in ms */
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1823:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
 1824:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	Status = VL53L1_get_user_zone(Dev, &user_zone);
 1825:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	/*  Initialize variables fix ticket EwokP #475395 */
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 40
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 40
 
 
 1826:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	PresetMode = VL53L1DevDataGet(Dev,
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1880:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** }
 1881:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
 1882:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 41
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 41
 
 
 1883:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** VL53L1_Error VL53L1_ClearInterruptAndStartMeasurement(VL53L1_DEV Dev)
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1937:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	return Status;
 1938:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** }
 1939:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 42
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 42
 
 
 1940:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1964:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		else
 1965:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			RAS = LRAP * presults_data->median_range_mm;
  395              		.loc 1 1965 4 is_stmt 1 view .LVU112
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 43
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 43
 
 
  396              		.loc 1 1965 8 is_stmt 0 view .LVU113
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  440              	.L35:
 1975:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			else
 1976:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 				SRQL = 50 * 65536;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 44
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 44
 
 
  441              		.loc 1 1976 10 view .LVU131
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  484              		.align	1
  485              		.syntax unified
  486              		.thumb
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 45
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 45
 
 
  487              		.thumb_func
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1998:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		break;
 1999:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	case VL53L1_DEVICEERROR_RANGEPHASECHECK:
 2000:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		RangeStatus = VL53L1_RANGESTATUS_OUTOFBOUNDS_FAIL;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 46
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 46
 
 
  530              		.loc 1 2000 3 is_stmt 1 view .LVU147
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2015:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		RangeStatus = VL53L1_RANGESTATUS_RANGE_VALID_MIN_RANGE_CLIPPED;
  566              		.loc 1 2015 3 is_stmt 1 view .LVU163
 2016:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		break;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 47
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 47
 
 
  567              		.loc 1 2016 3 view .LVU164
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  611              	.LFB146:
  919:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_Error Status = VL53L1_ERROR_NONE;
  612              		.loc 1 919 1 is_stmt 1 view -0
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 48
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 48
 
 
  613              		.cfi_startproc
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  652              		.loc 1 937 2 is_stmt 1 view .LVU192
  937:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			&device_preset_mode);
  653              		.loc 1 937 11 is_stmt 0 view .LVU193
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 49
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 49
 
 
  654 0016 0DF11F02 		add	r2, sp, #31
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  693              	.LVL78:
  694              	.L61:
  695              		.cfi_restore_state
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 50
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 50
 
 
  932:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	else
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  741 0074 D7E7     		b	.L55
  742              		.cfi_endproc
  743              	.LFE146:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 51
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 51
 
 
  745              		.section	.text.SetLimitValue,"ax",%progbits
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  787 0012 FFF7FEFF 		bl	VL53L1_set_lite_sigma_threshold
  788              	.LVL91:
 1416:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	case VL53L1_CHECKENABLE_SIGNAL_RATE_FINAL_RANGE:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 52
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 52
 
 
  789              		.loc 1 1416 3 is_stmt 1 view .LVU231
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1812:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_PresetModes PresetMode;
  835              		.loc 1 1812 2 is_stmt 1 view .LVU242
  836              	.LVL96:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 53
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 53
 
 
 1813:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_DistanceModes NewDistanceMode;
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  870              		.loc 1 1838 5 is_stmt 0 view .LVU263
  871 001a B3B1     		cbz	r3, .L81
  872              	.L72:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 54
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 54
 
 
 1841:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		inter_measurement_period_ms =  VL53L1DevDataGet(Dev,
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  911 0032 01AA     		add	r2, sp, #4
  912 0034 6946     		mov	r1, sp
  913 0036 2046     		mov	r0, r4
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 55
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 55
 
 
  914              	.LVL103:
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  954 005c 3146     		mov	r1, r6
  955 005e 2046     		mov	r0, r4
  956 0060 FFF7FEFF 		bl	SetPresetMode
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 56
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 56
 
 
  957              	.LVL112:
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  998              	.LVL119:
 1867:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 				Dev,
  999              		.loc 1 1867 3 view .LVU307
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 57
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 57
 
 
 1867:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 				Dev,
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  172:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		status = VL53L1_enable_powerforce(Dev);
  1046              		.loc 1 172 2 is_stmt 1 view .LVU318
  172:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		status = VL53L1_enable_powerforce(Dev);
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 58
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 58
 
 
  1047              		.loc 1 172 5 is_stmt 0 view .LVU319
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  1084              		.loc 1 173 12 is_stmt 0 view .LVU336
  1085 0020 2046     		mov	r0, r4
  1086              	.LVL127:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 59
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 59
 
 
  173:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  1128 0052 0346     		mov	r3, r0
  1129              	.LVL135:
  195:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 					Dev,
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 60
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 60
 
 
  1130              		.loc 1 195 12 view .LVU350
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  1173              		.section	.text.VL53L1_nvm_read,"ax",%progbits
  1174              		.align	1
  1175              		.syntax unified
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 61
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 61
 
 
  1176              		.thumb
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  253:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 						Dev,
  1220              		.loc 1 253 13 view .LVU374
  1221 001a FFF7FEFF 		bl	VL53L1_WrByte
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 62
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 62
 
 
  1222              	.LVL147:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  281:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 						Dev,
  1262              		.loc 1 281 13 is_stmt 0 view .LVU389
  1263 0046 0423     		movs	r3, #4
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 63
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 63
 
 
  1264 0048 2A46     		mov	r2, r5
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  273:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			status = VL53L1_WrByte(
  1304              		.loc 1 273 6 is_stmt 0 view .LVU404
  1305 006e 0028     		cmp	r0, #0
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 64
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 64
 
 
  1306 0070 E2D0     		beq	.L115
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  1350              	.LVL161:
  318:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		status = VL53L1_WrByte(
  1351              		.loc 1 318 2 is_stmt 1 view .LVU417
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 65
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 65
 
 
  318:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		status = VL53L1_WrByte(
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  1391              		.loc 1 327 12 view .LVU432
  1392 0030 0346     		mov	r3, r0
  1393              	.LVL168:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 66
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 66
 
 
  327:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  1440              		.loc 1 359 2 view .LVU442
  360:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 					Dev,
  1441              		.loc 1 360 3 view .LVU443
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 67
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 67
 
 
  360:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 					Dev,
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  1482              	.L130:
  382:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
  1483              		.loc 1 382 3 is_stmt 1 view .LVU458
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 68
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 68
 
 
  382:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  1526              		.loc 1 623 21 is_stmt 0 view .LVU472
  1527 000a 40F25D73 		movw	r3, #1885
  1528 000e 0360     		str	r3, [r0]
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 69
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 69
 
 
  625:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	return Status;
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  641:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
  1570              		.loc 1 641 2 is_stmt 1 view .LVU488
  641:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 70
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 70
 
 
  1571              		.loc 1 641 48 is_stmt 0 view .LVU489
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  1615 0006 1F22     		movs	r2, #31
  1616 0008 1249     		ldr	r1, .L137
  1617              	.LVL191:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 71
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 71
 
 
  659:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			VL53L1_DEVINFO_STRLEN-1);
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  1656 003a 04F12000 		add	r0, r4, #32
  1657 003e FFF7FEFF 		bl	strncpy
  1658              	.LVL197:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 72
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 72
 
 
  685:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	return Status;
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  1706              		.loc 1 697 2 view .LVU526
  697:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		pRangeStatusString);
  1707              		.loc 1 697 11 is_stmt 0 view .LVU527
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 73
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 73
 
 
  1708 0002 FFF7FEFF 		bl	VL53L1_get_range_status_string
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  1753              		.global	VL53L1_GetPalStateString
  1754              		.syntax unified
  1755              		.thumb
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 74
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 74
 
 
  1756              		.thumb_func
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  734:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
  1802              		.loc 1 734 24 view .LVU551
  736:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 75
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 75
 
 
  1803              		.loc 1 736 2 view .LVU552
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  1846              		.loc 1 751 11 view .LVU565
  1847 0006 FFF7FEFF 		bl	VL53L1_WrByte
  1848              	.LVL214:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 76
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 76
 
 
  754:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	return Status;
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  1894              		.syntax unified
  1895              		.thumb
  1896              		.thumb_func
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 77
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 77
 
 
  1897              		.fpu fpv4-sp-d16
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  1942              		.cfi_offset 4, -24
  1943              		.cfi_offset 5, -20
  1944              		.cfi_offset 6, -16
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 78
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 78
 
 
  1945              		.cfi_offset 7, -12
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  1981              	.LVL223:
 1059:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		Status = VL53L1_get_user_zone(Dev, &user_zone);
  1982              		.loc 1 1059 2 is_stmt 1 view .LVU608
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 79
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 79
 
 
 1060:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1093:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		Status = VL53L1_set_user_zone(Dev, &user_zone);
  2020              		.loc 1 1093 5 is_stmt 0 view .LVU626
  2021 003c 0BB3     		cbz	r3, .L165
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 80
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 80
 
 
  2022              	.LVL229:
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  2066              		.loc 1 1070 12 view .LVU636
  2067 0068 E0E7     		b	.L155
  2068              	.L164:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 81
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 81
 
 
 1085:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			MmTimeoutUs, TimingBudget);
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  2113              		.thumb
  2114              		.thumb_func
  2115              		.fpu fpv4-sp-d16
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 82
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 82
 
 
  2117              	VL53L1_GetDistanceMode:
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  2161              		.cfi_offset 14, -4
 1318:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	uint32_t adjustedIMP;
  2162              		.loc 1 1318 2 is_stmt 1 view .LVU660
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 83
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 83
 
 
  2163              	.LVL247:
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  2206              		@ frame_needed = 0, uses_anonymous_args = 0
 1336:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_Error Status = VL53L1_ERROR_NONE;
  2207              		.loc 1 1336 1 is_stmt 0 view .LVU674
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 84
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 84
 
 
  2208 0000 10B5     		push	{r4, lr}
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  2246              	.LVL255:
  2247              	.L174:
 1350:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 85
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 85
 
 
  2248              		.loc 1 1350 1 view .LVU691
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  2297              	.LFB156:
 1372:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_Error Status = VL53L1_ERROR_NONE;
  2298              		.loc 1 1372 1 is_stmt 1 view -0
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 86
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 86
 
 
  2299              		.cfi_startproc
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  2341              		.loc 1 1392 5 is_stmt 0 view .LVU715
  2342 0000 0129     		cmp	r1, #1
  2343 0002 05D8     		bhi	.L180
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 87
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 87
 
 
 1395:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			LimitCheckId, Temp8);
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  2386              		.loc 1 1439 2 view .LVU729
 1439:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		Status = VL53L1_ERROR_INVALID_PARAMS;
  2387              		.loc 1 1439 5 is_stmt 0 view .LVU730
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 88
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 88
 
 
  2388 0000 0129     		cmp	r1, #1
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1461:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** }
  2430              		.loc 1 1461 2 view .LVU743
 1462:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 89
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 89
 
 
  2431              		.loc 1 1462 1 is_stmt 0 view .LVU744
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1470:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
  2477              		.loc 1 1470 24 view .LVU755
 1472:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		Status = VL53L1_ERROR_INVALID_PARAMS;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 90
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 90
 
 
  2478              		.loc 1 1472 2 view .LVU756
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  2519              		.fpu fpv4-sp-d16
  2521              	VL53L1_SetLimitCheckValue:
  2522              	.LVL280:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 91
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 91
 
 
  2523              	.LFB161:
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  2561              		.cfi_def_cfa_offset 16
  2562              		.cfi_offset 4, -16
  2563              		.cfi_offset 5, -12
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 92
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 92
 
 
  2564              		.cfi_offset 6, -8
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  2611              	.LFB142:
  759:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_Error Status = VL53L1_ERROR_NONE;
  2612              		.loc 1 759 1 is_stmt 1 view -0
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 93
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 93
 
 
  2613              		.cfi_startproc
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  786:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			Status |= VL53L1_SetLimitCheckEnable(Dev, i, 1);
  2653              		.loc 1 786 6 is_stmt 0 view .LVU811
  2654 0020 4CB9     		cbnz	r4, .L204
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 94
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 94
 
 
  787:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		else
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  2693              		.loc 1 795 12 is_stmt 0 view .LVU827
  2694 003e 4FF49012 		mov	r2, #1179648
  2695 0042 0021     		movs	r1, #0
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 95
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 95
 
 
  2696 0044 3046     		mov	r0, r6
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  2745              	.LVL304:
 1527:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	FixPoint1616_t TempFix1616;
  2746              		.loc 1 1527 2 view .LVU835
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 96
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 96
 
 
 1528:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	uint16_t SigmaThresh;
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  2785              		.loc 1 1546 2 view .LVU851
 1546:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
  2786              		.loc 1 1546 5 is_stmt 0 view .LVU852
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 97
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 97
 
 
  2787 0024 0028     		cmp	r0, #0
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1541:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	default:
  2826              		.loc 1 1541 3 is_stmt 1 view .LVU868
  2827 004e E9E7     		b	.L215
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 98
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 98
 
 
  2828              	.L216:
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  2870              		.cfi_offset 14, -4
  2871 0004 82B0     		sub	sp, sp, #8
  2872              		.cfi_def_cfa_offset 32
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 99
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 99
 
 
  2873 0006 0646     		mov	r6, r0
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  2910              	.LVL326:
  2911              		.loc 1 2050 34 view .LVU898
  2912 0020 FFF7FEFF 		bl	ComputeRQL
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 100
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 100
 
 
  2913              	.LVL327:
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  2947              		.loc 1 2069 2 is_stmt 1 view .LVU916
  2948              		.loc 1 2069 30 is_stmt 0 view .LVU917
  2949 003a 6361     		str	r3, [r4, #20]
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 101
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 101
 
 
 2070:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2083:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	case VL53L1_DEVICEERROR_USERROICLIP:
 2084:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		pRangeData->RangeStatus = VL53L1_RANGESTATUS_MIN_RANGE_FAIL;
 2085:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		break;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 102
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 102
 
 
 2086:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	default:
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2109:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	/* Update Limit Check Status */
 2110:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	/* Sigma */
 2111:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_GetLimitCheckValue(Dev,
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 103
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 103
 
 
  3021              		.loc 1 2111 2 view .LVU941
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2135:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
 2136:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_GetLimitCheckEnable(Dev,
  3052              		.loc 1 2136 2 discriminator 6 view .LVU950
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 104
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 104
 
 
  3053 00b2 0DF10702 		add	r2, sp, #7
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  3088 00da 02B0     		add	sp, sp, #8
  3089              		.cfi_remember_state
  3090              		.cfi_def_cfa_offset 24
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 105
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 105
 
 
  3091              		@ sp needed
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  3134 0104 044B     		ldr	r3, .L237
  3135 0106 5B68     		ldr	r3, [r3, #4]
 2147:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			pRangeData->RangeStatus =
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 106
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 106
 
 
  3136              		.loc 1 2147 6 view .LVU975
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  3181              		.loc 1 1578 2 view .LVU986
 1578:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		Status = VL53L1_ERROR_INVALID_PARAMS;
  3182              		.loc 1 1578 5 is_stmt 0 view .LVU987
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 107
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 107
 
 
  3183 0000 0129     		cmp	r1, #1
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  3227              		.loc 1 1599 1 is_stmt 0 view .LVU999
  3228 0000 70B5     		push	{r4, r5, r6, lr}
  3229              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 108
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 108
 
 
  3230              		.cfi_offset 4, -16
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  3268              	.LVL364:
 1608:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	user_zone.width =    (pRoi->BotRightX - pRoi->TopLeftX);
  3269              		.loc 1 1608 40 view .LVU1016
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 109
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 109
 
 
  3270 0022 1118     		adds	r1, r2, r0
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  3310              		.cfi_restore_state
 1605:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
  3311              		.loc 1 1605 10 view .LVU1031
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 110
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 110
 
 
  3312 0050 6FF00300 		mvn	r0, #3
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  3359 0008 FFF7FEFF 		bl	VL53L1_get_user_zone
  3360              	.LVL371:
 1628:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	pRoi->TopLeftY =  (2 * user_zone.y_centre + user_zone.height) >> 1;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 111
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 111
 
 
  3361              		.loc 1 1628 2 is_stmt 1 view .LVU1041
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  3396 0032 5B1B     		subs	r3, r3, r5
 1631:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
  3397              		.loc 1 1631 64 view .LVU1061
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 112
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 112
 
 
  3398 0034 5B10     		asrs	r3, r3, #1
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1657:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
  3440              		.loc 1 1657 1 view .LVU1076
  3441 0006 7047     		bx	lr
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 113
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 113
 
 
  3442              		.cfi_endproc
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  3490              		.loc 1 1710 1 is_stmt 1 view -0
  3491              		.cfi_startproc
  3492              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 114
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 114
 
 
  3493              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1119:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	uint8_t Mm1Enabled;
  3539              		.loc 1 1119 2 is_stmt 1 view .LVU1097
  3540              	.LVL381:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 115
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 115
 
 
 1120:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	uint8_t Mm2Enabled;
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  3573              		.loc 1 1155 3 is_stmt 1 view .LVU1119
 1155:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
  3574              		.loc 1 1155 14 is_stmt 0 view .LVU1120
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 116
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 116
 
 
  3575 0018 96F87C33 		ldrb	r3, [r6, #892]	@ zero_extendqisi2
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1208:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 				Status = VL53L1_set_timeouts_us(
  3613              		.loc 1 1208 18 is_stmt 0 view .LVU1137
  3614 003e B2FBF3F3 		udiv	r3, r2, r3
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 117
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 117
 
 
  3615              	.LVL387:
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1139:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			VL53L1_SEQUENCESTEP_MM1, &Mm1Enabled);
  3655              		.loc 1 1139 3 view .LVU1152
 1139:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			VL53L1_SEQUENCESTEP_MM1, &Mm1Enabled);
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 118
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 118
 
 
  3656              		.loc 1 1139 12 is_stmt 0 view .LVU1153
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1161:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 				TimingGuard = 5000;
  3699              		.loc 1 1161 7 view .LVU1165
  3700 0094 012B     		cmp	r3, #1
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 119
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 119
 
 
  3701 0096 32D0     		beq	.L267
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  3739              		.loc 1 1172 17 view .LVU1181
  3740 00c6 45F26042 		movw	r2, #21600
  3741 00ca B2E7     		b	.L263
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 120
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 120
 
 
  3742              	.L279:
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1177:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			vhv = LOWPOWER_AUTO_VHV_LOOP_DURATION_US;
  3780              		.loc 1 1177 25 is_stmt 0 view .LVU1198
  3781 00f4 0C49     		ldr	r1, .L280+8
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 121
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 121
 
 
 1189:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		break;
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  3823              	.L281:
  3824 011e 00BF     		.align	2
  3825              	.L280:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 122
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 122
 
 
  3826 0120 80969800 		.word	10000000
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  3872 0016 84F87E33 		strb	r3, [r4, #894]
  984:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 				DistanceMode);
  3873              		.loc 1 984 3 view .LVU1222
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 123
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 123
 
 
  3874 001a 84F87F33 		strb	r3, [r4, #895]
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  3913              		.loc 1 994 13 view .LVU1237
  3914 0042 FFF7FEFF 		bl	VL53L1_SetMeasurementTimingBudgetMicroSeconds
  3915              	.LVL422:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 124
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 124
 
 
  3916 0046 0346     		mov	r3, r0
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  3961 0004 80F87823 		strb	r2, [r0, #888]
  820:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1DevDataSet(Dev, LLData.measurement_mode, measurement_mode);
  3962              		.loc 1 820 2 view .LVU1249
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 125
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 125
 
 
  3963              	.LVL428:
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1678:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	uint32_t MeasurementTimingBudgetMicroSeconds;
  4008              		.loc 1 1678 2 is_stmt 1 view .LVU1261
  4009              	.LVL431:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 126
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 126
 
 
 1679:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1235:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_Error Status = VL53L1_ERROR_NONE;
  4053              		.loc 1 1235 1 is_stmt 1 view -0
  4054              		.cfi_startproc
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 127
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 127
 
 
  4055              		@ args = 0, pretend = 0, frame = 24
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1248:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
  4092              		.loc 1 1248 24 view .LVU1293
 1250:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 128
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 128
 
 
  4093              		.loc 1 1250 2 view .LVU1294
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  4132              	.LVL444:
 1303:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		}
  4133              		.loc 1 1303 11 view .LVU1310
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 129
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 129
 
 
  4134 0042 4CE0     		b	.L302
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  4176 0072 03D0     		beq	.L303
 1274:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
  4177              		.loc 1 1274 5 is_stmt 1 view .LVU1323
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 130
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 130
 
 
 1274:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  4217              		.loc 1 1282 19 view .LVU1338
  4218 00a0 1BE0     		b	.L298
  4219              	.LVL459:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 131
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 131
 
 
  4220              	.L305:
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1298:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		break;
  4259              		.loc 1 1298 18 is_stmt 0 view .LVU1354
  4260 00cc 039A     		ldr	r2, [sp, #12]
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 132
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 132
 
 
  4261 00ce 03EB4203 		add	r3, r3, r2, lsl #1
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  4306              	.LFB170:
 1733:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** #define TIMED_MODE_TIMING_GUARD_MILLISECONDS 4
  4307              		.loc 1 1733 1 is_stmt 1 view -0
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 133
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 133
 
 
  4308              		.cfi_startproc
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  4347 001c 0020     		movs	r0, #0
  4348              	.LVL474:
 1746:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		break;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 134
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 134
 
 
  4349              		.loc 1 1746 10 view .LVU1382
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  4387              		.loc 1 1792 1 is_stmt 0 view .LVU1398
  4388 0038 03B0     		add	sp, sp, #12
  4389              		.cfi_remember_state
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 135
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 135
 
 
  4390              		.cfi_def_cfa_offset 12
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  4429              		.loc 1 1775 3 view .LVU1413
 1775:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			Status = VL53L1_ERROR_INVALID_PARAMS;
  4430              		.loc 1 1775 21 is_stmt 0 view .LVU1414
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 136
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 136
 
 
  4431 005e 019B     		ldr	r3, [sp, #4]
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  4478              		.cfi_startproc
  4479              		@ args = 0, pretend = 0, frame = 0
  4480              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 137
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 137
 
 
 1795:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_Error Status = VL53L1_ERROR_NONE;
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1884:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_Error Status = VL53L1_ERROR_NONE;
  4524              		.loc 1 1884 1 is_stmt 1 view -0
  4525              		.cfi_startproc
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 138
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 138
 
 
  4526              		@ args = 0, pretend = 0, frame = 0
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 1907:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
  4562              		.loc 1 1907 1 is_stmt 0 view .LVU1456
  4563 0014 08BD     		pop	{r3, pc}
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 139
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 139
 
 
  4564              	.LVL502:
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  4609              		.section	.text.VL53L1_WaitMeasurementDataReady,"ax",%progbits
  4610              		.align	1
  4611              		.global	VL53L1_WaitMeasurementDataReady
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 140
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 140
 
 
  4612              		.syntax unified
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2161:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** {
  4655              		.loc 1 2161 1 is_stmt 1 view -0
  4656              		.cfi_startproc
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 141
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 141
 
 
  4657              		@ args = 0, pretend = 0, frame = 136
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2179:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
 2180:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	if (Status == VL53L1_ERROR_NONE) {
  4694              		.loc 1 2180 2 is_stmt 1 view .LVU1490
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 142
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 142
 
 
  4695              		.loc 1 2180 5 is_stmt 0 view .LVU1491
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  4727 003c 2846     		mov	r0, r5
  4728              	.LVL519:
 2187:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 				presults->device_status,
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 143
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 143
 
 
  4729              		.loc 1 2187 12 view .LVU1502
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2212:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		Status = VL53L1_set_tuning_parm(Dev,
 2213:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			TuningParameterId,
 2214:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			TuningParameterValue);
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 144
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 144
 
 
 2215:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	else {
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  4806              		.align	1
  4807              		.global	VL53L1_GetTuningParameter
  4808              		.syntax unified
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 145
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 145
 
 
  4809              		.thumb
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2242:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	}
 2243:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
 2244:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	LOG_FUNCTION_END(Status);
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 146
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 146
 
 
  4846              		.loc 1 2244 26 is_stmt 1 view .LVU1536
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  4891              		.cfi_offset 5, -8
  4892              		.cfi_offset 14, -4
  4893 0002 89B0     		sub	sp, sp, #36
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 147
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 147
 
 
  4894              		.cfi_def_cfa_offset 48
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2276:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		/* We discovered RefSpad mngt badly breaks some preset mode
 2277:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		 * The WA is to apply again the current one
 2278:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		 */
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 148
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 148
 
 
 2279:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		if (Status == VL53L1_ERROR_NONE)
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2322:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		/* End of fix  ticket  #466282 */
 2323:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	}
 2324:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 149
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 149
 
 
 2325:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** #endif
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  4974              	.L362:
 2297:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			pc->ref_spad_man__num_requested_ref_spads = numloc[0];
  4975              		.loc 1 2297 3 is_stmt 1 view .LVU1579
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 150
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 150
 
 
 2297:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			pc->ref_spad_man__num_requested_ref_spads = numloc[0];
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  5011 0072 84F84420 		strb	r2, [r4, #68]
 2318:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			pc->global_config__spad_enables_ref_4 = comms_buffer[4];
  5012              		.loc 1 2318 4 is_stmt 1 view .LVU1599
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 151
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 151
 
 
 2318:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			pc->global_config__spad_enables_ref_4 = comms_buffer[4];
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  5054              	.LVL557:
 2310:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 				VL53L1_GLOBAL_CONFIG__SPAD_ENABLES_REF_0,
  5055              		.loc 1 2310 13 view .LVU1613
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 152
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 152
 
 
  5056 00ac 0346     		mov	r3, r0
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2343:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
 2344:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	LOG_FUNCTION_END(Status);
  5098              		.loc 1 2344 26 is_stmt 1 view .LVU1623
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 153
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 153
 
 
 2345:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	return Status;
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2358:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		pXTalkCompensationEnable);
 2359:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
 2360:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	LOG_FUNCTION_END(Status);
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 154
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 154
 
 
  5139              		.loc 1 2360 26 view .LVU1634
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2391:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	if (OffsetCalibrationMode == VL53L1_OFFSETCALIBRATIONMODE_STANDARD) {
  5165              		.loc 1 2391 2 view .LVU1641
  5166              		.loc 1 2391 5 is_stmt 0 view .LVU1642
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 155
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 155
 
 
  5167 0000 0129     		cmp	r1, #1
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  5201 0016 7047     		bx	lr
  5202              		.cfi_endproc
  5203              	.LFE186:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 156
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 156
 
 
  5205              		.section	.text.VL53L1_PerformOffsetCalibration,"ax",%progbits
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  5243              		.loc 1 2424 2 is_stmt 1 view .LVU1666
  5244              		.loc 1 2424 5 is_stmt 0 view .LVU1667
  5245 0010 0346     		mov	r3, r0
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 157
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 157
 
 
  5246 0012 60B9     		cbnz	r0, .L386
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2440:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	}
  5280              		.loc 1 2440 10 view .LVU1677
  5281 0034 6FF00303 		mvn	r3, #3
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 158
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 158
 
 
  5282 0038 F9E7     		b	.L386
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  5320              		.loc 1 2462 2 view .LVU1682
 2463:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	int16_t Max, UnderMax, OverMax, Repeat;
  5321              		.loc 1 2463 2 view .LVU1683
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 159
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 159
 
 
 2464:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	int32_t total_count, inloopcount;
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  5357 002c 591C     		adds	r1, r3, #1
  5358              	.LVL584:
  5359              		.loc 1 2482 11 view .LVU1707
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 160
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 160
 
 
  5360 002e 09B2     		sxth	r1, r1
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  5401 0052 41E0     		b	.L393
  5402              	.L413:
 2494:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 						&RangingMeasurementData);
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 161
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 161
 
 
 2495:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		if (Status == VL53L1_ERROR_NONE)
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  5434              		.loc 1 2517 15 is_stmt 0 view .LVU1734
  5435 006c 0135     		adds	r5, r5, #1
  5436              	.LVL601:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 162
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 162
 
 
  5437              		.loc 1 2517 15 view .LVU1735
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  5476              		.loc 1 2509 17 view .LVU1750
  5477 0096 9B44     		add	fp, fp, r3
  5478              	.LVL607:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 163
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 163
 
 
 2511:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 			}
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  5515              		.loc 1 2528 9 is_stmt 0 view .LVU1765
  5516 00b8 0AF1FF3A 		add	r10, r10, #-1
  5517              	.LVL614:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 164
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 164
 
 
  5518              		.loc 1 2528 9 view .LVU1766
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  5557 00e6 22DB     		blt	.L406
 2533:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		(sum_ranging > ((int32_t) total_count * 0xffff))) {
  5558              		.loc 1 2533 41 discriminator 1 view .LVU1780
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 165
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 165
 
 
  5559 00e8 C6EB0643 		rsb	r3, r6, r6, lsl #16
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  5589 0102 0BEB6303 		add	r3, fp, r3, asr #1
  5590              	.LVL621:
 2540:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		offset = (int16_t)CalDistanceMilliMeter - meanDistance_mm;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 166
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 166
 
 
  5591              		.loc 1 2540 5 view .LVU1792
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  5629              		.loc 1 2534 10 view .LVU1808
  5630 0132 E0E7     		b	.L404
  5631              	.LVL629:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 167
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 167
 
 
  5632              	.L407:
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2562:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	LOG_FUNCTION_START("");
  5677              		.loc 1 2562 24 view .LVU1817
 2563:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 168
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 168
 
 
 2564:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	cal_data.struct_version = pCalibrationData->struct_version -
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  5704 0026 04F12C06 		add	r6, r4, #44
  5705 002a 0BAD     		add	r5, sp, #44
  5706 002c 04F15C0E 		add	lr, r4, #92
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 169
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 169
 
 
  5707              	.L418:
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  5743              		.loc 1 2603 5 is_stmt 0 view .LVU1842
  5744 0062 A379     		ldrb	r3, [r4, #6]	@ zero_extendqisi2
 2602:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	cal_data.customer.global_config__spad_enables_ref_2 =
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 170
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 170
 
 
  5745              		.loc 1 2602 54 view .LVU1843
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  5779 008c B4F91430 		ldrsh	r3, [r4, #20]
 2616:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	cal_data.customer.algo__crosstalk_compensation_x_plane_gradient_kcps =
  5780              		.loc 1 2616 71 view .LVU1864
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 171
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 171
 
 
  5781 0090 ADF81430 		strh	r3, [sp, #20]	@ movhi
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2632:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
 2633:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** }
  5816              		.loc 1 2633 1 is_stmt 0 view .LVU1884
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 172
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 172
 
 
  5817 00c2 1BB0     		add	sp, sp, #108
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  5860              	.LVL640:
  5861              		.loc 1 2646 11 view .LVU1895
  5862 0008 FFF7FEFF 		bl	VL53L1_get_part_to_part_data
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 173
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 173
 
 
  5863              	.LVL641:
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  5892 0038 0FCF     		ldmia	r7!, {r0, r1, r2, r3}
  5893 003a 3060     		str	r0, [r6]	@ unaligned
  5894 003c 7160     		str	r1, [r6, #4]	@ unaligned
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 174
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 174
 
 
  5895 003e B260     		str	r2, [r6, #8]	@ unaligned
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  5929              		.loc 1 2687 2 is_stmt 1 view .LVU1919
 2688:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		pC2->global_config__spad_enables_ref_4;
  5930              		.loc 1 2688 6 is_stmt 0 view .LVU1920
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 175
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 175
 
 
  5931 006c 9DF80C30 		ldrb	r3, [sp, #12]	@ zero_extendqisi2
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2702:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		pC2->ref_spad_char__total_rate_target_mcps;
  5965              		.loc 1 2702 6 is_stmt 0 view .LVU1941
  5966 0096 BDF81830 		ldrh	r3, [sp, #24]
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 176
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 176
 
 
 2701:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	pC->ref_spad_char__total_rate_target_mcps =
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  6004              		.thumb
  6005              		.thumb_func
  6006              		.fpu fpv4-sp-d16
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 177
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 177
 
 
  6008              	SingleTargetXTalkCalibration:
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  407:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	uint32_t signalXTalkTotalPerSpad;
  6046              		.loc 1 407 2 view .LVU1975
  408:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	VL53L1_PresetModes PresetMode;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 178
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 178
 
 
  6047              		.loc 1 408 2 view .LVU1976
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  6084              		.cfi_def_cfa_offset 32
  6085              		@ sp needed
  6086 002a BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 179
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 179
 
 
  6087              	.LVL650:
@@ -10738,7 +10738,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  6127 0050 FFF7FEFF 		bl	VL53L1_WaitMeasurementDataReady
  6128              	.LVL656:
  443:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		VL53L1_ClearInterruptAndStartMeasurement(Dev);
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 180
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 180
 
 
  6129              		.loc 1 443 3 view .LVU2008
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  6167 0080 E1E7     		b	.L427
  6168              	.L436:
  452:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 181
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 181
 
 
  6169              		.loc 1 452 2 is_stmt 1 view .LVU2025
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  6206              	.LVL670:
  482:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		xTalkCalDistanceAsInt == 0 ||
  6207              		.loc 1 482 3 is_stmt 1 view .LVU2043
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 182
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 182
 
 
  482:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		xTalkCalDistanceAsInt == 0 ||
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  509:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		CHECK_ERROR_GO_ENDFUNC;
  6247              		.loc 1 509 3 is_stmt 1 view .LVU2059
  509:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		CHECK_ERROR_GO_ENDFUNC;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 183
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 183
 
 
  6248              		.loc 1 509 12 is_stmt 0 view .LVU2060
@@ -10978,7 +10978,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  521:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 
  6287              		.loc 1 521 12 view .LVU2076
  6288 00fa FFF7FEFF 		bl	VL53L1_enable_xtalk_compensation
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 184
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 184
 
 
  6289              	.LVL685:
@@ -11038,7 +11038,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  6336              		.loc 1 2369 24 view .LVU2085
 2371:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		BDTable[VL53L1_TUNING_SINGLE_TARGET_XTALK_TARGET_DISTANCE_MM] =
  6337              		.loc 1 2371 2 view .LVU2086
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 185
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 185
 
 
 2371:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		BDTable[VL53L1_TUNING_SINGLE_TARGET_XTALK_TARGET_DISTANCE_MM] =
@@ -11098,7 +11098,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  6379              		.align	1
  6380              		.global	VL53L1_GetOpticalCenter
  6381              		.syntax unified
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 186
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 186
 
 
  6382              		.thumb
@@ -11158,7 +11158,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  6421              		.loc 1 2731 2 is_stmt 1 view .LVU2113
  6422              		.loc 1 2731 5 is_stmt 0 view .LVU2114
  6423 0014 0346     		mov	r3, r0
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 187
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 187
 
 
  6424 0016 38B9     		cbnz	r0, .L449
@@ -11218,7 +11218,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2749:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** {
  6463              		.loc 1 2749 1 is_stmt 1 view -0
  6464              		.cfi_startproc
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 188
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 188
 
 
  6465              		@ args = 0, pretend = 0, frame = 16
@@ -11278,7 +11278,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  6502              		.loc 1 2766 14 is_stmt 0 view .LVU2143
  6503 001c 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
  6504              		.loc 1 2766 6 view .LVU2144
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 189
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 189
 
 
  6505 001e F3B1     		cbz	r3, .L464
@@ -11338,7 +11338,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2791:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 				Cfg.threshold_distance_high = (uint16_t)
 2792:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 						(high1616 & 0xFFFF);
 2793:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 				Cfg.threshold_distance_low = (uint16_t)
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 190
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 190
 
 
 2794:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 						(low1616 & 0xFFFF);
@@ -11398,7 +11398,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  6563              		.loc 1 2768 4 is_stmt 1 view .LVU2166
 2768:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 					Cfg);
  6564              		.loc 1 2768 13 is_stmt 0 view .LVU2167
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 191
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 191
 
 
  6565 0064 BDF81430 		ldrh	r3, [sp, #20]
@@ -11458,7 +11458,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  6606              		.loc 1 2781 5 is_stmt 1 view .LVU2180
 2781:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 				/* gain is ufix 5.11, convert to 16.16 */
  6607              		.loc 1 2781 7 is_stmt 0 view .LVU2181
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 192
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 192
 
 
  6608 00a6 B5F89C30 		ldrh	r3, [r5, #156]
@@ -11518,7 +11518,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2793:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 						(low1616 & 0xFFFF);
  6645              		.loc 1 2793 32 is_stmt 0 view .LVU2199
  6646 00c8 ADF81030 		strh	r3, [sp, #16]	@ movhi
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 193
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 193
 
 
 2796:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 					VL53L1_FIXPOINT1616TOFIXPOINT97(
@@ -11578,7 +11578,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  6684 0100 8DF80900 		strb	r0, [sp, #9]
  6685 0104 9CE7     		b	.L456
  6686              	.L462:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 194
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 194
 
 
 2816:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 				case VL53L1_DETECTION_DISTANCE_ONLY:
@@ -11638,7 +11638,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  6709              		@ sp needed
  6710 011c 30BD     		pop	{r4, r5, pc}
  6711              	.LVL719:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 195
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 195
 
 
  6712              	.L461:
@@ -11698,7 +11698,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  6754              		.global	VL53L1_GetThresholdConfig
  6755              		.syntax unified
  6756              		.thumb
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 196
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 196
 
 
  6757              		.thumb_func
@@ -11758,7 +11758,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2866:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	pConfig->Distance.High = Cfg.threshold_distance_high;
 2867:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	pConfig->Distance.Low = Cfg.threshold_distance_low;
 2868:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	pConfig->Rate.High =
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 197
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 197
 
 
 2869:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		VL53L1_FIXPOINT97TOFIXPOINT1616(
@@ -11818,7 +11818,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
 2866:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	pConfig->Distance.Low = Cfg.threshold_distance_low;
  6808              		.loc 1 2866 2 is_stmt 1 view .LVU2257
 2866:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 	pConfig->Distance.Low = Cfg.threshold_distance_low;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 198
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 198
 
 
  6809              		.loc 1 2866 30 is_stmt 0 view .LVU2258
@@ -11878,7 +11878,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  6845              		.loc 1 2879 9 is_stmt 0 view .LVU2276
  6846 0052 9DF80230 		ldrb	r3, [sp, #2]	@ zero_extendqisi2
 2879:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 		pConfig->DetectionMode = VL53L1_DETECTION_NORMAL_RUN;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 199
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 199
 
 
  6847              		.loc 1 2879 5 view .LVU2277
@@ -11938,7 +11938,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  6885 0084 C8E7     		b	.L470
  6886              	.L474:
 2888:D:/Git/VL53L1/lib/core/src\vl53l1_api.c **** 					(Cfg.threshold_distance_low == 0))
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 200
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 200
 
 
  6887              		.loc 1 2888 5 is_stmt 1 view .LVU2294
@@ -11998,7 +11998,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  6927              		.set	.LANCHOR0,. + 0
  6928              	.LC0:
  6929 0000 02       		.byte	2
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 201
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 201
 
 
  6930 0001 01       		.byte	1
@@ -12058,7 +12058,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  6979              		.file 6 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
  6980              		.file 7 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
  6981              		.file 8 "D:/Git/VL53L1/lib/platform/inc/vl53l1_types.h"
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 202
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 202
 
 
  6982              		.file 9 "D:/Git/VL53L1/lib/core/inc/vl53l1_ll_device.h"
@@ -12068,7 +12068,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  6986              		.file 13 "D:/Git/VL53L1/lib/core/inc/vl53l1_def.h"
  6987              		.file 14 "cube/Drivers/CMSIS/Include/core_cm4.h"
  6988              		.file 15 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
- 6989              		.file 16 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xc.h"
+ 6989              		.file 16 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xe.h"
  6990              		.file 17 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h"
  6991              		.file 18 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_dma.h"
  6992              		.file 19 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_i2c.h"
@@ -12083,187 +12083,187 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 1
  7001              		.file 28 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\includ
  7002              		.file 29 "D:/Git/VL53L1/lib/core/inc/vl53l1_core.h"
  7003              		.file 30 "D:/Git/VL53L1/lib/core/inc/vl53l1_preset_setup.h"
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 203
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 203
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 vl53l1_api.c
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:18     .text.CheckValidRectRoi:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:25     .text.CheckValidRectRoi:00000000 CheckValidRectRoi
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:121    .text.ConvertModeToLLD:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:127    .text.ConvertModeToLLD:00000000 ConvertModeToLLD
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:163    .text.ConvertModeFromLLD:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:169    .text.ConvertModeFromLLD:00000000 ConvertModeFromLLD
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:205    .text.ComputeDevicePresetMode:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:211    .text.ComputeDevicePresetMode:00000000 ComputeDevicePresetMode
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:351    .text.ComputeDevicePresetMode:00000084 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:356    .text.ComputeRQL:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:362    .text.ComputeRQL:00000000 ComputeRQL
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:478    .text.ComputeRQL:00000058 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:484    .text.ConvertStatusLite:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:490    .text.ConvertStatusLite:00000000 ConvertStatusLite
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:505    .text.ConvertStatusLite:0000000a $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:521    .text.ConvertStatusLite:0000001a $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:603    .text.SetPresetMode:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:609    .text.SetPresetMode:00000000 SetPresetMode
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:746    .text.SetLimitValue:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:752    .text.SetLimitValue:00000000 SetLimitValue
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:812    .text.ChangePresetMode:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:818    .text.ChangePresetMode:00000000 ChangePresetMode
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1015   .text.VL53L1_nvm_enable:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1021   .text.VL53L1_nvm_enable:00000000 VL53L1_nvm_enable
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1174   .text.VL53L1_nvm_read:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1180   .text.VL53L1_nvm_read:00000000 VL53L1_nvm_read
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1322   .text.VL53L1_nvm_disable:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1328   .text.VL53L1_nvm_disable:00000000 VL53L1_nvm_disable
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1411   .text.VL53L1_read_nvm_raw_data:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1417   .text.VL53L1_read_nvm_raw_data:00000000 VL53L1_read_nvm_raw_data
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1497   .text.VL53L1_GetVersion:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1504   .text.VL53L1_GetVersion:00000000 VL53L1_GetVersion
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1540   .text.VL53L1_GetProductRevision:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1547   .text.VL53L1_GetProductRevision:00000000 VL53L1_GetProductRevision
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1585   .text.VL53L1_GetDeviceInfo:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1592   .text.VL53L1_GetDeviceInfo:00000000 VL53L1_GetDeviceInfo
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1676   .text.VL53L1_GetDeviceInfo:00000054 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1684   .text.VL53L1_GetRangeStatusString:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1691   .text.VL53L1_GetRangeStatusString:00000000 VL53L1_GetRangeStatusString
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1718   .text.VL53L1_GetPalErrorString:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1725   .text.VL53L1_GetPalErrorString:00000000 VL53L1_GetPalErrorString
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1752   .text.VL53L1_GetPalStateString:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1759   .text.VL53L1_GetPalStateString:00000000 VL53L1_GetPalStateString
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1786   .text.VL53L1_GetPalState:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1793   .text.VL53L1_GetPalState:00000000 VL53L1_GetPalState
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1819   .text.VL53L1_SetDeviceAddress:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1826   .text.VL53L1_SetDeviceAddress:00000000 VL53L1_SetDeviceAddress
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1857   .text.VL53L1_WaitDeviceBooted:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1864   .text.VL53L1_WaitDeviceBooted:00000000 VL53L1_WaitDeviceBooted
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1892   .text.VL53L1_GetPresetMode:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1899   .text.VL53L1_GetPresetMode:00000000 VL53L1_GetPresetMode
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1925   .text.VL53L1_SetDistanceMode:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:1932   .text.VL53L1_SetDistanceMode:00000000 VL53L1_SetDistanceMode
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2110   .text.VL53L1_GetDistanceMode:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2117   .text.VL53L1_GetDistanceMode:00000000 VL53L1_GetDistanceMode
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 204
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:18     .text.CheckValidRectRoi:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:25     .text.CheckValidRectRoi:00000000 CheckValidRectRoi
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:121    .text.ConvertModeToLLD:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:127    .text.ConvertModeToLLD:00000000 ConvertModeToLLD
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:163    .text.ConvertModeFromLLD:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:169    .text.ConvertModeFromLLD:00000000 ConvertModeFromLLD
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:205    .text.ComputeDevicePresetMode:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:211    .text.ComputeDevicePresetMode:00000000 ComputeDevicePresetMode
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:351    .text.ComputeDevicePresetMode:00000084 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:356    .text.ComputeRQL:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:362    .text.ComputeRQL:00000000 ComputeRQL
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:478    .text.ComputeRQL:00000058 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:484    .text.ConvertStatusLite:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:490    .text.ConvertStatusLite:00000000 ConvertStatusLite
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:505    .text.ConvertStatusLite:0000000a $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:521    .text.ConvertStatusLite:0000001a $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:603    .text.SetPresetMode:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:609    .text.SetPresetMode:00000000 SetPresetMode
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:746    .text.SetLimitValue:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:752    .text.SetLimitValue:00000000 SetLimitValue
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:812    .text.ChangePresetMode:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:818    .text.ChangePresetMode:00000000 ChangePresetMode
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1015   .text.VL53L1_nvm_enable:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1021   .text.VL53L1_nvm_enable:00000000 VL53L1_nvm_enable
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1174   .text.VL53L1_nvm_read:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1180   .text.VL53L1_nvm_read:00000000 VL53L1_nvm_read
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1322   .text.VL53L1_nvm_disable:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1328   .text.VL53L1_nvm_disable:00000000 VL53L1_nvm_disable
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1411   .text.VL53L1_read_nvm_raw_data:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1417   .text.VL53L1_read_nvm_raw_data:00000000 VL53L1_read_nvm_raw_data
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1497   .text.VL53L1_GetVersion:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1504   .text.VL53L1_GetVersion:00000000 VL53L1_GetVersion
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1540   .text.VL53L1_GetProductRevision:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1547   .text.VL53L1_GetProductRevision:00000000 VL53L1_GetProductRevision
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1585   .text.VL53L1_GetDeviceInfo:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1592   .text.VL53L1_GetDeviceInfo:00000000 VL53L1_GetDeviceInfo
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1676   .text.VL53L1_GetDeviceInfo:00000054 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1684   .text.VL53L1_GetRangeStatusString:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1691   .text.VL53L1_GetRangeStatusString:00000000 VL53L1_GetRangeStatusString
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1718   .text.VL53L1_GetPalErrorString:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1725   .text.VL53L1_GetPalErrorString:00000000 VL53L1_GetPalErrorString
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1752   .text.VL53L1_GetPalStateString:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1759   .text.VL53L1_GetPalStateString:00000000 VL53L1_GetPalStateString
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1786   .text.VL53L1_GetPalState:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1793   .text.VL53L1_GetPalState:00000000 VL53L1_GetPalState
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1819   .text.VL53L1_SetDeviceAddress:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1826   .text.VL53L1_SetDeviceAddress:00000000 VL53L1_SetDeviceAddress
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1857   .text.VL53L1_WaitDeviceBooted:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1864   .text.VL53L1_WaitDeviceBooted:00000000 VL53L1_WaitDeviceBooted
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1892   .text.VL53L1_GetPresetMode:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1899   .text.VL53L1_GetPresetMode:00000000 VL53L1_GetPresetMode
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1925   .text.VL53L1_SetDistanceMode:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:1932   .text.VL53L1_SetDistanceMode:00000000 VL53L1_SetDistanceMode
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2110   .text.VL53L1_GetDistanceMode:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2117   .text.VL53L1_GetDistanceMode:00000000 VL53L1_GetDistanceMode
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 204
 
 
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2143   .text.VL53L1_SetInterMeasurementPeriodMilliSeconds:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2150   .text.VL53L1_SetInterMeasurementPeriodMilliSeconds:00000000 VL53L1_SetInterMeasurementPeriodMilliSeconds
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2188   .text.VL53L1_SetInterMeasurementPeriodMilliSeconds:00000014 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2193   .text.VL53L1_GetInterMeasurementPeriodMilliSeconds:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2200   .text.VL53L1_GetInterMeasurementPeriodMilliSeconds:00000000 VL53L1_GetInterMeasurementPeriodMilliSeconds
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2251   .text.VL53L1_GetInterMeasurementPeriodMilliSeconds:00000020 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2256   .text.VL53L1_GetNumberOfLimitCheck:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2263   .text.VL53L1_GetNumberOfLimitCheck:00000000 VL53L1_GetNumberOfLimitCheck
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2288   .text.VL53L1_GetLimitCheckInfo:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2295   .text.VL53L1_GetLimitCheckInfo:00000000 VL53L1_GetLimitCheckInfo
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2322   .text.VL53L1_GetLimitCheckStatus:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2329   .text.VL53L1_GetLimitCheckStatus:00000000 VL53L1_GetLimitCheckStatus
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2369   .text.VL53L1_SetLimitCheckEnable:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2376   .text.VL53L1_SetLimitCheckEnable:00000000 VL53L1_SetLimitCheckEnable
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2460   .text.VL53L1_GetLimitCheckEnable:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2467   .text.VL53L1_GetLimitCheckEnable:00000000 VL53L1_GetLimitCheckEnable
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2514   .text.VL53L1_SetLimitCheckValue:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2521   .text.VL53L1_SetLimitCheckValue:00000000 VL53L1_SetLimitCheckValue
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2602   .text.VL53L1_DataInit:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2609   .text.VL53L1_DataInit:00000000 VL53L1_DataInit
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2719   .text.VL53L1_GetLimitCheckValue:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2726   .text.VL53L1_GetLimitCheckValue:00000000 VL53L1_GetLimitCheckValue
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2849   .text.SetSimpleData:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2855   .text.SetSimpleData:00000000 SetSimpleData
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2966   .text.SetSimpleData:00000052 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3158   .text.SetSimpleData:00000118 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3163   .text.VL53L1_GetLimitCheckCurrent:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3170   .text.VL53L1_GetLimitCheckCurrent:00000000 VL53L1_GetLimitCheckCurrent
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3213   .text.VL53L1_SetUserROI:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3220   .text.VL53L1_SetUserROI:00000000 VL53L1_SetUserROI
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3327   .text.VL53L1_GetUserROI:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3334   .text.VL53L1_GetUserROI:00000000 VL53L1_GetUserROI
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3413   .text.VL53L1_GetNumberOfSequenceSteps:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3420   .text.VL53L1_GetNumberOfSequenceSteps:00000000 VL53L1_GetNumberOfSequenceSteps
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3446   .text.VL53L1_GetSequenceStepsInfo:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3453   .text.VL53L1_GetSequenceStepsInfo:00000000 VL53L1_GetSequenceStepsInfo
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3480   .text.VL53L1_GetSequenceStepEnable:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3487   .text.VL53L1_GetSequenceStepEnable:00000000 VL53L1_GetSequenceStepEnable
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3514   .text.VL53L1_SetMeasurementTimingBudgetMicroSeconds:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3521   .text.VL53L1_SetMeasurementTimingBudgetMicroSeconds:00000000 VL53L1_SetMeasurementTimingBudgetMicroSeconds
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3826   .text.VL53L1_SetMeasurementTimingBudgetMicroSeconds:00000120 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3833   .text.VL53L1_SetPresetMode:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3840   .text.VL53L1_SetPresetMode:00000000 VL53L1_SetPresetMode
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3936   .text.VL53L1_StaticInit:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3943   .text.VL53L1_StaticInit:00000000 VL53L1_StaticInit
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3986   .text.VL53L1_SetSequenceStepEnable:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:3993   .text.VL53L1_SetSequenceStepEnable:00000000 VL53L1_SetSequenceStepEnable
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4043   .text.VL53L1_GetMeasurementTimingBudgetMicroSeconds:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4050   .text.VL53L1_GetMeasurementTimingBudgetMicroSeconds:00000000 VL53L1_GetMeasurementTimingBudgetMicroSeconds
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4297   .text.VL53L1_StartMeasurement:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4304   .text.VL53L1_StartMeasurement:00000000 VL53L1_StartMeasurement
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4462   .text.VL53L1_StartMeasurement:00000080 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4467   .text.VL53L1_StopMeasurement:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4474   .text.VL53L1_StopMeasurement:00000000 VL53L1_StopMeasurement
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4514   .text.VL53L1_ClearInterruptAndStartMeasurement:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4521   .text.VL53L1_ClearInterruptAndStartMeasurement:00000000 VL53L1_ClearInterruptAndStartMeasurement
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4576   .text.VL53L1_GetMeasurementDataReady:00000000 $t
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 205
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2143   .text.VL53L1_SetInterMeasurementPeriodMilliSeconds:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2150   .text.VL53L1_SetInterMeasurementPeriodMilliSeconds:00000000 VL53L1_SetInterMeasurementPeriodMilliSeconds
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2188   .text.VL53L1_SetInterMeasurementPeriodMilliSeconds:00000014 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2193   .text.VL53L1_GetInterMeasurementPeriodMilliSeconds:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2200   .text.VL53L1_GetInterMeasurementPeriodMilliSeconds:00000000 VL53L1_GetInterMeasurementPeriodMilliSeconds
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2251   .text.VL53L1_GetInterMeasurementPeriodMilliSeconds:00000020 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2256   .text.VL53L1_GetNumberOfLimitCheck:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2263   .text.VL53L1_GetNumberOfLimitCheck:00000000 VL53L1_GetNumberOfLimitCheck
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2288   .text.VL53L1_GetLimitCheckInfo:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2295   .text.VL53L1_GetLimitCheckInfo:00000000 VL53L1_GetLimitCheckInfo
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2322   .text.VL53L1_GetLimitCheckStatus:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2329   .text.VL53L1_GetLimitCheckStatus:00000000 VL53L1_GetLimitCheckStatus
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2369   .text.VL53L1_SetLimitCheckEnable:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2376   .text.VL53L1_SetLimitCheckEnable:00000000 VL53L1_SetLimitCheckEnable
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2460   .text.VL53L1_GetLimitCheckEnable:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2467   .text.VL53L1_GetLimitCheckEnable:00000000 VL53L1_GetLimitCheckEnable
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2514   .text.VL53L1_SetLimitCheckValue:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2521   .text.VL53L1_SetLimitCheckValue:00000000 VL53L1_SetLimitCheckValue
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2602   .text.VL53L1_DataInit:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2609   .text.VL53L1_DataInit:00000000 VL53L1_DataInit
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2719   .text.VL53L1_GetLimitCheckValue:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2726   .text.VL53L1_GetLimitCheckValue:00000000 VL53L1_GetLimitCheckValue
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2849   .text.SetSimpleData:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2855   .text.SetSimpleData:00000000 SetSimpleData
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2966   .text.SetSimpleData:00000052 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3158   .text.SetSimpleData:00000118 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3163   .text.VL53L1_GetLimitCheckCurrent:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3170   .text.VL53L1_GetLimitCheckCurrent:00000000 VL53L1_GetLimitCheckCurrent
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3213   .text.VL53L1_SetUserROI:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3220   .text.VL53L1_SetUserROI:00000000 VL53L1_SetUserROI
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3327   .text.VL53L1_GetUserROI:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3334   .text.VL53L1_GetUserROI:00000000 VL53L1_GetUserROI
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3413   .text.VL53L1_GetNumberOfSequenceSteps:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3420   .text.VL53L1_GetNumberOfSequenceSteps:00000000 VL53L1_GetNumberOfSequenceSteps
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3446   .text.VL53L1_GetSequenceStepsInfo:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3453   .text.VL53L1_GetSequenceStepsInfo:00000000 VL53L1_GetSequenceStepsInfo
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3480   .text.VL53L1_GetSequenceStepEnable:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3487   .text.VL53L1_GetSequenceStepEnable:00000000 VL53L1_GetSequenceStepEnable
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3514   .text.VL53L1_SetMeasurementTimingBudgetMicroSeconds:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3521   .text.VL53L1_SetMeasurementTimingBudgetMicroSeconds:00000000 VL53L1_SetMeasurementTimingBudgetMicroSeconds
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3826   .text.VL53L1_SetMeasurementTimingBudgetMicroSeconds:00000120 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3833   .text.VL53L1_SetPresetMode:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3840   .text.VL53L1_SetPresetMode:00000000 VL53L1_SetPresetMode
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3936   .text.VL53L1_StaticInit:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3943   .text.VL53L1_StaticInit:00000000 VL53L1_StaticInit
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3986   .text.VL53L1_SetSequenceStepEnable:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:3993   .text.VL53L1_SetSequenceStepEnable:00000000 VL53L1_SetSequenceStepEnable
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4043   .text.VL53L1_GetMeasurementTimingBudgetMicroSeconds:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4050   .text.VL53L1_GetMeasurementTimingBudgetMicroSeconds:00000000 VL53L1_GetMeasurementTimingBudgetMicroSeconds
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4297   .text.VL53L1_StartMeasurement:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4304   .text.VL53L1_StartMeasurement:00000000 VL53L1_StartMeasurement
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4462   .text.VL53L1_StartMeasurement:00000080 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4467   .text.VL53L1_StopMeasurement:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4474   .text.VL53L1_StopMeasurement:00000000 VL53L1_StopMeasurement
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4514   .text.VL53L1_ClearInterruptAndStartMeasurement:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4521   .text.VL53L1_ClearInterruptAndStartMeasurement:00000000 VL53L1_ClearInterruptAndStartMeasurement
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4576   .text.VL53L1_GetMeasurementDataReady:00000000 $t
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 205
 
 
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4583   .text.VL53L1_GetMeasurementDataReady:00000000 VL53L1_GetMeasurementDataReady
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4610   .text.VL53L1_WaitMeasurementDataReady:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4617   .text.VL53L1_WaitMeasurementDataReady:00000000 VL53L1_WaitMeasurementDataReady
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4645   .text.VL53L1_GetRangingMeasurementData:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4652   .text.VL53L1_GetRangingMeasurementData:00000000 VL53L1_GetRangingMeasurementData
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4741   .text.VL53L1_SetTuningParameter:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4748   .text.VL53L1_SetTuningParameter:00000000 VL53L1_SetTuningParameter
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4801   .text.VL53L1_SetTuningParameter:00000024 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4806   .text.VL53L1_GetTuningParameter:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4813   .text.VL53L1_GetTuningParameter:00000000 VL53L1_GetTuningParameter
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4868   .text.VL53L1_GetTuningParameter:00000024 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4873   .text.VL53L1_PerformRefSpadManagement:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:4880   .text.VL53L1_PerformRefSpadManagement:00000000 VL53L1_PerformRefSpadManagement
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:5063   .text.VL53L1_PerformRefSpadManagement:000000b0 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:5068   .text.VL53L1_SetXTalkCompensationEnable:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:5075   .text.VL53L1_SetXTalkCompensationEnable:00000000 VL53L1_SetXTalkCompensationEnable
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:5114   .text.VL53L1_GetXTalkCompensationEnable:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:5121   .text.VL53L1_GetXTalkCompensationEnable:00000000 VL53L1_GetXTalkCompensationEnable
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:5148   .text.VL53L1_SetOffsetCalibrationMode:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:5155   .text.VL53L1_SetOffsetCalibrationMode:00000000 VL53L1_SetOffsetCalibrationMode
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:5206   .text.VL53L1_PerformOffsetCalibration:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:5213   .text.VL53L1_PerformOffsetCalibration:00000000 VL53L1_PerformOffsetCalibration
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:5287   .text.VL53L1_PerformOffsetSimpleCalibration:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:5294   .text.VL53L1_PerformOffsetSimpleCalibration:00000000 VL53L1_PerformOffsetSimpleCalibration
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:5641   .text.VL53L1_PerformOffsetSimpleCalibration:0000013c $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:5646   .text.VL53L1_SetCalibrationData:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:5653   .text.VL53L1_SetCalibrationData:00000000 VL53L1_SetCalibrationData
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:5826   .text.VL53L1_GetCalibrationData:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:5833   .text.VL53L1_GetCalibrationData:00000000 VL53L1_GetCalibrationData
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:6002   .text.SingleTargetXTalkCalibration:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:6008   .text.SingleTargetXTalkCalibration:00000000 SingleTargetXTalkCalibration
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:6316   .text.SingleTargetXTalkCalibration:00000114 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:6321   .text.VL53L1_PerformSingleTargetXTalkCalibration:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:6328   .text.VL53L1_PerformSingleTargetXTalkCalibration:00000000 VL53L1_PerformSingleTargetXTalkCalibration
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:6374   .text.VL53L1_PerformSingleTargetXTalkCalibration:00000018 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:6379   .text.VL53L1_GetOpticalCenter:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:6386   .text.VL53L1_GetOpticalCenter:00000000 VL53L1_GetOpticalCenter
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:6453   .text.VL53L1_SetThresholdConfig:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:6460   .text.VL53L1_SetThresholdConfig:00000000 VL53L1_SetThresholdConfig
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:6553   .text.VL53L1_SetThresholdConfig:0000005a $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:6557   .text.VL53L1_SetThresholdConfig:0000005e $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:6753   .text.VL53L1_GetThresholdConfig:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:6760   .text.VL53L1_GetThresholdConfig:00000000 VL53L1_GetThresholdConfig
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:6926   .rodata:00000000 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:6947   .data.BDTable:00000000 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:6951   .data.BDTable:00000000 BDTable
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:6961   .rodata.VL53L1_GetDeviceInfo.str1.4:00000000 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2983   .text.SetSimpleData:00000063 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2983   .text.SetSimpleData:00000064 $t
-                           .group:00000000 wm4.0.a9549919c595c19c35ef13bc9ee4c8af
-                           .group:00000000 wm4.target_vl53l1_1.h.12.5039e74bcd507e129caba66ab5fc05af
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4583   .text.VL53L1_GetMeasurementDataReady:00000000 VL53L1_GetMeasurementDataReady
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4610   .text.VL53L1_WaitMeasurementDataReady:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4617   .text.VL53L1_WaitMeasurementDataReady:00000000 VL53L1_WaitMeasurementDataReady
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4645   .text.VL53L1_GetRangingMeasurementData:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4652   .text.VL53L1_GetRangingMeasurementData:00000000 VL53L1_GetRangingMeasurementData
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4741   .text.VL53L1_SetTuningParameter:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4748   .text.VL53L1_SetTuningParameter:00000000 VL53L1_SetTuningParameter
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4801   .text.VL53L1_SetTuningParameter:00000024 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4806   .text.VL53L1_GetTuningParameter:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4813   .text.VL53L1_GetTuningParameter:00000000 VL53L1_GetTuningParameter
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4868   .text.VL53L1_GetTuningParameter:00000024 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4873   .text.VL53L1_PerformRefSpadManagement:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:4880   .text.VL53L1_PerformRefSpadManagement:00000000 VL53L1_PerformRefSpadManagement
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:5063   .text.VL53L1_PerformRefSpadManagement:000000b0 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:5068   .text.VL53L1_SetXTalkCompensationEnable:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:5075   .text.VL53L1_SetXTalkCompensationEnable:00000000 VL53L1_SetXTalkCompensationEnable
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:5114   .text.VL53L1_GetXTalkCompensationEnable:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:5121   .text.VL53L1_GetXTalkCompensationEnable:00000000 VL53L1_GetXTalkCompensationEnable
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:5148   .text.VL53L1_SetOffsetCalibrationMode:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:5155   .text.VL53L1_SetOffsetCalibrationMode:00000000 VL53L1_SetOffsetCalibrationMode
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:5206   .text.VL53L1_PerformOffsetCalibration:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:5213   .text.VL53L1_PerformOffsetCalibration:00000000 VL53L1_PerformOffsetCalibration
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:5287   .text.VL53L1_PerformOffsetSimpleCalibration:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:5294   .text.VL53L1_PerformOffsetSimpleCalibration:00000000 VL53L1_PerformOffsetSimpleCalibration
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:5641   .text.VL53L1_PerformOffsetSimpleCalibration:0000013c $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:5646   .text.VL53L1_SetCalibrationData:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:5653   .text.VL53L1_SetCalibrationData:00000000 VL53L1_SetCalibrationData
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:5826   .text.VL53L1_GetCalibrationData:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:5833   .text.VL53L1_GetCalibrationData:00000000 VL53L1_GetCalibrationData
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:6002   .text.SingleTargetXTalkCalibration:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:6008   .text.SingleTargetXTalkCalibration:00000000 SingleTargetXTalkCalibration
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:6316   .text.SingleTargetXTalkCalibration:00000114 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:6321   .text.VL53L1_PerformSingleTargetXTalkCalibration:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:6328   .text.VL53L1_PerformSingleTargetXTalkCalibration:00000000 VL53L1_PerformSingleTargetXTalkCalibration
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:6374   .text.VL53L1_PerformSingleTargetXTalkCalibration:00000018 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:6379   .text.VL53L1_GetOpticalCenter:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:6386   .text.VL53L1_GetOpticalCenter:00000000 VL53L1_GetOpticalCenter
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:6453   .text.VL53L1_SetThresholdConfig:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:6460   .text.VL53L1_SetThresholdConfig:00000000 VL53L1_SetThresholdConfig
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:6553   .text.VL53L1_SetThresholdConfig:0000005a $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:6557   .text.VL53L1_SetThresholdConfig:0000005e $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:6753   .text.VL53L1_GetThresholdConfig:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:6760   .text.VL53L1_GetThresholdConfig:00000000 VL53L1_GetThresholdConfig
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:6926   .rodata:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:6947   .data.BDTable:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:6951   .data.BDTable:00000000 BDTable
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:6961   .rodata.VL53L1_GetDeviceInfo.str1.4:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2983   .text.SetSimpleData:00000063 $d
+C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s:2983   .text.SetSimpleData:00000064 $t
+                           .group:00000000 wm4.0.cbadcd7125b439f63d13d43ae17ce4cb
+                           .group:00000000 wm4.target_vl53l1_1.h.12.551c1b90918b951c5224feb9b75565bd
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.d0b7f3cd6ee95f610104014bb3ed522a
                            .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
                            .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
                            .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
                            .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 206
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 206
 
 
                            .group:00000000 wm4.stddef.h.39.a38874c8f8a57e66301090908ec2a69f
@@ -12300,30 +12300,30 @@ C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s:2983   .text.SetSimpleData:00000
                            .group:00000000 wm4.vl53l1_platform_log.h.71.79ea17a42b4255ee5461fb53cd7aea3c
                            .group:00000000 wm4.stm32f3xx_hal_conf.h.37.cb1c9cb802da867d86527a1477311c20
                            .group:00000000 wm4.stm32f3xx.h.55.fe34e0340b06ab20c90f3cf1d792e0eb
-                           .group:00000000 wm4.stm32f303xc.h.51.75494ed92b93e6861874d99c51c92793
+                           .group:00000000 wm4.stm32f303xe.h.51.65501469ddbb8a3dac94b2f9d61c4e79
                            .group:00000000 wm4.core_cm4.h.42.42f38327ee0970d80f60117e6a3ba2b0
                            .group:00000000 wm4.cmsis_gcc.h.36.39970cb43ce4b53c82644a1f9bc2eab9
                            .group:00000000 wm4.core_cm4.h.223.390ff9b0e06949b13520d8b6746f63e8
-                           .group:00000000 wm4.stm32f303xc.h.710.b77655c64e6ea7efdc9ab6a96701a5ae
+                           .group:00000000 wm4.stm32f303xe.h.787.6957ba193b5d3b55f4f9c444bc42cb63
                            .group:00000000 wm4.stm32f3xx.h.191.245d83eb21a6c69e2950c577a7134277
                            .group:00000000 wm4.stm32f3xx_hal_def.h.76.500c7c9bfcb8d4adebf82d1af27ff044
-                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.60ee232241a99e19acd27637eebe4f1c
-                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.1fba3945551953e78cf69c94a0383651
+                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.06cc24fd94394ddd03725d84823331b1
+                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.96615d6f3e5897bb79454968f7fc6c86
                            .group:00000000 wm4.stm32f3xx_hal_gpio.h.38.11db931fcbf37182e25c3927ddf6e8ba
-                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.8d493744f4b7a4f7a0f4f97db0ccbd8e
+                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.46a6c05d651e2a032ac66cebe63916b8
                            .group:00000000 wm4.stm32f3xx_hal_dma.h.38.61966c780efd486aa451ae49ca247997
                            .group:00000000 wm4.stm32f3xx_hal_dma_ex.h.38.195e7d437d9280b9f4e6bae0fa00db04
                            .group:00000000 wm4.stm32f3xx_hal_dma.h.423.83da80eb3e6ae96f050d0c5e4b55e4b9
                            .group:00000000 wm4.stm32f3xx_hal_cortex.h.38.c5c1d06be9dad8e7837dbe16f3535233
                            .group:00000000 wm4.stm32f3xx_hal_flash.h.38.2b4c202390dfbe69a578ce118ab4d799
-                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.36f8341b05728c01a88b7f1003837b1f
+                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.65931ad4b848f69ba672eb38b2753615
                            .group:00000000 wm4.stm32f3xx_hal_i2c.h.38.e3750f5f029ebf729a7cf07e85cad615
-                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.74099379a9814ae4d6d1c8682fdde7ad
+                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.bdd47c8bc2d21749d9fd72e6b8484890
                            .group:00000000 wm4.stm32f3xx_hal_i2c.h.626.05cba3c85b66bb4631bfd2ebbfab1b06
                            .group:00000000 wm4.stm32f3xx_hal_pwr.h.38.efb6ce75a5c12d6b2c7c914e7a94ec2b
                            .group:00000000 wm4.stm32f3xx_hal_pwr_ex.h.38.d228edc56905d96af2d831d3c8e0487a
-                           .group:00000000 wm4.stm32f3xx_hal.h.60.e1acc37932101d84a977b19b7a581169
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccIApzSj.s 			page 207
+                           .group:00000000 wm4.stm32f3xx_hal.h.60.11e72be277d7cf245b56360bacde3327
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccpaHgls.s 			page 207
 
 
                            .group:00000000 wm4.vl53l1_platform_user_data.h.94.31d6fd49a37f98d182bed50c298f83ae

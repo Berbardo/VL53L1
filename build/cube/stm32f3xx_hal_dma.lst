@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
   28:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****        detection.
   29:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****                     
   30:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****    (#) Use HAL_DMA_Abort() function to abort the current transfer
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 2
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 2
 
 
   31:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****                    
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
   85:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
   86:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
   87:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 3
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 3
 
 
   88:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  142:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c **** @endverbatim
  143:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   * @{
  144:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   */
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 4
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 4
 
 
  145:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  199:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c **** 
  200:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   /* Initialize the DMA state*/
  201:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   hdma->State = HAL_DMA_STATE_READY;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 5
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 5
 
 
  202:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  256:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   /* Reset the DMA state */
  257:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   hdma->State = HAL_DMA_STATE_RESET;
  258:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 6
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 6
 
 
  259:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   /* Release Lock */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  313:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   	
  314:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   	/* Disable the peripheral */
  315:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   	hdma->Instance->CCR &= ~DMA_CCR_EN;  
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 7
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 7
 
 
  316:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   	
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  370:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****     {
  371:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****       hdma->Instance->CCR |= (DMA_IT_TC | DMA_IT_HT | DMA_IT_TE);
  372:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****     }
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 8
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 8
 
 
  373:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   	else
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  427:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c **** {  
  428:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   HAL_StatusTypeDef status = HAL_OK;
  429:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 9
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 9
 
 
  430:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   if(HAL_DMA_STATE_BUSY != hdma->State)
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  484:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   
  485:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   /* Polling mode not supported in circular mode */
  486:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   if (RESET != (hdma->Instance->CCR & DMA_CCR_CIRC))
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 10
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 10
 
 
  487:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   {
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  541:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****         return HAL_ERROR;
  542:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****       }
  543:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****     }
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 11
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 11
 
 
  544:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   }
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  598:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   	}
  599:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   }
  600:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 12
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 12
 
 
  601:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   /* Transfer Complete Interrupt management ***********************************/
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  655:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c **** /**
  656:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   * @brief  Register callbacks
  657:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   * @param  hdma                 pointer to a DMA_HandleTypeDef structure that contains
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 13
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 13
 
 
  658:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   *                               the configuration information for the specified DMA Stream.
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  712:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   * @param  CallbackID           User Callback identifer
  713:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   *                               a HAL_DMA_CallbackIDTypeDef ENUM as parameter.
  714:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   * @retval HAL status
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 14
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 14
 
 
  715:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   */              
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  769:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c **** 
  770:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c **** /** @defgroup DMA_Exported_Functions_Group3 Peripheral State functions
  771:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****  *  @brief    Peripheral State functions 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 15
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 15
 
 
  772:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****  *
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  826:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   * @param  DataLength The length of data to be transferred from source to destination
  827:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   * @retval HAL status
  828:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   */
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 16
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 16
 
 
  829:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c **** static void DMA_SetConfig(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  850:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****     hdma->Instance->CPAR = SrcAddress;
   62              		.loc 1 850 5 is_stmt 1 view .LVU13
   63              		.loc 1 850 9 is_stmt 0 view .LVU14
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 17
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 17
 
 
   64 0016 0368     		ldr	r3, [r0]
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  109              	.LFB139:
  856:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c **** 
  857:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c **** /**
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 18
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 18
 
 
  858:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   * @brief  Set the DMA base address and channel index depending on DMA instance
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  145 0022 064A     		ldr	r2, .L9+8
  146 0024 A2FB0323 		umull	r2, r3, r2, r3
  147 0028 1B09     		lsrs	r3, r3, #4
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 19
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 19
 
 
  148              		.loc 1 876 135 view .LVU40
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  190 0002 10B5     		push	{r4, lr}
  191              		.cfi_def_cfa_offset 8
  192              		.cfi_offset 4, -8
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 20
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 20
 
 
  193              		.cfi_offset 14, -4
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  227 001c 0343     		orrs	r3, r3, r0
  186:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****           hdma->Init.PeriphDataAlignment | hdma->Init.MemDataAlignment |
  228              		.loc 1 186 54 view .LVU70
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 21
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 21
 
 
  229 001e E068     		ldr	r0, [r4, #12]
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  204:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   
  266              		.loc 1 204 3 is_stmt 1 view .LVU88
  204:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 22
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 22
 
 
  267              		.loc 1 204 14 is_stmt 0 view .LVU89
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  227:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c **** 
  313              		.loc 1 227 7 is_stmt 0 view .LVU100
  314 0006 0268     		ldr	r2, [r0]
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 23
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 23
 
 
  227:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c **** 
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  245:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c **** 
  351              		.loc 1 245 30 view .LVU119
  352 002e 5360     		str	r3, [r2, #4]
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 24
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 24
 
 
  248:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   hdma->XferHalfCpltCallback = NULL;
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  263:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c **** 
  389              		.loc 1 263 1 view .LVU138
  390 0048 7047     		bx	lr
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 25
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 25
 
 
  391              		.cfi_endproc
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  435 0018 0023     		movs	r3, #0
  436              	.LVL21:
  326:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   	
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 26
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 26
 
 
  437              		.loc 1 326 4 is_stmt 0 view .LVU151
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  475              		.loc 1 321 24 view .LVU167
  476 0040 1368     		ldr	r3, [r2]
  477 0042 43F00103 		orr	r3, r3, #1
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 27
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 27
 
 
  478 0046 1360     		str	r3, [r2]
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  524 000c 80F82040 		strb	r4, [r0, #32]
  354:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   {
  525              		.loc 1 354 3 discriminator 2 view .LVU178
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 28
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 28
 
 
  354:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   {
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  563 0030 2868     		ldr	r0, [r5]
  564 0032 20F00100 		bic	r0, r0, #1
  565 0036 2860     		str	r0, [r5]
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 29
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 29
 
 
  365:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   	
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  376:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   	}
  604              		.loc 1 376 25 view .LVU212
  605 0066 1368     		ldr	r3, [r2]
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 30
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 30
 
 
  606 0068 23F00403 		bic	r3, r3, #4
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  651              		.loc 1 409 2 is_stmt 1 view .LVU223
  409:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c **** 	
  652              		.loc 1 409 52 is_stmt 0 view .LVU224
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 31
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 31
 
 
  653 0016 026C     		ldr	r2, [r0, #64]
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  430:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   {
  697              		.loc 1 430 3 view .LVU237
  430:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   {
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 32
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 32
 
 
  698              		.loc 1 430 32 is_stmt 0 view .LVU238
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  736 0028 C16B     		ldr	r1, [r0, #60]
  447:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****     
  737              		.loc 1 447 47 view .LVU255
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 33
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 33
 
 
  738 002a 0122     		movs	r2, #1
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  781              		.loc 1 473 1 is_stmt 1 view -0
  782              		.cfi_startproc
  783              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 34
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 34
 
 
  784              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  823              		.loc 1 486 21 is_stmt 0 view .LVU283
  824 001c 0368     		ldr	r3, [r0]
  486:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   {
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 35
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 35
 
 
  825              		.loc 1 486 31 view .LVU284
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  863 0042 2968     		ldr	r1, [r5]
  509:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****     {      
  864              		.loc 1 509 67 view .LVU301
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 36
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 36
 
 
  865 0044 226C     		ldr	r2, [r4, #64]
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  902 0072 D1E7     		b	.L47
  903              	.LVL57:
  904              	.L59:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 37
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 37
 
 
  488:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****     return HAL_ERROR;
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  941              		.loc 1 523 7 view .LVU336
  942 0094 0023     		movs	r3, #0
  943 0096 84F82030 		strb	r3, [r4, #32]
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 38
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 38
 
 
  525:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****     }      
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  980 00be 6B60     		str	r3, [r5, #4]
  981 00c0 F6E7     		b	.L57
  982              		.cfi_endproc
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 39
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 39
 
 
  983              	.LFE132:
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  1027 0012 13D0     		beq	.L63
  579:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   {
  1028              		.loc 1 579 67 discriminator 1 view .LVU367
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 40
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 40
 
 
  1029 0014 15F0040F 		tst	r5, #4
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  1067              		.loc 1 602 8 is_stmt 1 view .LVU383
  602:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   {
  1068              		.loc 1 602 47 is_stmt 0 view .LVU384
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 41
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 41
 
 
  1069 003c 0223     		movs	r3, #2
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  1107 006c 80F82030 		strb	r3, [r0, #32]
  620:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   	{
  1108              		.loc 1 620 4 view .LVU401
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 42
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 42
 
 
  620:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   	{
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  1147              		.loc 1 639 5 is_stmt 1 view .LVU417
  639:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****     
  1148              		.loc 1 639 21 is_stmt 0 view .LVU418
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 43
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 43
 
 
  1149 009e 8363     		str	r3, [r0, #56]
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  670:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****   
  1192              		.loc 1 670 3 view .LVU432
  1193 0002 90F82000 		ldrb	r0, [r0, #32]	@ zero_extendqisi2
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 44
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 44
 
 
  1194              	.LVL75:
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  1234              		.loc 1 677 35 is_stmt 0 view .LVU446
  1235 002e 9A62     		str	r2, [r3, #40]
  678:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****        
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 45
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 45
 
 
  1236              		.loc 1 678 12 is_stmt 1 view .LVU447
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  1271              		.loc 1 706 1 view .LVU466
  1272 0048 7047     		bx	lr
  1273              		.cfi_endproc
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 46
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 46
 
 
  1274              	.LFE134:
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  1318 001c 83F82020 		strb	r2, [r3, #32]
  763:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c **** }
  1319              		.loc 1 763 3 view .LVU479
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 47
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 47
 
 
  763:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c **** }
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  1360              		.loc 1 740 12 view .LVU493
  740:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c ****            break; 
  1361              		.loc 1 740 36 is_stmt 0 view .LVU494
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 48
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 48
 
 
  1362 0044 0020     		movs	r0, #0
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  1405              		@ args = 0, pretend = 0, frame = 0
  1406              		@ frame_needed = 0, uses_anonymous_args = 0
  1407              		@ link register save eliminated.
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 49
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 49
 
 
  794:cube/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c **** }
@@ -2925,7 +2925,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  1445              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
  1446              		.file 4 "cube/Drivers/CMSIS/Include/core_cm4.h"
  1447              		.file 5 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
- 1448              		.file 6 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xc.h"
+ 1448              		.file 6 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xe.h"
  1449              		.file 7 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\lib\\gcc\\arm-none-eab
  1450              		.file 8 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
  1451              		.file 9 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
@@ -2934,50 +2934,50 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 1
  1454              		.file 12 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h"
  1455              		.file 13 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_dma.h"
  1456              		.file 14 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h"
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 50
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 50
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f3xx_hal_dma.c
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:18     .text.DMA_SetConfig:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:25     .text.DMA_SetConfig:00000000 DMA_SetConfig
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:101    .text.DMA_CalcBaseAndBitshift:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:107    .text.DMA_CalcBaseAndBitshift:00000000 DMA_CalcBaseAndBitshift
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:161    .text.DMA_CalcBaseAndBitshift:00000034 $d
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:171    .text.HAL_DMA_Init:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:178    .text.HAL_DMA_Init:00000000 HAL_DMA_Init
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:286    .text.HAL_DMA_DeInit:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:293    .text.HAL_DMA_DeInit:00000000 HAL_DMA_DeInit
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:395    .text.HAL_DMA_Start:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:402    .text.HAL_DMA_Start:00000000 HAL_DMA_Start
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:493    .text.HAL_DMA_Start_IT:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:500    .text.HAL_DMA_Start_IT:00000000 HAL_DMA_Start_IT
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:620    .text.HAL_DMA_Abort:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:627    .text.HAL_DMA_Abort:00000000 HAL_DMA_Abort
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:676    .text.HAL_DMA_Abort_IT:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:683    .text.HAL_DMA_Abort_IT:00000000 HAL_DMA_Abort_IT
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:771    .text.HAL_DMA_PollForTransfer:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:778    .text.HAL_DMA_PollForTransfer:00000000 HAL_DMA_PollForTransfer
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:986    .text.HAL_DMA_IRQHandler:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:993    .text.HAL_DMA_IRQHandler:00000000 HAL_DMA_IRQHandler
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:1172   .text.HAL_DMA_RegisterCallback:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:1179   .text.HAL_DMA_RegisterCallback:00000000 HAL_DMA_RegisterCallback
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:1227   .text.HAL_DMA_RegisterCallback:0000002a $d
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:1231   .text.HAL_DMA_RegisterCallback:0000002e $t
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:1277   .text.HAL_DMA_UnRegisterCallback:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:1284   .text.HAL_DMA_UnRegisterCallback:00000000 HAL_DMA_UnRegisterCallback
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:1329   .text.HAL_DMA_UnRegisterCallback:0000002a $d
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:1393   .text.HAL_DMA_GetState:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:1400   .text.HAL_DMA_GetState:00000000 HAL_DMA_GetState
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:1418   .text.HAL_DMA_GetError:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:1425   .text.HAL_DMA_GetError:00000000 HAL_DMA_GetError
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:1334   .text.HAL_DMA_UnRegisterCallback:0000002f $d
-C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:1334   .text.HAL_DMA_UnRegisterCallback:00000030 $t
-                           .group:00000000 wm4.0.a9549919c595c19c35ef13bc9ee4c8af
-                           .group:00000000 wm4.target_vl53l1_1.h.12.5039e74bcd507e129caba66ab5fc05af
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:18     .text.DMA_SetConfig:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:25     .text.DMA_SetConfig:00000000 DMA_SetConfig
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:101    .text.DMA_CalcBaseAndBitshift:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:107    .text.DMA_CalcBaseAndBitshift:00000000 DMA_CalcBaseAndBitshift
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:161    .text.DMA_CalcBaseAndBitshift:00000034 $d
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:171    .text.HAL_DMA_Init:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:178    .text.HAL_DMA_Init:00000000 HAL_DMA_Init
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:286    .text.HAL_DMA_DeInit:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:293    .text.HAL_DMA_DeInit:00000000 HAL_DMA_DeInit
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:395    .text.HAL_DMA_Start:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:402    .text.HAL_DMA_Start:00000000 HAL_DMA_Start
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:493    .text.HAL_DMA_Start_IT:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:500    .text.HAL_DMA_Start_IT:00000000 HAL_DMA_Start_IT
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:620    .text.HAL_DMA_Abort:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:627    .text.HAL_DMA_Abort:00000000 HAL_DMA_Abort
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:676    .text.HAL_DMA_Abort_IT:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:683    .text.HAL_DMA_Abort_IT:00000000 HAL_DMA_Abort_IT
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:771    .text.HAL_DMA_PollForTransfer:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:778    .text.HAL_DMA_PollForTransfer:00000000 HAL_DMA_PollForTransfer
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:986    .text.HAL_DMA_IRQHandler:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:993    .text.HAL_DMA_IRQHandler:00000000 HAL_DMA_IRQHandler
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:1172   .text.HAL_DMA_RegisterCallback:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:1179   .text.HAL_DMA_RegisterCallback:00000000 HAL_DMA_RegisterCallback
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:1227   .text.HAL_DMA_RegisterCallback:0000002a $d
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:1231   .text.HAL_DMA_RegisterCallback:0000002e $t
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:1277   .text.HAL_DMA_UnRegisterCallback:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:1284   .text.HAL_DMA_UnRegisterCallback:00000000 HAL_DMA_UnRegisterCallback
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:1329   .text.HAL_DMA_UnRegisterCallback:0000002a $d
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:1393   .text.HAL_DMA_GetState:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:1400   .text.HAL_DMA_GetState:00000000 HAL_DMA_GetState
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:1418   .text.HAL_DMA_GetError:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:1425   .text.HAL_DMA_GetError:00000000 HAL_DMA_GetError
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:1334   .text.HAL_DMA_UnRegisterCallback:0000002f $d
+C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s:1334   .text.HAL_DMA_UnRegisterCallback:00000030 $t
+                           .group:00000000 wm4.0.cbadcd7125b439f63d13d43ae17ce4cb
+                           .group:00000000 wm4.target_vl53l1_1.h.12.551c1b90918b951c5224feb9b75565bd
                            .group:00000000 wm4.stm32f3xx_hal_conf.h.37.cb1c9cb802da867d86527a1477311c20
                            .group:00000000 wm4.stm32f3xx.h.55.fe34e0340b06ab20c90f3cf1d792e0eb
-                           .group:00000000 wm4.stm32f303xc.h.51.75494ed92b93e6861874d99c51c92793
+                           .group:00000000 wm4.stm32f303xe.h.51.65501469ddbb8a3dac94b2f9d61c4e79
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.d0b7f3cd6ee95f610104014bb3ed522a
                            .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
@@ -2987,14 +2987,14 @@ C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:1334   .text.HAL_DMA_UnRegisterC
                            .group:00000000 wm4.core_cm4.h.74.09ac1776756364a5a5d23084aa23e459
                            .group:00000000 wm4.cmsis_gcc.h.36.39970cb43ce4b53c82644a1f9bc2eab9
                            .group:00000000 wm4.core_cm4.h.223.390ff9b0e06949b13520d8b6746f63e8
-                           .group:00000000 wm4.stm32f303xc.h.710.b77655c64e6ea7efdc9ab6a96701a5ae
+                           .group:00000000 wm4.stm32f303xe.h.787.6957ba193b5d3b55f4f9c444bc42cb63
                            .group:00000000 wm4.stm32f3xx.h.191.245d83eb21a6c69e2950c577a7134277
                            .group:00000000 wm4.newlib.h.8.f6e543eac3f2f65163ba2ffe3b04987b
                            .group:00000000 wm4.ieeefp.h.77.5499ed899a78229fbaf6d102924f4714
                            .group:00000000 wm4.config.h.224.c701144a7b0518c6ee9b9b5465b79f81
                            .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
                            .group:00000000 wm4.stdio.h.31.7c0e28c411445f3f9c5b11accf882760
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s 			page 51
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccjcJw7.s 			page 51
 
 
                            .group:00000000 wm4.stddef.h.187.2ff233552538c6ff9b8575ca8ea52cb3
@@ -3011,22 +3011,22 @@ C:\Users\Berbardo\AppData\Local\Temp\cc2pzARC.s:1334   .text.HAL_DMA_UnRegisterC
                            .group:00000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
                            .group:00000000 wm4.stdio.h.81.2a55589bfa3ee24eeb84e3c79458e4a9
                            .group:00000000 wm4.stm32f3xx_hal_def.h.76.500c7c9bfcb8d4adebf82d1af27ff044
-                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.60ee232241a99e19acd27637eebe4f1c
-                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.1fba3945551953e78cf69c94a0383651
+                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.06cc24fd94394ddd03725d84823331b1
+                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.96615d6f3e5897bb79454968f7fc6c86
                            .group:00000000 wm4.stm32f3xx_hal_gpio.h.38.11db931fcbf37182e25c3927ddf6e8ba
-                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.8d493744f4b7a4f7a0f4f97db0ccbd8e
+                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.46a6c05d651e2a032ac66cebe63916b8
                            .group:00000000 wm4.stm32f3xx_hal_dma.h.38.61966c780efd486aa451ae49ca247997
                            .group:00000000 wm4.stm32f3xx_hal_dma_ex.h.38.195e7d437d9280b9f4e6bae0fa00db04
                            .group:00000000 wm4.stm32f3xx_hal_dma.h.423.83da80eb3e6ae96f050d0c5e4b55e4b9
                            .group:00000000 wm4.stm32f3xx_hal_cortex.h.38.c5c1d06be9dad8e7837dbe16f3535233
                            .group:00000000 wm4.stm32f3xx_hal_flash.h.38.2b4c202390dfbe69a578ce118ab4d799
-                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.36f8341b05728c01a88b7f1003837b1f
+                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.65931ad4b848f69ba672eb38b2753615
                            .group:00000000 wm4.stm32f3xx_hal_i2c.h.38.e3750f5f029ebf729a7cf07e85cad615
-                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.74099379a9814ae4d6d1c8682fdde7ad
+                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.bdd47c8bc2d21749d9fd72e6b8484890
                            .group:00000000 wm4.stm32f3xx_hal_i2c.h.626.05cba3c85b66bb4631bfd2ebbfab1b06
                            .group:00000000 wm4.stm32f3xx_hal_pwr.h.38.efb6ce75a5c12d6b2c7c914e7a94ec2b
                            .group:00000000 wm4.stm32f3xx_hal_pwr_ex.h.38.d228edc56905d96af2d831d3c8e0487a
-                           .group:00000000 wm4.stm32f3xx_hal.h.60.e1acc37932101d84a977b19b7a581169
+                           .group:00000000 wm4.stm32f3xx_hal.h.60.11e72be277d7cf245b56360bacde3327
 
 UNDEFINED SYMBOLS
 HAL_GetTick

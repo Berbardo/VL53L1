@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 1
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 1
   27:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * 'BSD 3-clause "New" or "Revised" License', in which case the following
   28:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** * provisions apply instead of the ones mentioned above :
   29:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** *
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 2
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s 			page 2
 
 
   30:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** ********************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 1
   84:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #warning "HAL I2C module must be enable "
   85:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // #endif
   86:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 3
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s 			page 3
 
 
   87:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** //extern I2C_HandleTypeDef hi2c1;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 1
   54              	.LVL2:
   55              	.LFB127:
  119:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 4
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s 			page 4
 
 
  120:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** // the ranging_sensor_comms.dll will take care of the page selection
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 1
  103              		.fpu fpv4-sp-d16
  105              	VL53L1_WrWord:
  106              	.LVL6:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 5
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s 			page 5
 
 
  107              	.LFB129:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 1
  154              		.thumb_func
  155              		.fpu fpv4-sp-d16
  157              	VL53L1_UpdateByte:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 6
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s 			page 6
 
 
  158              	.LVL10:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 1
  205              		.thumb
  206              		.thumb_func
  207              		.fpu fpv4-sp-d16
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 7
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s 			page 7
 
 
  209              	VL53L1_RdWord:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 1
  256              		.syntax unified
  257              		.thumb
  258              		.thumb_func
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 8
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s 			page 8
 
 
  259              		.fpu fpv4-sp-d16
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 1
  296              		.loc 1 179 2 view .LVU52
  180:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** }
  297              		.loc 1 180 1 is_stmt 0 view .LVU53
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 9
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s 			page 9
 
 
  298 0000 0020     		movs	r0, #0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 1
  189:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** 	return status;
  348              		.loc 1 189 2 view .LVU62
  190:D:/Git/VL53L1/lib/platform/src\vl53l1_platform.c **** }
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 10
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s 			page 10
 
 
  349              		.loc 1 190 1 is_stmt 0 view .LVU63
@@ -598,52 +598,52 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 1
  394              		.file 11 "D:/Git/VL53L1/lib/core/inc/vl53l1_register_structs.h"
  395              		.file 12 "D:/Git/VL53L1/lib/core/inc/vl53l1_ll_def.h"
  396              		.file 13 "cube/Drivers/CMSIS/Include/core_cm4.h"
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 11
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s 			page 11
 
 
  397              		.file 14 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
- 398              		.file 15 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xc.h"
+ 398              		.file 15 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xe.h"
  399              		.file 16 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h"
  400              		.file 17 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_dma.h"
  401              		.file 18 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_i2c.h"
  402              		.file 19 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h"
  403              		.file 20 "D:/Git/VL53L1/lib/core/inc/vl53l1_def.h"
  404              		.file 21 "D:/Git/VL53L1/lib/platform/inc/vl53l1_platform_user_data.h"
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 12
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 vl53l1_platform.c
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:18     .text.VL53L1_WriteMulti:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:26     .text.VL53L1_WriteMulti:00000000 VL53L1_WriteMulti
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:46     .text.VL53L1_ReadMulti:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:53     .text.VL53L1_ReadMulti:00000000 VL53L1_ReadMulti
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:72     .text.VL53L1_WrByte:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:79     .text.VL53L1_WrByte:00000000 VL53L1_WrByte
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:98     .text.VL53L1_WrWord:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:105    .text.VL53L1_WrWord:00000000 VL53L1_WrWord
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:124    .text.VL53L1_WrDWord:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:131    .text.VL53L1_WrDWord:00000000 VL53L1_WrDWord
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:150    .text.VL53L1_UpdateByte:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:157    .text.VL53L1_UpdateByte:00000000 VL53L1_UpdateByte
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:176    .text.VL53L1_RdByte:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:183    .text.VL53L1_RdByte:00000000 VL53L1_RdByte
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:202    .text.VL53L1_RdWord:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:209    .text.VL53L1_RdWord:00000000 VL53L1_RdWord
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:228    .text.VL53L1_RdDWord:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:235    .text.VL53L1_RdDWord:00000000 VL53L1_RdDWord
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:254    .text.VL53L1_GetTickCount:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:261    .text.VL53L1_GetTickCount:00000000 VL53L1_GetTickCount
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:280    .text.VL53L1_GetTimerFrequency:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:287    .text.VL53L1_GetTimerFrequency:00000000 VL53L1_GetTimerFrequency
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:306    .text.VL53L1_WaitMs:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:313    .text.VL53L1_WaitMs:00000000 VL53L1_WaitMs
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:332    .text.VL53L1_WaitUs:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:339    .text.VL53L1_WaitUs:00000000 VL53L1_WaitUs
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:358    .text.VL53L1_WaitValueMaskEx:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:365    .text.VL53L1_WaitValueMaskEx:00000000 VL53L1_WaitValueMaskEx
-                           .group:00000000 wm4.0.a9549919c595c19c35ef13bc9ee4c8af
-                           .group:00000000 wm4.target_vl53l1_1.h.12.5039e74bcd507e129caba66ab5fc05af
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:18     .text.VL53L1_WriteMulti:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:26     .text.VL53L1_WriteMulti:00000000 VL53L1_WriteMulti
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:46     .text.VL53L1_ReadMulti:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:53     .text.VL53L1_ReadMulti:00000000 VL53L1_ReadMulti
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:72     .text.VL53L1_WrByte:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:79     .text.VL53L1_WrByte:00000000 VL53L1_WrByte
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:98     .text.VL53L1_WrWord:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:105    .text.VL53L1_WrWord:00000000 VL53L1_WrWord
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:124    .text.VL53L1_WrDWord:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:131    .text.VL53L1_WrDWord:00000000 VL53L1_WrDWord
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:150    .text.VL53L1_UpdateByte:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:157    .text.VL53L1_UpdateByte:00000000 VL53L1_UpdateByte
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:176    .text.VL53L1_RdByte:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:183    .text.VL53L1_RdByte:00000000 VL53L1_RdByte
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:202    .text.VL53L1_RdWord:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:209    .text.VL53L1_RdWord:00000000 VL53L1_RdWord
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:228    .text.VL53L1_RdDWord:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:235    .text.VL53L1_RdDWord:00000000 VL53L1_RdDWord
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:254    .text.VL53L1_GetTickCount:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:261    .text.VL53L1_GetTickCount:00000000 VL53L1_GetTickCount
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:280    .text.VL53L1_GetTimerFrequency:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:287    .text.VL53L1_GetTimerFrequency:00000000 VL53L1_GetTimerFrequency
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:306    .text.VL53L1_WaitMs:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:313    .text.VL53L1_WaitMs:00000000 VL53L1_WaitMs
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:332    .text.VL53L1_WaitUs:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:339    .text.VL53L1_WaitUs:00000000 VL53L1_WaitUs
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:358    .text.VL53L1_WaitValueMaskEx:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s:365    .text.VL53L1_WaitValueMaskEx:00000000 VL53L1_WaitValueMaskEx
+                           .group:00000000 wm4.0.cbadcd7125b439f63d13d43ae17ce4cb
+                           .group:00000000 wm4.target_vl53l1_1.h.12.551c1b90918b951c5224feb9b75565bd
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.d0b7f3cd6ee95f610104014bb3ed522a
                            .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
@@ -669,7 +669,7 @@ C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:365    .text.VL53L1_WaitValueMas
                            .group:00000000 wm4.types.h.40.c2dcbbb5c1f4f0e5cb716ebf7776da48
                            .group:00000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
                            .group:00000000 wm4.stdio.h.81.2a55589bfa3ee24eeb84e3c79458e4a9
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s 			page 13
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccvCrhmd.s 			page 13
 
 
                            .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
@@ -685,29 +685,29 @@ C:\Users\Berbardo\AppData\Local\Temp\ccv1Dk15.s:365    .text.VL53L1_WaitValueMas
                            .group:00000000 wm4.vl53l1_platform_log.h.71.79ea17a42b4255ee5461fb53cd7aea3c
                            .group:00000000 wm4.stm32f3xx_hal_conf.h.37.cb1c9cb802da867d86527a1477311c20
                            .group:00000000 wm4.stm32f3xx.h.55.fe34e0340b06ab20c90f3cf1d792e0eb
-                           .group:00000000 wm4.stm32f303xc.h.51.75494ed92b93e6861874d99c51c92793
+                           .group:00000000 wm4.stm32f303xe.h.51.65501469ddbb8a3dac94b2f9d61c4e79
                            .group:00000000 wm4.core_cm4.h.42.42f38327ee0970d80f60117e6a3ba2b0
                            .group:00000000 wm4.cmsis_gcc.h.36.39970cb43ce4b53c82644a1f9bc2eab9
                            .group:00000000 wm4.core_cm4.h.223.390ff9b0e06949b13520d8b6746f63e8
-                           .group:00000000 wm4.stm32f303xc.h.710.b77655c64e6ea7efdc9ab6a96701a5ae
+                           .group:00000000 wm4.stm32f303xe.h.787.6957ba193b5d3b55f4f9c444bc42cb63
                            .group:00000000 wm4.stm32f3xx.h.191.245d83eb21a6c69e2950c577a7134277
                            .group:00000000 wm4.stm32f3xx_hal_def.h.76.500c7c9bfcb8d4adebf82d1af27ff044
-                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.60ee232241a99e19acd27637eebe4f1c
-                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.1fba3945551953e78cf69c94a0383651
+                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.06cc24fd94394ddd03725d84823331b1
+                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.96615d6f3e5897bb79454968f7fc6c86
                            .group:00000000 wm4.stm32f3xx_hal_gpio.h.38.11db931fcbf37182e25c3927ddf6e8ba
-                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.8d493744f4b7a4f7a0f4f97db0ccbd8e
+                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.46a6c05d651e2a032ac66cebe63916b8
                            .group:00000000 wm4.stm32f3xx_hal_dma.h.38.61966c780efd486aa451ae49ca247997
                            .group:00000000 wm4.stm32f3xx_hal_dma_ex.h.38.195e7d437d9280b9f4e6bae0fa00db04
                            .group:00000000 wm4.stm32f3xx_hal_dma.h.423.83da80eb3e6ae96f050d0c5e4b55e4b9
                            .group:00000000 wm4.stm32f3xx_hal_cortex.h.38.c5c1d06be9dad8e7837dbe16f3535233
                            .group:00000000 wm4.stm32f3xx_hal_flash.h.38.2b4c202390dfbe69a578ce118ab4d799
-                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.36f8341b05728c01a88b7f1003837b1f
+                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.65931ad4b848f69ba672eb38b2753615
                            .group:00000000 wm4.stm32f3xx_hal_i2c.h.38.e3750f5f029ebf729a7cf07e85cad615
-                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.74099379a9814ae4d6d1c8682fdde7ad
+                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.bdd47c8bc2d21749d9fd72e6b8484890
                            .group:00000000 wm4.stm32f3xx_hal_i2c.h.626.05cba3c85b66bb4631bfd2ebbfab1b06
                            .group:00000000 wm4.stm32f3xx_hal_pwr.h.38.efb6ce75a5c12d6b2c7c914e7a94ec2b
                            .group:00000000 wm4.stm32f3xx_hal_pwr_ex.h.38.d228edc56905d96af2d831d3c8e0487a
-                           .group:00000000 wm4.stm32f3xx_hal.h.60.e1acc37932101d84a977b19b7a581169
+                           .group:00000000 wm4.stm32f3xx_hal.h.60.11e72be277d7cf245b56360bacde3327
                            .group:00000000 wm4.vl53l1_def.h.87.ea1a10eae4f02dade0991856ca744364
                            .group:00000000 wm4.vl53l1_platform_user_data.h.94.31d6fd49a37f98d182bed50c298f83ae
                            .group:00000000 wm4.vl53l1_api_strings.h.151.55114e539843189df2f7fc9296ddbb29

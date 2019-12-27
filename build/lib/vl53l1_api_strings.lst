@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
   27:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** * 'BSD 3-clause "New" or "Revised" License', in which case the following
   28:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** * provisions apply instead of the ones mentioned above :
   29:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** *
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 2
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 2
 
 
   30:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** ********************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
   84:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 	uint8_t   RangeStatus,
   85:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 	char    *pRangeStatusString)
   86:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** {
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 3
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 3
 
 
   30              		.loc 1 86 1 view -0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
  103:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 	case 2:
  104:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 		VL53L1_COPYSTRING(pRangeStatusString,
  105:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 			VL53L1_STRING_RANGESTATUS_SIGNAL);
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 4
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 4
 
 
  106:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 	break;
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
   93              		.loc 1 104 3 is_stmt 0 view .LVU17
   94 0036 1846     		mov	r0, r3
   95              	.LVL11:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 5
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 5
 
 
  104:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 			VL53L1_STRING_RANGESTATUS_SIGNAL);
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
  116:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 			VL53L1_STRING_RANGESTATUS_HW);
  138              		.loc 1 116 3 view .LVU30
  139 0062 FFF7FEFF 		bl	strncpy
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 6
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 6
 
 
  140              	.LVL24:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
  185              		.loc 1 134 1 is_stmt 0 view .LVU37
  186 0000 08B5     		push	{r3, lr}
  187              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 7
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 7
 
 
  188              		.cfi_offset 3, -8
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
  172:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 		VL53L1_COPYSTRING(pPalStateString,
  205              		.loc 1 172 3 view .LVU41
  206 0018 40F2FF12 		movw	r2, #511
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 8
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 8
 
 
  207 001c 2049     		ldr	r1, .L32
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
  243 003c 40F2FF12 		movw	r2, #511
  244 0040 1949     		ldr	r1, .L32+8
  245              	.LVL39:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 9
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 9
 
 
  148:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 			VL53L1_STRING_STATE_WAIT_STATICINIT);
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
  160:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 			VL53L1_STRING_STATE_RUNNING);
  288              		.loc 1 160 3 is_stmt 0 view .LVU66
  289 006c 1846     		mov	r0, r3
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 10
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 10
 
 
  290              	.LVL52:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
  332              	.LVL64:
  177:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 			VL53L1_STRING_STATE_UNKNOWN);
  333              		.loc 1 177 3 view .LVU79
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 11
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 11
 
 
  334 0098 FFF7FEFF 		bl	strncpy
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
  376              		.loc 1 197 2 view .LVU85
  377 0004 0728     		cmp	r0, #7
  378 0006 45D8     		bhi	.L45
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 12
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 12
 
 
  379 0008 DFE800F0 		tbb	[pc, r0]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
  224:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 				VL53L1_STRING_SEQUENCESTEP_MM2);
  225:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 	break;
  226:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 	case VL53L1_SEQUENCESTEP_RANGE:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 13
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 13
 
 
  227:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 		VL53L1_COPYSTRING(pSequenceStepsString,
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
  209:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 	case VL53L1_SEQUENCESTEP_DSS1:
  439              		.loc 1 209 2 is_stmt 1 view .LVU103
  190:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 14
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 14
 
 
  440              		.loc 1 190 15 is_stmt 0 view .LVU104
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
  480              		.loc 1 219 3 is_stmt 1 view .LVU118
  481 0064 40F2FF12 		movw	r2, #511
  482 0068 1049     		ldr	r1, .L47+16
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 15
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 15
 
 
  483              	.LVL89:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
  523              	.LVL99:
  229:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 	default:
  524              		.loc 1 229 2 is_stmt 1 view .LVU133
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 16
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 16
 
 
  190:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
  244:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 
  245:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 	LOG_FUNCTION_START("");
  572              		.loc 1 245 24 view .LVU141
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 17
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 17
 
 
  246:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
  266:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** 	return Status;
  603              		.loc 1 266 2 view .LVU151
  267:D:/Git/VL53L1/lib/core/src\vl53l1_api_strings.c **** }
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 18
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 18
 
 
  604              		.loc 1 267 1 is_stmt 0 view .LVU152
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
  642      52444F57 
  642      4E205374 
  642      61746500 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 19
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 19
 
 
  643              	.LC8:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
  672 0024 4D696E20 		.ascii	"Min Range Fail\000"
  672      52616E67 
  672      65204661 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 20
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 20
 
 
  672      696C00
@@ -1196,33 +1196,33 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 1
  712              		.file 11 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h"
  713              		.file 12 "D:/Git/VL53L1/lib/core/inc/vl53l1_def.h"
  714              		.file 13 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\includ
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 21
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 21
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 vl53l1_api_strings.c
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:18     .text.VL53L1_get_range_status_string:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:26     .text.VL53L1_get_range_status_string:00000000 VL53L1_get_range_status_string
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:48     .text.VL53L1_get_range_status_string:0000000c $d
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:54     .text.VL53L1_get_range_status_string:00000012 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:160    .text.VL53L1_get_range_status_string:00000078 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:171    .text.VL53L1_get_pal_state_string:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:178    .text.VL53L1_get_pal_state_string:00000000 VL53L1_get_pal_state_string
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:341    .text.VL53L1_get_pal_state_string:000000a0 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:353    .text.VL53L1_get_sequence_steps_info:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:360    .text.VL53L1_get_sequence_steps_info:00000000 VL53L1_get_sequence_steps_info
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:381    .text.VL53L1_get_sequence_steps_info:0000000c $d
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:389    .text.VL53L1_get_sequence_steps_info:00000014 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:539    .text.VL53L1_get_sequence_steps_info:0000009c $d
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:550    .text.VL53L1_get_limit_check_info:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:557    .text.VL53L1_get_limit_check_info:00000000 VL53L1_get_limit_check_info
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:624    .text.VL53L1_get_limit_check_info:00000038 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:631    .rodata.VL53L1_get_limit_check_info.str1.4:00000000 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:640    .rodata.VL53L1_get_pal_state_string.str1.4:00000000 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:663    .rodata.VL53L1_get_range_status_string.str1.4:00000000 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:683    .rodata.VL53L1_get_sequence_steps_info.str1.4:00000000 $d
-                           .group:00000000 wm4.0.a9549919c595c19c35ef13bc9ee4c8af
-                           .group:00000000 wm4.target_vl53l1_1.h.12.5039e74bcd507e129caba66ab5fc05af
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:18     .text.VL53L1_get_range_status_string:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:26     .text.VL53L1_get_range_status_string:00000000 VL53L1_get_range_status_string
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:48     .text.VL53L1_get_range_status_string:0000000c $d
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:54     .text.VL53L1_get_range_status_string:00000012 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:160    .text.VL53L1_get_range_status_string:00000078 $d
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:171    .text.VL53L1_get_pal_state_string:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:178    .text.VL53L1_get_pal_state_string:00000000 VL53L1_get_pal_state_string
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:341    .text.VL53L1_get_pal_state_string:000000a0 $d
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:353    .text.VL53L1_get_sequence_steps_info:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:360    .text.VL53L1_get_sequence_steps_info:00000000 VL53L1_get_sequence_steps_info
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:381    .text.VL53L1_get_sequence_steps_info:0000000c $d
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:389    .text.VL53L1_get_sequence_steps_info:00000014 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:539    .text.VL53L1_get_sequence_steps_info:0000009c $d
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:550    .text.VL53L1_get_limit_check_info:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:557    .text.VL53L1_get_limit_check_info:00000000 VL53L1_get_limit_check_info
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:624    .text.VL53L1_get_limit_check_info:00000038 $d
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:631    .rodata.VL53L1_get_limit_check_info.str1.4:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:640    .rodata.VL53L1_get_pal_state_string.str1.4:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:663    .rodata.VL53L1_get_range_status_string.str1.4:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s:683    .rodata.VL53L1_get_sequence_steps_info.str1.4:00000000 $d
+                           .group:00000000 wm4.0.cbadcd7125b439f63d13d43ae17ce4cb
+                           .group:00000000 wm4.target_vl53l1_1.h.12.551c1b90918b951c5224feb9b75565bd
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.d0b7f3cd6ee95f610104014bb3ed522a
                            .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
@@ -1256,7 +1256,7 @@ C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:683    .rodata.VL53L1_get_sequen
                            .group:00000000 wm4.vl53l1_register_map.h.69.ec259f417eacfeb4a1fe3b1107810d95
                            .group:00000000 wm4.vl53l1_register_structs.h.74.11a89e7b4ec79fa5f24a8809948e429f
                            .group:00000000 wm4.vl53l1_platform_user_defines.h.65.ba5bf58a2b92eb98a59c4d4834576b4d
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s 			page 22
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cccrvqtk.s 			page 22
 
 
                            .group:00000000 wm4.vl53l1_error_exceptions.h.70.5b53c89ff28584d05d224dd03776b32e
@@ -1264,29 +1264,29 @@ C:\Users\Berbardo\AppData\Local\Temp\ccEqbkzY.s:683    .rodata.VL53L1_get_sequen
                            .group:00000000 wm4.vl53l1_platform_log.h.71.79ea17a42b4255ee5461fb53cd7aea3c
                            .group:00000000 wm4.stm32f3xx_hal_conf.h.37.cb1c9cb802da867d86527a1477311c20
                            .group:00000000 wm4.stm32f3xx.h.55.fe34e0340b06ab20c90f3cf1d792e0eb
-                           .group:00000000 wm4.stm32f303xc.h.51.75494ed92b93e6861874d99c51c92793
+                           .group:00000000 wm4.stm32f303xe.h.51.65501469ddbb8a3dac94b2f9d61c4e79
                            .group:00000000 wm4.core_cm4.h.42.42f38327ee0970d80f60117e6a3ba2b0
                            .group:00000000 wm4.cmsis_gcc.h.36.39970cb43ce4b53c82644a1f9bc2eab9
                            .group:00000000 wm4.core_cm4.h.223.390ff9b0e06949b13520d8b6746f63e8
-                           .group:00000000 wm4.stm32f303xc.h.710.b77655c64e6ea7efdc9ab6a96701a5ae
+                           .group:00000000 wm4.stm32f303xe.h.787.6957ba193b5d3b55f4f9c444bc42cb63
                            .group:00000000 wm4.stm32f3xx.h.191.245d83eb21a6c69e2950c577a7134277
                            .group:00000000 wm4.stm32f3xx_hal_def.h.76.500c7c9bfcb8d4adebf82d1af27ff044
-                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.60ee232241a99e19acd27637eebe4f1c
-                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.1fba3945551953e78cf69c94a0383651
+                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.06cc24fd94394ddd03725d84823331b1
+                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.96615d6f3e5897bb79454968f7fc6c86
                            .group:00000000 wm4.stm32f3xx_hal_gpio.h.38.11db931fcbf37182e25c3927ddf6e8ba
-                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.8d493744f4b7a4f7a0f4f97db0ccbd8e
+                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.46a6c05d651e2a032ac66cebe63916b8
                            .group:00000000 wm4.stm32f3xx_hal_dma.h.38.61966c780efd486aa451ae49ca247997
                            .group:00000000 wm4.stm32f3xx_hal_dma_ex.h.38.195e7d437d9280b9f4e6bae0fa00db04
                            .group:00000000 wm4.stm32f3xx_hal_dma.h.423.83da80eb3e6ae96f050d0c5e4b55e4b9
                            .group:00000000 wm4.stm32f3xx_hal_cortex.h.38.c5c1d06be9dad8e7837dbe16f3535233
                            .group:00000000 wm4.stm32f3xx_hal_flash.h.38.2b4c202390dfbe69a578ce118ab4d799
-                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.36f8341b05728c01a88b7f1003837b1f
+                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.65931ad4b848f69ba672eb38b2753615
                            .group:00000000 wm4.stm32f3xx_hal_i2c.h.38.e3750f5f029ebf729a7cf07e85cad615
-                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.74099379a9814ae4d6d1c8682fdde7ad
+                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.bdd47c8bc2d21749d9fd72e6b8484890
                            .group:00000000 wm4.stm32f3xx_hal_i2c.h.626.05cba3c85b66bb4631bfd2ebbfab1b06
                            .group:00000000 wm4.stm32f3xx_hal_pwr.h.38.efb6ce75a5c12d6b2c7c914e7a94ec2b
                            .group:00000000 wm4.stm32f3xx_hal_pwr_ex.h.38.d228edc56905d96af2d831d3c8e0487a
-                           .group:00000000 wm4.stm32f3xx_hal.h.60.e1acc37932101d84a977b19b7a581169
+                           .group:00000000 wm4.stm32f3xx_hal.h.60.11e72be277d7cf245b56360bacde3327
                            .group:00000000 wm4.vl53l1_def.h.87.ea1a10eae4f02dade0991856ca744364
                            .group:00000000 wm4.vl53l1_platform_user_data.h.94.31d6fd49a37f98d182bed50c298f83ae
                            .group:00000000 wm4.vl53l1_api_strings.h.151.55114e539843189df2f7fc9296ddbb29

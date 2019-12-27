@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 1
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 1
   28:cube/Src/system_stm32f3xx.c ****   *-----------------------------------------------------------------------------
   29:cube/Src/system_stm32f3xx.c ****   *        System Clock source                    | HSI
   30:cube/Src/system_stm32f3xx.c ****   *-----------------------------------------------------------------------------
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 2
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s 			page 2
 
 
   31:cube/Src/system_stm32f3xx.c ****   *        SYSCLK(Hz)                             | 8000000
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 1
   85:cube/Src/system_stm32f3xx.c **** 
   86:cube/Src/system_stm32f3xx.c **** #include "stm32f3xx.h"
   87:cube/Src/system_stm32f3xx.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 3
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s 			page 3
 
 
   88:cube/Src/system_stm32f3xx.c **** /**
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 1
  142:cube/Src/system_stm32f3xx.c **** 
  143:cube/Src/system_stm32f3xx.c **** const uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
  144:cube/Src/system_stm32f3xx.c **** const uint8_t APBPrescTable[8]  = {0, 0, 0, 0, 1, 2, 3, 4};
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 4
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s 			page 4
 
 
  145:cube/Src/system_stm32f3xx.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 1
   47              		.loc 1 180 13 is_stmt 0 view .LVU6
   48 0018 5868     		ldr	r0, [r3, #4]
   49 001a 114A     		ldr	r2, .L2+8
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 5
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s 			page 5
 
 
   50 001c 0240     		ands	r2, r2, r0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 1
  202:cube/Src/system_stm32f3xx.c **** #else
  203:cube/Src/system_stm32f3xx.c ****   SCB->VTOR = FLASH_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal FLASH */
   83              		.loc 1 203 3 is_stmt 1 view .LVU19
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 6
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s 			page 6
 
 
   84              		.loc 1 203 13 is_stmt 0 view .LVU20
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 1
  235:cube/Src/system_stm32f3xx.c ****   *              have wrong result.
  236:cube/Src/system_stm32f3xx.c ****   *
  237:cube/Src/system_stm32f3xx.c ****   *         - The result of this function could be not correct when using fractional
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 7
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s 			page 7
 
 
  238:cube/Src/system_stm32f3xx.c ****   *           value for HSE crystal.
@@ -381,7 +381,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 1
  248:cube/Src/system_stm32f3xx.c ****   tmp = RCC->CFGR & RCC_CFGR_SWS;
  116              		.loc 1 248 3 view .LVU24
  117              		.loc 1 248 12 is_stmt 0 view .LVU25
- 118 0000 1D4B     		ldr	r3, .L11
+ 118 0000 1E4B     		ldr	r3, .L12
  119 0002 5B68     		ldr	r3, [r3, #4]
  120              		.loc 1 248 7 view .LVU26
  121 0004 03F00C03 		and	r3, r3, #12
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 1
  272:cube/Src/system_stm32f3xx.c ****       {
  273:cube/Src/system_stm32f3xx.c ****         /* HSI oscillator clock selected as PREDIV1 clock entry */
  274:cube/Src/system_stm32f3xx.c ****         SystemCoreClock = (HSI_VALUE / predivfactor) * pllmull;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 8
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s 			page 8
 
 
  275:cube/Src/system_stm32f3xx.c ****       }
@@ -440,10 +440,10 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 1
  291:cube/Src/system_stm32f3xx.c ****       SystemCoreClock = HSI_VALUE;
  129              		.loc 1 291 7 view .LVU28
  130              		.loc 1 291 23 is_stmt 0 view .LVU29
- 131 0012 1A4B     		ldr	r3, .L11+4
+ 131 0012 1B4B     		ldr	r3, .L12+4
  132              	.LVL2:
  133              		.loc 1 291 23 view .LVU30
- 134 0014 1A4A     		ldr	r2, .L11+8
+ 134 0014 1B4A     		ldr	r2, .L12+8
  135 0016 1A60     		str	r2, [r3]
  292:cube/Src/system_stm32f3xx.c ****       break;
  136              		.loc 1 292 7 is_stmt 1 view .LVU31
@@ -454,11 +454,11 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 1
  140              		.loc 1 253 7 view .LVU32
  253:cube/Src/system_stm32f3xx.c ****       break;
  141              		.loc 1 253 23 is_stmt 0 view .LVU33
- 142 001a 184B     		ldr	r3, .L11+4
+ 142 001a 194B     		ldr	r3, .L12+4
  143              	.LVL4:
  253:cube/Src/system_stm32f3xx.c ****       break;
  144              		.loc 1 253 23 view .LVU34
- 145 001c 184A     		ldr	r2, .L11+8
+ 145 001c 194A     		ldr	r2, .L12+8
  146 001e 1A60     		str	r2, [r3]
  254:cube/Src/system_stm32f3xx.c ****     case RCC_CFGR_SWS_HSE:  /* HSE used as system clock */
  147              		.loc 1 254 7 is_stmt 1 view .LVU35
@@ -470,22 +470,22 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 1
  296:cube/Src/system_stm32f3xx.c ****   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4)];
  150              		.loc 1 296 3 view .LVU36
  151              		.loc 1 296 28 is_stmt 0 view .LVU37
- 152 0020 154B     		ldr	r3, .L11
+ 152 0020 164B     		ldr	r3, .L12
  153 0022 5B68     		ldr	r3, [r3, #4]
  154              		.loc 1 296 52 view .LVU38
  155 0024 C3F30313 		ubfx	r3, r3, #4, #4
  156              		.loc 1 296 22 view .LVU39
- 157 0028 164A     		ldr	r2, .L11+12
+ 157 0028 174A     		ldr	r2, .L12+12
  158 002a D15C     		ldrb	r1, [r2, r3]	@ zero_extendqisi2
  159              	.LVL6:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 9
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s 			page 9
 
 
  297:cube/Src/system_stm32f3xx.c ****   /* HCLK clock frequency */
  298:cube/Src/system_stm32f3xx.c ****   SystemCoreClock >>= tmp;
  160              		.loc 1 298 3 is_stmt 1 view .LVU40
  161              		.loc 1 298 19 is_stmt 0 view .LVU41
- 162 002c 134A     		ldr	r2, .L11+4
+ 162 002c 144A     		ldr	r2, .L12+4
  163 002e 1368     		ldr	r3, [r2]
  164 0030 CB40     		lsrs	r3, r3, r1
  165 0032 1360     		str	r3, [r2]
@@ -498,11 +498,11 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 1
  170              		.loc 1 256 7 is_stmt 1 view .LVU43
  256:cube/Src/system_stm32f3xx.c ****       break;
  171              		.loc 1 256 23 is_stmt 0 view .LVU44
- 172 0036 114B     		ldr	r3, .L11+4
+ 172 0036 124B     		ldr	r3, .L12+4
  173              	.LVL8:
  256:cube/Src/system_stm32f3xx.c ****       break;
  174              		.loc 1 256 23 view .LVU45
- 175 0038 114A     		ldr	r2, .L11+8
+ 175 0038 124A     		ldr	r2, .L12+8
  176 003a 1A60     		str	r2, [r3]
  257:cube/Src/system_stm32f3xx.c ****     case RCC_CFGR_SWS_PLL:  /* PLL used as system clock */
  177              		.loc 1 257 7 is_stmt 1 view .LVU46
@@ -513,168 +513,176 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 1
  181              		.loc 1 260 7 view .LVU47
  260:cube/Src/system_stm32f3xx.c ****       pllsource = RCC->CFGR & RCC_CFGR_PLLSRC;
  182              		.loc 1 260 20 is_stmt 0 view .LVU48
- 183 003e 0E4A     		ldr	r2, .L11
+ 183 003e 0F4A     		ldr	r2, .L12
  184 0040 5368     		ldr	r3, [r2, #4]
  185              	.LVL10:
  261:cube/Src/system_stm32f3xx.c ****       pllmull = ( pllmull >> 18) + 2;
  186              		.loc 1 261 7 is_stmt 1 view .LVU49
  261:cube/Src/system_stm32f3xx.c ****       pllmull = ( pllmull >> 18) + 2;
  187              		.loc 1 261 22 is_stmt 0 view .LVU50
- 188 0042 5268     		ldr	r2, [r2, #4]
- 189              	.LVL11:
+ 188 0042 5168     		ldr	r1, [r2, #4]
+ 261:cube/Src/system_stm32f3xx.c ****       pllmull = ( pllmull >> 18) + 2;
+ 189              		.loc 1 261 17 view .LVU51
+ 190 0044 01F4C031 		and	r1, r1, #98304
+ 191              	.LVL11:
  262:cube/Src/system_stm32f3xx.c **** 
- 190              		.loc 1 262 7 is_stmt 1 view .LVU51
+ 192              		.loc 1 262 7 is_stmt 1 view .LVU52
  262:cube/Src/system_stm32f3xx.c **** 
- 191              		.loc 1 262 27 is_stmt 0 view .LVU52
- 192 0044 C3F38343 		ubfx	r3, r3, #18, #4
- 193              	.LVL12:
+ 193              		.loc 1 262 27 is_stmt 0 view .LVU53
+ 194 0048 C3F38343 		ubfx	r3, r3, #18, #4
+ 195              	.LVL12:
  262:cube/Src/system_stm32f3xx.c **** 
- 194              		.loc 1 262 15 view .LVU53
- 195 0048 0233     		adds	r3, r3, #2
- 196              	.LVL13:
- 277:cube/Src/system_stm32f3xx.c ****       {
- 197              		.loc 1 277 7 is_stmt 1 view .LVU54
- 277:cube/Src/system_stm32f3xx.c ****       {
- 198              		.loc 1 277 10 is_stmt 0 view .LVU55
- 199 004a 12F4803F 		tst	r2, #65536
- 200 004e 05D1     		bne	.L9
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 10
+ 196              		.loc 1 262 15 view .LVU54
+ 197 004c 0233     		adds	r3, r3, #2
+ 198              	.LVL13:
+ 265:cube/Src/system_stm32f3xx.c ****       if (pllsource == RCC_CFGR_PLLSRC_HSE_PREDIV)
+ 199              		.loc 1 265 9 is_stmt 1 view .LVU55
+ 265:cube/Src/system_stm32f3xx.c ****       if (pllsource == RCC_CFGR_PLLSRC_HSE_PREDIV)
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s 			page 10
 
 
- 280:cube/Src/system_stm32f3xx.c ****       }
- 201              		.loc 1 280 9 is_stmt 1 view .LVU56
- 280:cube/Src/system_stm32f3xx.c ****       }
- 202              		.loc 1 280 44 is_stmt 0 view .LVU57
- 203 0050 0D4A     		ldr	r2, .L11+16
- 204              	.LVL14:
- 280:cube/Src/system_stm32f3xx.c ****       }
- 205              		.loc 1 280 44 view .LVU58
- 206 0052 02FB03F3 		mul	r3, r2, r3
- 207              	.LVL15:
- 280:cube/Src/system_stm32f3xx.c ****       }
- 208              		.loc 1 280 25 view .LVU59
- 209 0056 094A     		ldr	r2, .L11+4
- 210 0058 1360     		str	r3, [r2]
- 211 005a E1E7     		b	.L8
- 212              	.LVL16:
- 213              	.L9:
- 284:cube/Src/system_stm32f3xx.c ****         /* HSE oscillator clock selected as PREDIV1 clock entry */
- 214              		.loc 1 284 9 is_stmt 1 view .LVU60
- 284:cube/Src/system_stm32f3xx.c ****         /* HSE oscillator clock selected as PREDIV1 clock entry */
- 215              		.loc 1 284 28 is_stmt 0 view .LVU61
- 216 005c 064A     		ldr	r2, .L11
- 217              	.LVL17:
- 284:cube/Src/system_stm32f3xx.c ****         /* HSE oscillator clock selected as PREDIV1 clock entry */
- 218              		.loc 1 284 28 view .LVU62
- 219 005e D26A     		ldr	r2, [r2, #44]
- 284:cube/Src/system_stm32f3xx.c ****         /* HSE oscillator clock selected as PREDIV1 clock entry */
- 220              		.loc 1 284 36 view .LVU63
- 221 0060 02F00F02 		and	r2, r2, #15
- 284:cube/Src/system_stm32f3xx.c ****         /* HSE oscillator clock selected as PREDIV1 clock entry */
- 222              		.loc 1 284 22 view .LVU64
- 223 0064 0132     		adds	r2, r2, #1
- 224              	.LVL18:
- 286:cube/Src/system_stm32f3xx.c ****       }
- 225              		.loc 1 286 9 is_stmt 1 view .LVU65
- 286:cube/Src/system_stm32f3xx.c ****       }
- 226              		.loc 1 286 38 is_stmt 0 view .LVU66
- 227 0066 0649     		ldr	r1, .L11+8
- 228 0068 B1FBF2F2 		udiv	r2, r1, r2
- 229              	.LVL19:
- 286:cube/Src/system_stm32f3xx.c ****       }
- 230              		.loc 1 286 54 view .LVU67
- 231 006c 03FB02F3 		mul	r3, r3, r2
- 232              	.LVL20:
- 286:cube/Src/system_stm32f3xx.c ****       }
- 233              		.loc 1 286 25 view .LVU68
- 234 0070 024A     		ldr	r2, .L11+4
- 235 0072 1360     		str	r3, [r2]
- 236 0074 D4E7     		b	.L8
- 237              	.L12:
- 238 0076 00BF     		.align	2
- 239              	.L11:
- 240 0078 00100240 		.word	1073876992
- 241 007c 00000000 		.word	.LANCHOR0
- 242 0080 00127A00 		.word	8000000
- 243 0084 00000000 		.word	.LANCHOR1
- 244 0088 00093D00 		.word	4000000
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 11
+ 200              		.loc 1 265 28 is_stmt 0 view .LVU56
+ 201 004e D26A     		ldr	r2, [r2, #44]
+ 265:cube/Src/system_stm32f3xx.c ****       if (pllsource == RCC_CFGR_PLLSRC_HSE_PREDIV)
+ 202              		.loc 1 265 36 view .LVU57
+ 203 0050 02F00F02 		and	r2, r2, #15
+ 265:cube/Src/system_stm32f3xx.c ****       if (pllsource == RCC_CFGR_PLLSRC_HSE_PREDIV)
+ 204              		.loc 1 265 22 view .LVU58
+ 205 0054 0132     		adds	r2, r2, #1
+ 206              	.LVL14:
+ 266:cube/Src/system_stm32f3xx.c ****       {
+ 207              		.loc 1 266 7 is_stmt 1 view .LVU59
+ 266:cube/Src/system_stm32f3xx.c ****       {
+ 208              		.loc 1 266 10 is_stmt 0 view .LVU60
+ 209 0056 B1F5803F 		cmp	r1, #65536
+ 210 005a 07D0     		beq	.L11
+ 274:cube/Src/system_stm32f3xx.c ****       }
+ 211              		.loc 1 274 9 is_stmt 1 view .LVU61
+ 274:cube/Src/system_stm32f3xx.c ****       }
+ 212              		.loc 1 274 38 is_stmt 0 view .LVU62
+ 213 005c 0949     		ldr	r1, .L12+8
+ 214              	.LVL15:
+ 274:cube/Src/system_stm32f3xx.c ****       }
+ 215              		.loc 1 274 38 view .LVU63
+ 216 005e B1FBF2F2 		udiv	r2, r1, r2
+ 217              	.LVL16:
+ 274:cube/Src/system_stm32f3xx.c ****       }
+ 218              		.loc 1 274 54 view .LVU64
+ 219 0062 03FB02F3 		mul	r3, r3, r2
+ 220              	.LVL17:
+ 274:cube/Src/system_stm32f3xx.c ****       }
+ 221              		.loc 1 274 25 view .LVU65
+ 222 0066 064A     		ldr	r2, .L12+4
+ 223 0068 1360     		str	r3, [r2]
+ 224 006a D9E7     		b	.L8
+ 225              	.LVL18:
+ 226              	.L11:
+ 269:cube/Src/system_stm32f3xx.c ****       }
+ 227              		.loc 1 269 9 is_stmt 1 view .LVU66
+ 269:cube/Src/system_stm32f3xx.c ****       }
+ 228              		.loc 1 269 38 is_stmt 0 view .LVU67
+ 229 006c 0549     		ldr	r1, .L12+8
+ 230              	.LVL19:
+ 269:cube/Src/system_stm32f3xx.c ****       }
+ 231              		.loc 1 269 38 view .LVU68
+ 232 006e B1FBF2F2 		udiv	r2, r1, r2
+ 233              	.LVL20:
+ 269:cube/Src/system_stm32f3xx.c ****       }
+ 234              		.loc 1 269 54 view .LVU69
+ 235 0072 03FB02F3 		mul	r3, r3, r2
+ 236              	.LVL21:
+ 269:cube/Src/system_stm32f3xx.c ****       }
+ 237              		.loc 1 269 25 view .LVU70
+ 238 0076 024A     		ldr	r2, .L12+4
+ 239 0078 1360     		str	r3, [r2]
+ 240 007a D1E7     		b	.L8
+ 241              	.L13:
+ 242              		.align	2
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s 			page 11
 
 
- 245              		.cfi_endproc
- 246              	.LFE127:
- 248              		.global	APBPrescTable
- 249              		.global	AHBPrescTable
- 250              		.global	SystemCoreClock
- 251              		.section	.data.SystemCoreClock,"aw"
- 252              		.align	2
- 253              		.set	.LANCHOR0,. + 0
- 256              	SystemCoreClock:
- 257 0000 00127A00 		.word	8000000
- 258              		.section	.rodata.AHBPrescTable,"a"
- 259              		.align	2
- 260              		.set	.LANCHOR1,. + 0
- 263              	AHBPrescTable:
- 264 0000 00       		.byte	0
- 265 0001 00       		.byte	0
- 266 0002 00       		.byte	0
- 267 0003 00       		.byte	0
- 268 0004 00       		.byte	0
- 269 0005 00       		.byte	0
- 270 0006 00       		.byte	0
- 271 0007 00       		.byte	0
- 272 0008 01       		.byte	1
- 273 0009 02       		.byte	2
- 274 000a 03       		.byte	3
- 275 000b 04       		.byte	4
- 276 000c 06       		.byte	6
- 277 000d 07       		.byte	7
- 278 000e 08       		.byte	8
- 279 000f 09       		.byte	9
- 280              		.section	.rodata.APBPrescTable,"a"
- 281              		.align	2
- 284              	APBPrescTable:
- 285 0000 00       		.byte	0
- 286 0001 00       		.byte	0
- 287 0002 00       		.byte	0
- 288 0003 00       		.byte	0
- 289 0004 01       		.byte	1
- 290 0005 02       		.byte	2
- 291 0006 03       		.byte	3
- 292 0007 04       		.byte	4
- 293              		.text
- 294              	.Letext0:
- 295              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
- 296              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
- 297              		.file 4 "cube/Drivers/CMSIS/Include/core_cm4.h"
- 298              		.file 5 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
- 299              		.file 6 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xc.h"
- 300              		.file 7 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\lib\\gcc\\arm-none-eab
- 301              		.file 8 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
- 302              		.file 9 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
- 303              		.file 10 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\includ
- 304              		.file 11 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h"
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 12
+ 243              	.L12:
+ 244 007c 00100240 		.word	1073876992
+ 245 0080 00000000 		.word	.LANCHOR0
+ 246 0084 00127A00 		.word	8000000
+ 247 0088 00000000 		.word	.LANCHOR1
+ 248              		.cfi_endproc
+ 249              	.LFE127:
+ 251              		.global	APBPrescTable
+ 252              		.global	AHBPrescTable
+ 253              		.global	SystemCoreClock
+ 254              		.section	.data.SystemCoreClock,"aw"
+ 255              		.align	2
+ 256              		.set	.LANCHOR0,. + 0
+ 259              	SystemCoreClock:
+ 260 0000 00127A00 		.word	8000000
+ 261              		.section	.rodata.AHBPrescTable,"a"
+ 262              		.align	2
+ 263              		.set	.LANCHOR1,. + 0
+ 266              	AHBPrescTable:
+ 267 0000 00       		.byte	0
+ 268 0001 00       		.byte	0
+ 269 0002 00       		.byte	0
+ 270 0003 00       		.byte	0
+ 271 0004 00       		.byte	0
+ 272 0005 00       		.byte	0
+ 273 0006 00       		.byte	0
+ 274 0007 00       		.byte	0
+ 275 0008 01       		.byte	1
+ 276 0009 02       		.byte	2
+ 277 000a 03       		.byte	3
+ 278 000b 04       		.byte	4
+ 279 000c 06       		.byte	6
+ 280 000d 07       		.byte	7
+ 281 000e 08       		.byte	8
+ 282 000f 09       		.byte	9
+ 283              		.section	.rodata.APBPrescTable,"a"
+ 284              		.align	2
+ 287              	APBPrescTable:
+ 288 0000 00       		.byte	0
+ 289 0001 00       		.byte	0
+ 290 0002 00       		.byte	0
+ 291 0003 00       		.byte	0
+ 292 0004 01       		.byte	1
+ 293 0005 02       		.byte	2
+ 294 0006 03       		.byte	3
+ 295 0007 04       		.byte	4
+ 296              		.text
+ 297              	.Letext0:
+ 298              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 299              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 300              		.file 4 "cube/Drivers/CMSIS/Include/core_cm4.h"
+ 301              		.file 5 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
+ 302              		.file 6 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xe.h"
+ 303              		.file 7 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\lib\\gcc\\arm-none-eab
+ 304              		.file 8 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 305              		.file 9 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\include
+ 306              		.file 10 "c:\\program files (x86)\\gnu tools arm embedded\\8 2019-q3-update\\arm-none-eabi\\includ
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s 			page 12
+
+
+ 307              		.file 11 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h"
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 system_stm32f3xx.c
-C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s:18     .text.SystemInit:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s:26     .text.SystemInit:00000000 SystemInit
-C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s:92     .text.SystemInit:00000058 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s:100    .text.SystemCoreClockUpdate:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s:107    .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
-C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s:240    .text.SystemCoreClockUpdate:00000078 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s:284    .rodata.APBPrescTable:00000000 APBPrescTable
-C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s:263    .rodata.AHBPrescTable:00000000 AHBPrescTable
-C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s:256    .data.SystemCoreClock:00000000 SystemCoreClock
-C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s:252    .data.SystemCoreClock:00000000 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s:259    .rodata.AHBPrescTable:00000000 $d
-C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s:281    .rodata.APBPrescTable:00000000 $d
-                           .group:00000000 wm4.0.a9549919c595c19c35ef13bc9ee4c8af
-                           .group:00000000 wm4.target_vl53l1_1.h.12.5039e74bcd507e129caba66ab5fc05af
+C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s:18     .text.SystemInit:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s:26     .text.SystemInit:00000000 SystemInit
+C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s:92     .text.SystemInit:00000058 $d
+C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s:100    .text.SystemCoreClockUpdate:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s:107    .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
+C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s:244    .text.SystemCoreClockUpdate:0000007c $d
+C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s:287    .rodata.APBPrescTable:00000000 APBPrescTable
+C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s:266    .rodata.AHBPrescTable:00000000 AHBPrescTable
+C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s:259    .data.SystemCoreClock:00000000 SystemCoreClock
+C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s:255    .data.SystemCoreClock:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s:262    .rodata.AHBPrescTable:00000000 $d
+C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s:284    .rodata.APBPrescTable:00000000 $d
+                           .group:00000000 wm4.0.cbadcd7125b439f63d13d43ae17ce4cb
+                           .group:00000000 wm4.target_vl53l1_1.h.12.551c1b90918b951c5224feb9b75565bd
                            .group:00000000 wm4.stm32f3xx.h.55.fe34e0340b06ab20c90f3cf1d792e0eb
-                           .group:00000000 wm4.stm32f303xc.h.51.75494ed92b93e6861874d99c51c92793
+                           .group:00000000 wm4.stm32f303xe.h.51.65501469ddbb8a3dac94b2f9d61c4e79
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.d0b7f3cd6ee95f610104014bb3ed522a
                            .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
@@ -684,7 +692,7 @@ C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s:281    .rodata.APBPrescTable:000
                            .group:00000000 wm4.core_cm4.h.74.09ac1776756364a5a5d23084aa23e459
                            .group:00000000 wm4.cmsis_gcc.h.36.39970cb43ce4b53c82644a1f9bc2eab9
                            .group:00000000 wm4.core_cm4.h.223.390ff9b0e06949b13520d8b6746f63e8
-                           .group:00000000 wm4.stm32f303xc.h.710.b77655c64e6ea7efdc9ab6a96701a5ae
+                           .group:00000000 wm4.stm32f303xe.h.787.6957ba193b5d3b55f4f9c444bc42cb63
                            .group:00000000 wm4.stm32f3xx.h.191.245d83eb21a6c69e2950c577a7134277
                            .group:00000000 wm4.stm32f3xx_hal_conf.h.37.cb1c9cb802da867d86527a1477311c20
                            .group:00000000 wm4.newlib.h.8.f6e543eac3f2f65163ba2ffe3b04987b
@@ -706,24 +714,24 @@ C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s:281    .rodata.APBPrescTable:000
                            .group:00000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
                            .group:00000000 wm4.stdio.h.81.2a55589bfa3ee24eeb84e3c79458e4a9
                            .group:00000000 wm4.stm32f3xx_hal_def.h.76.500c7c9bfcb8d4adebf82d1af27ff044
-                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.60ee232241a99e19acd27637eebe4f1c
-                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.1fba3945551953e78cf69c94a0383651
+                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.06cc24fd94394ddd03725d84823331b1
+                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.96615d6f3e5897bb79454968f7fc6c86
                            .group:00000000 wm4.stm32f3xx_hal_gpio.h.38.11db931fcbf37182e25c3927ddf6e8ba
-                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.8d493744f4b7a4f7a0f4f97db0ccbd8e
+                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.46a6c05d651e2a032ac66cebe63916b8
                            .group:00000000 wm4.stm32f3xx_hal_dma.h.38.61966c780efd486aa451ae49ca247997
                            .group:00000000 wm4.stm32f3xx_hal_dma_ex.h.38.195e7d437d9280b9f4e6bae0fa00db04
                            .group:00000000 wm4.stm32f3xx_hal_dma.h.423.83da80eb3e6ae96f050d0c5e4b55e4b9
                            .group:00000000 wm4.stm32f3xx_hal_cortex.h.38.c5c1d06be9dad8e7837dbe16f3535233
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccgyvfXL.s 			page 13
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\cc3wpT3y.s 			page 14
 
 
                            .group:00000000 wm4.stm32f3xx_hal_flash.h.38.2b4c202390dfbe69a578ce118ab4d799
-                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.36f8341b05728c01a88b7f1003837b1f
+                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.65931ad4b848f69ba672eb38b2753615
                            .group:00000000 wm4.stm32f3xx_hal_i2c.h.38.e3750f5f029ebf729a7cf07e85cad615
-                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.74099379a9814ae4d6d1c8682fdde7ad
+                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.bdd47c8bc2d21749d9fd72e6b8484890
                            .group:00000000 wm4.stm32f3xx_hal_i2c.h.626.05cba3c85b66bb4631bfd2ebbfab1b06
                            .group:00000000 wm4.stm32f3xx_hal_pwr.h.38.efb6ce75a5c12d6b2c7c914e7a94ec2b
                            .group:00000000 wm4.stm32f3xx_hal_pwr_ex.h.38.d228edc56905d96af2d831d3c8e0487a
-                           .group:00000000 wm4.stm32f3xx_hal.h.60.e1acc37932101d84a977b19b7a581169
+                           .group:00000000 wm4.stm32f3xx_hal.h.60.11e72be277d7cf245b56360bacde3327
 
 NO UNDEFINED SYMBOLS

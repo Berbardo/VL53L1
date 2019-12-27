@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 1
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccmyc4xk.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 1
   27:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** * provisions apply instead of the ones mentioned above :
   28:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
   29:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** ********************************************************************************
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 2
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccmyc4xk.s 			page 2
 
 
   30:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 1
   84:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	_LOG_FUNCTION_END(VL53L1_TRACE_MODULE_CORE, status, ##__VA_ARGS__)
   85:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** #define LOG_FUNCTION_END_FMT(status, fmt, ...) \
   86:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	_LOG_FUNCTION_END_FMT(VL53L1_TRACE_MODULE_CORE, \
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 3
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccmyc4xk.s 			page 3
 
 
   87:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		status, fmt, ##__VA_ARGS__)
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 1
   45 0008 7047     		bx	lr
   46              		.cfi_endproc
   47              	.LFE126:
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 4
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccmyc4xk.s 			page 4
 
 
   49              		.section	.text.VL53L1_decode_vcsel_period,"ax",%progbits
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 1
  170:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	duration_us = duration_us >> 4;
  171:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
  172:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* Multiply #1 18b (6.12) by #2  28b (28.0)
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 5
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccmyc4xk.s 			page 5
 
 
  173:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * output 46b (34.12)
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 1
  227:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** {
  228:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/*
  229:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 * Converts events into count rate
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 6
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccmyc4xk.s 			page 6
 
 
  230:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	 *
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 1
  284:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
  285:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	if (tmp_int > 0xFFFF) {
  286:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		tmp_int = 0xFFFF;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 7
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccmyc4xk.s 			page 7
 
 
  287:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	}
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 1
  341:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
  342:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	uint32_t    pll_period_us = 0; /* 0.24 format */
  343:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	int64_t     tmp_long_int  = 0;
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 8
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccmyc4xk.s 			page 8
 
 
  344:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	int32_t     range_mm      = 0;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 1
  398:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	range_mm += 0x0400;
  399:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	range_mm /= 0x0800;
  400:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 9
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccmyc4xk.s 			page 9
 
 
  401:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 	/* Remove fractional bits */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 1
   93              	.LVL6:
   94              	.LFB128:
  424:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 10
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccmyc4xk.s 			page 10
 
 
  425:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 1
  126 001c 0833     		adds	r3, r3, #8
  438:D:/Git/VL53L1/lib/core/src\vl53l1_core_support.c **** 		*pcol = (spad_number-128) >> 3;
  127              		.loc 1 438 9 view .LVU31
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 11
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccmyc4xk.s 			page 11
 
 
  128 001e 0B70     		strb	r3, [r1]
@@ -628,19 +628,19 @@ ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 1
  149              		.file 8 "cube/Drivers/CMSIS/Include/core_cm4.h"
  150              		.file 9 "cube/Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
  151              		.file 10 "cube/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h"
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 12
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccmyc4xk.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 vl53l1_core_support.c
-C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s:18     .text.VL53L1_calc_pll_period_us:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s:26     .text.VL53L1_calc_pll_period_us:00000000 VL53L1_calc_pll_period_us
-C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s:50     .text.VL53L1_decode_vcsel_period:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s:57     .text.VL53L1_decode_vcsel_period:00000000 VL53L1_decode_vcsel_period
-C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s:85     .text.VL53L1_decode_row_col:00000000 $t
-C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s:92     .text.VL53L1_decode_row_col:00000000 VL53L1_decode_row_col
-                           .group:00000000 wm4.0.a9549919c595c19c35ef13bc9ee4c8af
-                           .group:00000000 wm4.target_vl53l1_1.h.12.5039e74bcd507e129caba66ab5fc05af
+C:\Users\Berbardo\AppData\Local\Temp\ccmyc4xk.s:18     .text.VL53L1_calc_pll_period_us:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccmyc4xk.s:26     .text.VL53L1_calc_pll_period_us:00000000 VL53L1_calc_pll_period_us
+C:\Users\Berbardo\AppData\Local\Temp\ccmyc4xk.s:50     .text.VL53L1_decode_vcsel_period:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccmyc4xk.s:57     .text.VL53L1_decode_vcsel_period:00000000 VL53L1_decode_vcsel_period
+C:\Users\Berbardo\AppData\Local\Temp\ccmyc4xk.s:85     .text.VL53L1_decode_row_col:00000000 $t
+C:\Users\Berbardo\AppData\Local\Temp\ccmyc4xk.s:92     .text.VL53L1_decode_row_col:00000000 VL53L1_decode_row_col
+                           .group:00000000 wm4.0.cbadcd7125b439f63d13d43ae17ce4cb
+                           .group:00000000 wm4.target_vl53l1_1.h.12.551c1b90918b951c5224feb9b75565bd
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.d0b7f3cd6ee95f610104014bb3ed522a
                            .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
@@ -679,32 +679,32 @@ C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s:92     .text.VL53L1_decode_row_c
                            .group:00000000 wm4.vl53l1_platform_log.h.71.79ea17a42b4255ee5461fb53cd7aea3c
                            .group:00000000 wm4.stm32f3xx_hal_conf.h.37.cb1c9cb802da867d86527a1477311c20
                            .group:00000000 wm4.stm32f3xx.h.55.fe34e0340b06ab20c90f3cf1d792e0eb
-                           .group:00000000 wm4.stm32f303xc.h.51.75494ed92b93e6861874d99c51c92793
+                           .group:00000000 wm4.stm32f303xe.h.51.65501469ddbb8a3dac94b2f9d61c4e79
                            .group:00000000 wm4.core_cm4.h.42.42f38327ee0970d80f60117e6a3ba2b0
                            .group:00000000 wm4.cmsis_gcc.h.36.39970cb43ce4b53c82644a1f9bc2eab9
                            .group:00000000 wm4.core_cm4.h.223.390ff9b0e06949b13520d8b6746f63e8
-                           .group:00000000 wm4.stm32f303xc.h.710.b77655c64e6ea7efdc9ab6a96701a5ae
+                           .group:00000000 wm4.stm32f303xe.h.787.6957ba193b5d3b55f4f9c444bc42cb63
                            .group:00000000 wm4.stm32f3xx.h.191.245d83eb21a6c69e2950c577a7134277
                            .group:00000000 wm4.stm32f3xx_hal_def.h.76.500c7c9bfcb8d4adebf82d1af27ff044
-                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.60ee232241a99e19acd27637eebe4f1c
-                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.1fba3945551953e78cf69c94a0383651
-ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccZyHSQs.s 			page 13
+                           .group:00000000 wm4.stm32f3xx_hal_rcc.h.64.06cc24fd94394ddd03725d84823331b1
+                           .group:00000000 wm4.stm32f3xx_hal_rcc_ex.h.38.96615d6f3e5897bb79454968f7fc6c86
+ARM GAS  C:\Users\Berbardo\AppData\Local\Temp\ccmyc4xk.s 			page 13
 
 
                            .group:00000000 wm4.stm32f3xx_hal_gpio.h.38.11db931fcbf37182e25c3927ddf6e8ba
-                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.8d493744f4b7a4f7a0f4f97db0ccbd8e
+                           .group:00000000 wm4.stm32f3xx_hal_gpio_ex.h.38.46a6c05d651e2a032ac66cebe63916b8
                            .group:00000000 wm4.stm32f3xx_hal_dma.h.38.61966c780efd486aa451ae49ca247997
                            .group:00000000 wm4.stm32f3xx_hal_dma_ex.h.38.195e7d437d9280b9f4e6bae0fa00db04
                            .group:00000000 wm4.stm32f3xx_hal_dma.h.423.83da80eb3e6ae96f050d0c5e4b55e4b9
                            .group:00000000 wm4.stm32f3xx_hal_cortex.h.38.c5c1d06be9dad8e7837dbe16f3535233
                            .group:00000000 wm4.stm32f3xx_hal_flash.h.38.2b4c202390dfbe69a578ce118ab4d799
-                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.36f8341b05728c01a88b7f1003837b1f
+                           .group:00000000 wm4.stm32f3xx_hal_flash_ex.h.38.65931ad4b848f69ba672eb38b2753615
                            .group:00000000 wm4.stm32f3xx_hal_i2c.h.38.e3750f5f029ebf729a7cf07e85cad615
-                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.74099379a9814ae4d6d1c8682fdde7ad
+                           .group:00000000 wm4.stm32f3xx_hal_i2c_ex.h.38.bdd47c8bc2d21749d9fd72e6b8484890
                            .group:00000000 wm4.stm32f3xx_hal_i2c.h.626.05cba3c85b66bb4631bfd2ebbfab1b06
                            .group:00000000 wm4.stm32f3xx_hal_pwr.h.38.efb6ce75a5c12d6b2c7c914e7a94ec2b
                            .group:00000000 wm4.stm32f3xx_hal_pwr_ex.h.38.d228edc56905d96af2d831d3c8e0487a
-                           .group:00000000 wm4.stm32f3xx_hal.h.60.e1acc37932101d84a977b19b7a581169
+                           .group:00000000 wm4.stm32f3xx_hal.h.60.11e72be277d7cf245b56360bacde3327
                            .group:00000000 wm4.vl53l1_def.h.87.ea1a10eae4f02dade0991856ca744364
                            .group:00000000 wm4.vl53l1_platform_user_data.h.94.31d6fd49a37f98d182bed50c298f83ae
 

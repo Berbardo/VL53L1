@@ -77,7 +77,7 @@ VL53L1_Error vl53l1_init(VL53L1_Dev_t* p_device, VL53L1_DeviceInfo_t device_info
         if (Status == VL53L1_ERROR_NONE) {
             Status = VL53L1_PerformRefSpadManagement(p_device);
         }
-        
+
         // Saving device calibration data
         if (Status == VL53L1_ERROR_NONE) {
             Status = VL53L1_GetCalibrationData(p_device, calibration);
@@ -127,6 +127,10 @@ VL53L1_Error vl53l1_init(VL53L1_Dev_t* p_device, VL53L1_DeviceInfo_t device_info
 
     if (Status == VL53L1_ERROR_NONE) {
         Status = VL53L1_SetMeasurementTimingBudgetMicroSeconds(p_device, MEASUREMENT_TIME_BUDGET_US);
+    }
+
+    if (Status == VL53L1_ERROR_NONE) {
+        Status = VL53L1_SetInterMeasurementPeriodMilliSeconds(p_device, MEASUREMENT_TIME_BUDGET_US/1000 + 5);
     }
 
     // Start reading

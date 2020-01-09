@@ -98,6 +98,8 @@ uint8_t distance_sensors_adapter_init(void) {
         VL53L1_Error status = VL53L1_ERROR_NONE;
         VL53L1_Dev_t* p_device = &(sensors[i]);
 
+        vl53l1_turn_on(&(sensors[i]));
+
         status = VL53L1_WaitDeviceBooted(p_device);
 
         if (status == VL53L1_ERROR_NONE) {

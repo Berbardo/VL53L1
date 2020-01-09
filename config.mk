@@ -27,6 +27,10 @@ CUBE_DIR := cube
 # Config Files Directory
 CFG_DIR := cfg
 
+# Tests Directory
+TEST_DIR := tests
+
 # Default values, can be set on the command line or here
 DEBUG   ?= 1
 VERBOSE ?= 0
+TEST    ?= 0

@@ -26,7 +26,7 @@
 #define VL53L1_DEFAULT_COMM_SPEED_KHZ 100
 
 #define INIT_RESET_SLEEP_TIME_MS 10
-#define MAX_RANGE 2000
+#define MAX_RANGE_MM 2000
 
 /*****************************************
  * Private Variables
@@ -69,9 +69,9 @@ static VL53L1_DeviceInfo_t sensors_info[DS_AMOUNT];
 static VL53L1_RangingMeasurementData_t sensors_measurement[DS_AMOUNT];
 static VL53L1_CalibrationData_t sensors_calibration[DS_AMOUNT];
 
-static uint16_t actual_range[] = {MAX_RANGE, MAX_RANGE, MAX_RANGE};
-static const uint8_t used_sensors[] = {1, 1, 1};
-static const uint8_t i2c_addresses[] = {130, 134, 138};
+static uint16_t actual_range[] = {MAX_RANGE_MM, MAX_RANGE_MM, MAX_RANGE_MM};
+static const uint8_t used_sensors[] = {1, 0, 0};
+static const uint8_t i2c_addresses[] = {0x30, 0x34, 0x38};
 __attribute__((used)) static uint8_t sensors_status[] = {0, 0, 0};
 
 /*****************************************
@@ -133,7 +133,7 @@ uint8_t distance_sensors_adapter_update(void) {
         }
 
         sensors_status[i] =
-            vl53l1_update_range(&(sensors[i]), &(sensors_measurement[i]), &(actual_range[i]), MAX_RANGE);
+            vl53l1_update_range(&(sensors[i]), &(sensors_measurement[i]), &(actual_range[i]), MAX_RANGE_MM);
 
         if (sensors_status[i] != 0) {
             status |= 1 << (i + 1);

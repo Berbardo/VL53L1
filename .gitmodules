@@ -1,0 +1,3 @@
+[submodule "SEGGER_RTT"]
+	path = lib/SEGGER_RTT
+	url = git@github.com:ThundeRatz/SEGGER_RTT.git

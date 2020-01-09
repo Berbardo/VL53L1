@@ -71,7 +71,7 @@ static VL53L1_CalibrationData_t sensors_calibration[DS_AMOUNT];
 
 static uint16_t actual_range[] = {MAX_RANGE_MM, MAX_RANGE_MM, MAX_RANGE_MM};
 static const uint8_t used_sensors[] = {1, 0, 0};
-static const uint8_t i2c_addresses[] = {0x30, 0x34, 0x38};
+static const uint8_t i2c_addresses[] = {0x52 /** 0x30 **/, 0x34, 0x38};
 __attribute__((used)) static uint8_t sensors_status[] = {0, 0, 0};
 
 /*****************************************

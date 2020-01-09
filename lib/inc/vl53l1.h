@@ -19,7 +19,7 @@
  * Public Constants
  *****************************************/
 
-#define VL53L1_DEFAULT_ADDRESS 152
+#define VL53L1_DEFAULT_ADDRESS 0x52
 
 /*****************************************
  * Public Functions Prototypes

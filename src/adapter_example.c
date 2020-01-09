@@ -16,6 +16,7 @@
 
 #include "vl53l1.h"
 
+#include "mcu.h"
 #include "main.h"
 #include "i2c.h"
 
@@ -39,7 +40,7 @@ static VL53L1_Dev_t sensors[] = {
         .comms_speed_khz = VL53L1_DEFAULT_COMM_SPEED_KHZ,
         .present = 0,
         .calibrated = 0,
-        .I2cHandle = I2C_HANDLE,
+        .I2cHandle = &I2C_HANDLE,
         .xshut_port = FIRST_SENSOR_GPIOx,
         .xshut_pin = FIRST_SENSOR_GPIO_PIN
     },
@@ -49,7 +50,7 @@ static VL53L1_Dev_t sensors[] = {
         .comms_speed_khz = VL53L1_DEFAULT_COMM_SPEED_KHZ,
         .present = 0,
         .calibrated = 0,
-        .I2cHandle = I2C_HANDLE,
+        .I2cHandle = &I2C_HANDLE,
         .xshut_port = SECOND_SENSOR_GPIOx,
         .xshut_pin = SECOND_SENSOR_GPIO_PIN
     },
@@ -59,7 +60,7 @@ static VL53L1_Dev_t sensors[] = {
         .comms_speed_khz = VL53L1_DEFAULT_COMM_SPEED_KHZ,
         .present = 0,
         .calibrated = 0,
-        .I2cHandle = I2C_HANDLE,
+        .I2cHandle = &I2C_HANDLE,
         .xshut_port = THIRD_SENSOR_GPIOx,
         .xshut_pin = THIRD_SENSOR_GPIO_PIN
     }
@@ -88,7 +89,7 @@ uint8_t distance_sensors_adapter_init(void) {
         vl53l1_turn_off(&(sensors[i]));
     }
 
-    HAL_Delay(INIT_RESET_SLEEP_TIME_MS);
+    mcu_sleep(INIT_RESET_SLEEP_TIME_MS);
 
     for (int i = 0; i < DS_AMOUNT; i++) {
         if (!used_sensors[i]) {
@@ -99,8 +100,6 @@ uint8_t distance_sensors_adapter_init(void) {
         VL53L1_Dev_t* p_device = &(sensors[i]);
 
         vl53l1_turn_on(&(sensors[i]));
-
-        status = VL53L1_WaitDeviceBooted(p_device);
 
         if (status == VL53L1_ERROR_NONE) {
             status = VL53L1_SetDeviceAddress(p_device, i2c_addresses[i]);

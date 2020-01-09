@@ -11,6 +11,7 @@
 
 #include "vl53l1.h"
 #include "gpio.h"
+#include "mcu.h"
 
 /*****************************************
  * Private Macro
@@ -147,6 +148,29 @@ void vl53l1_turn_off(VL53L1_Dev_t* p_device) {
 
 void vl53l1_turn_on(VL53L1_Dev_t* p_device) {
     HAL_GPIO_WritePin(p_device->xshut_port, p_device->xshut_pin, GPIO_PIN_SET);
+}
+
+VL53L1_Error vl53l1_wait_boot(VL53L1_Dev_t* p_device) {
+    VL53L1_Error status = VL53L1_ERROR_UNDEFINED;
+    uint16_t byte = 0x0000;
+    uint16_t loopCounter = 0;
+
+    vl53l1_turn_on(p_device);
+
+    while (loopCounter < 2000) {
+        // It doesn't work without a delay, even using 0
+        mcu_sleep(0);
+        status = VL53L1_RdWord(p_device,
+                                VL53L1_IDENTIFICATION__MODEL_ID, &byte);
+
+        if (byte == 0xEEAA) {
+            break;
+        }
+
+        loopCounter++;
+    }
+
+    return status;
 }
 
 uint8_t vl53l1_update_range(VL53L1_Dev_t* p_device, VL53L1_RangingMeasurementData_t* p_ranging_data, uint16_t* range,

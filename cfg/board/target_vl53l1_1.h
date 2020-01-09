@@ -16,7 +16,7 @@
  *****************************************/
 
 /** DISTANCE SENSORS */
-#define I2C_HANDLE &hi2c2
+#define I2C_HANDLE hi2c2
 #define TARGET_I2C_INIT MX_I2C2_Init
 
 #define FIRST_SENSOR_GPIOx GPIOC

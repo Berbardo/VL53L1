@@ -10,6 +10,8 @@
 
 #include "adapter_example.h"
 
+#include "mcu.h"
+
 static uint16_t measured_distance[DS_AMOUNT];
 
 /*****************************************
@@ -17,6 +19,10 @@ static uint16_t measured_distance[DS_AMOUNT];
  *****************************************/
 
 int main() {
+    mcu_init();
+
+    mcu_sleep(300);
+
     distance_sensors_adapter_init();
 
     for (;;) {

@@ -174,6 +174,7 @@ void vl53l1_shield_control(distance_sensor_position_t sensor, uint8_t state) {
             data &=~0x40;
             if(state)
                 data |=0x40;
+            RegAddr[1] = data;
             HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, 0x43*2, RegAddr, 2, 100);
             break;
         }
@@ -183,6 +184,7 @@ void vl53l1_shield_control(distance_sensor_position_t sensor, uint8_t state) {
             data &=~0x80;
             if(state)
                 data |=0x80;
+            RegAddr[1] = data;
             HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, 0x43*2, RegAddr, 2, 100);
             break;
         }

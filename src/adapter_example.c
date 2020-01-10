@@ -87,7 +87,6 @@ uint8_t distance_sensors_adapter_init(void) {
     // desabilita todos, independente de quantos vai usar
     for (int i = 0; i < DS_AMOUNT; i++) {
         vl53l1_turn_off(&(sensors[i]));
-
         // vl53l1_shield_control(i, 0);
     }
 
@@ -102,11 +101,7 @@ uint8_t distance_sensors_adapter_init(void) {
         VL53L1_Dev_t* p_device = &(sensors[i]);
 
         vl53l1_turn_on(p_device);
-        uint16_t wordData;
-        VL53L1_RdWord(p_device, VL53L1_IDENTIFICATION__MODEL_ID, &wordData);
-
         // vl53l1_shield_control(i, 1);
-        // status = vl53l1_wait_boot(p_device); // Trocar pelo turn on depois, peguei essa função da lib do vl53l0x mas teoricamente ela não é mais necessária
 
         if (status == VL53L1_ERROR_NONE) {
             status = VL53L1_SetDeviceAddress(p_device, i2c_addresses[i]);

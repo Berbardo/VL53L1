@@ -149,7 +149,9 @@ void vl53l1_turn_off(VL53L1_Dev_t* p_device) {
 }
 
 void vl53l1_turn_on(VL53L1_Dev_t* p_device) {
+    uint16_t wordData;
     HAL_GPIO_WritePin(p_device->xshut_port, p_device->xshut_pin, GPIO_PIN_SET);
+    VL53L1_RdWord(p_device, VL53L1_IDENTIFICATION__MODEL_ID, &wordData);
 }
 
 VL53L1_Error vl53l1_wait_boot(VL53L1_Dev_t* p_device) {

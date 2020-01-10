@@ -86,8 +86,8 @@ uint8_t distance_sensors_adapter_init(void) {
 
     // desabilita todos, independente de quantos vai usar
     for (int i = 0; i < DS_AMOUNT; i++) {
-        // vl53l1_turn_off(&(sensors[i]));
-        vl53l1_shield_control(i, 0);
+        vl53l1_turn_off(&(sensors[i]));
+        // vl53l1_shield_control(i, 0);
     }
 
     mcu_sleep(INIT_RESET_SLEEP_TIME_MS);
@@ -100,8 +100,8 @@ uint8_t distance_sensors_adapter_init(void) {
         VL53L1_Error status = VL53L1_ERROR_NONE;
         VL53L1_Dev_t* p_device = &(sensors[i]);
 
-        // vl53l1_turn_on(&(sensors[i]));
-        vl53l1_shield_control(i, 1);
+        vl53l1_turn_on(&(sensors[i]));
+        // vl53l1_shield_control(i, 1);
 
         if (status == VL53L1_ERROR_NONE) {
             status = VL53L1_SetDeviceAddress(p_device, i2c_addresses[i]);

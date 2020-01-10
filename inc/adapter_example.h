@@ -51,4 +51,6 @@ uint8_t distance_sensors_adapter_update();
  */
 uint16_t distance_sensors_adapter_get(distance_sensor_position_t sensor);
 
+void vl53l1_shield_control(distance_sensor_position_t sensor, uint8_t state);
+
 #endif // __ADAPTER_EXAMPLE_H__

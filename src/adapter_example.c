@@ -40,7 +40,7 @@ static VL53L1_Dev_t sensors[] = {
         .comms_speed_khz = VL53L1_DEFAULT_COMM_SPEED_KHZ,
         .present = 0,
         .calibrated = 0,
-        .I2cHandle = &I2C_HANDLE,
+        .I2cHandle = &TARGET_I2C_HANDLE,
         .xshut_port = FIRST_SENSOR_GPIOx,
         .xshut_pin = FIRST_SENSOR_GPIO_PIN
     },
@@ -50,7 +50,7 @@ static VL53L1_Dev_t sensors[] = {
         .comms_speed_khz = VL53L1_DEFAULT_COMM_SPEED_KHZ,
         .present = 0,
         .calibrated = 0,
-        .I2cHandle = &I2C_HANDLE,
+        .I2cHandle = &TARGET_I2C_HANDLE,
         .xshut_port = SECOND_SENSOR_GPIOx,
         .xshut_pin = SECOND_SENSOR_GPIO_PIN
     },
@@ -60,7 +60,7 @@ static VL53L1_Dev_t sensors[] = {
         .comms_speed_khz = VL53L1_DEFAULT_COMM_SPEED_KHZ,
         .present = 0,
         .calibrated = 0,
-        .I2cHandle = &I2C_HANDLE,
+        .I2cHandle = &TARGET_I2C_HANDLE,
         .xshut_port = THIRD_SENSOR_GPIOx,
         .xshut_pin = THIRD_SENSOR_GPIO_PIN
     }
@@ -86,7 +86,8 @@ uint8_t distance_sensors_adapter_init(void) {
 
     // desabilita todos, independente de quantos vai usar
     for (int i = 0; i < DS_AMOUNT; i++) {
-        vl53l1_turn_off(&(sensors[i]));
+        // vl53l1_turn_off(&(sensors[i]));
+        vl53l1_shield_control(i, 0);
     }
 
     mcu_sleep(INIT_RESET_SLEEP_TIME_MS);
@@ -99,7 +100,8 @@ uint8_t distance_sensors_adapter_init(void) {
         VL53L1_Error status = VL53L1_ERROR_NONE;
         VL53L1_Dev_t* p_device = &(sensors[i]);
 
-        vl53l1_turn_on(&(sensors[i]));
+        // vl53l1_turn_on(&(sensors[i]));
+        vl53l1_shield_control(i, 1);
 
         if (status == VL53L1_ERROR_NONE) {
             status = VL53L1_SetDeviceAddress(p_device, i2c_addresses[i]);
@@ -150,4 +152,39 @@ uint16_t distance_sensors_adapter_get(distance_sensor_position_t sensor) {
     }
 
     return -1;
+}
+
+void vl53l1_shield_control(distance_sensor_position_t sensor, uint8_t state) {
+    uint8_t data;
+    uint8_t RegAddr[0x10];
+    RegAddr[0] = 0x12+1;
+    switch (sensor) {
+        case DS_FRONT_CENTER: {
+            HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, 0x42*2 + 1, &data, 1, 100);
+            data &=~0x80;
+            if(state)
+                data |=0x80;
+            RegAddr[1] = data;
+            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, 0x42*2, RegAddr, 2, 100);
+            break;
+        }
+
+        case DS_FRONT_LEFT: {
+            HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, 0x43*2 + 1, &data, 1, 100);
+            data &=~0x40;
+            if(state)
+                data |=0x40;
+            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, 0x43*2, RegAddr, 2, 100);
+            break;
+        }
+
+        case DS_FRONT_RIGHT: {
+            HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, 0x43*2 + 1, &data, 1, 100);
+            data &=~0x80;
+            if(state)
+                data |=0x80;
+            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, 0x43*2, RegAddr, 2, 100);
+            break;
+        }
+    }
 }

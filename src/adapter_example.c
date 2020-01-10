@@ -6,7 +6,7 @@
  * @author Lucas Schneider <lucas.schneider@thunderatz.org>
  * @author Bernardo Coutinho <bernardo.coutinho@thunderatz.org>
  *
- * @date 11/2019
+ * @date 01/2020
  */
 
 #include <stdbool.h>
@@ -155,36 +155,36 @@ uint16_t distance_sensors_adapter_get(distance_sensor_position_t sensor) {
 }
 
 void vl53l1_shield_control(distance_sensor_position_t sensor, uint8_t state) {
-    uint8_t data;
+    uint8_t data[0x10];
     uint8_t RegAddr[0x10];
     RegAddr[0] = 0x12+1;
     switch (sensor) {
         case DS_FRONT_CENTER: {
-            HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, 0x42*2 + 1, &data, 1, 100);
-            data &=~0x80;
+            HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, 0x42*2, data, 2, 100);
+            data[1] &=~0x80;
             if(state)
-                data |=0x80;
-            RegAddr[1] = data;
+                data[1] |=0x80;
+            RegAddr[1] = data[1];
             HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, 0x42*2, RegAddr, 2, 100);
             break;
         }
 
         case DS_FRONT_LEFT: {
-            HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, 0x43*2 + 1, &data, 1, 100);
-            data &=~0x40;
+            HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, 0x43*2, data, 2, 100);
+            data[1] &=~0x40;
             if(state)
-                data |=0x40;
-            RegAddr[1] = data;
+                data[1] |=0x40;
+            RegAddr[1] = data[1];
             HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, 0x43*2, RegAddr, 2, 100);
             break;
         }
 
         case DS_FRONT_RIGHT: {
-            HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, 0x43*2 + 1, &data, 1, 100);
-            data &=~0x80;
+            HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, 0x43*2, data, 2, 100);
+            data[1] &=~0x80;
             if(state)
-                data |=0x80;
-            RegAddr[1] = data;
+                data[1] |=0x80;
+            RegAddr[1] = data[1];
             HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, 0x43*2, RegAddr, 2, 100);
             break;
         }

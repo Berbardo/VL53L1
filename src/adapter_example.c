@@ -154,42 +154,76 @@ uint16_t distance_sensors_adapter_get(distance_sensor_position_t sensor) {
     return -1;
 }
 
+/*****************************************
+ * Shield Specific Constants
+ *****************************************/
+
+/**
+ * Expander 0 i2c address[7..0] format
+ */
+#define I2cExpAddr0 ((int)(0x43*2))
+/**
+ * Expander 1 i2c address[7..0] format
+ */
+#define I2cExpAddr1 ((int)(0x42*2))
+/** @} XNUCLEO53L1A1_I2CExpanders */
+
+/**
+ * GPIO monitor pin state register
+ * 16 bit register LSB at lowest offset (little endian)
+ */
+#define GPMR    0x10
+/**
+ * STMPE1600 GPIO set pin state register
+ * 16 bit register LSB at lowest offset (little endian)
+ */
+#define GPSR    0x12
+/**
+ * STMPE1600 GPIO set pin direction register
+ * 16 bit register LSB at lowest offset
+ */
+#define GPDR    0x14
+
+/*****************************************
+ * Shield Specific Function Definition
+ *****************************************/
+
 void vl53l1_shield_control(distance_sensor_position_t sensor, uint8_t state) {
-    uint8_t Rd_RegAddr = 0x10 + 1;
-    uint8_t data[0x10];
+    uint8_t Rd_RegAddr = GPMR + 1;
+    uint8_t data;
     uint8_t Wr_RegAddr[0x10];
-    Wr_RegAddr[0] = 0x12+1;
+    Wr_RegAddr[0] = GPSR + 1;
     switch (sensor) {
         case DS_FRONT_CENTER: {
-            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, 0x42*2, &Rd_RegAddr, 1, 100);
-            HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, 0x42*2, data, 2, 100);
-            data[1] &=~0x80;
+            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, I2cExpAddr1, &Rd_RegAddr, 1, 100);
+            HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, I2cExpAddr1, &data, 1, 100);
+            data &=~0x80;
             if(state)
-                data[1] |=0x80;
-            Wr_RegAddr[1] = data[1];
-            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, 0x42*2, Wr_RegAddr, 2, 100);
+                data |=0x80;
+            Wr_RegAddr[1] = data;
+            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, I2cExpAddr1, Wr_RegAddr, 2, 100);
             break;
         }
 
         case DS_FRONT_LEFT: {
-            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, 0x43*2, &Rd_RegAddr, 1, 100);
-            HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, 0x43*2, data, 2, 100);
-            data[1] &=~0x40;
+            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, I2cExpAddr0, &Rd_RegAddr, 1, 100);
+            HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, I2cExpAddr0, &data, 1, 100);
+            data &=~0x40;
             if(state)
-                data[1] |=0x40;
-            Wr_RegAddr[1] = data[1];
-            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, 0x43*2, Wr_RegAddr, 2, 100);
+                data |=0x40;
+            Wr_RegAddr[1] = data;
+            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, I2cExpAddr0, Wr_RegAddr, 2, 100);
             break;
         }
 
         case DS_FRONT_RIGHT: {
-            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, 0x43*2, &Rd_RegAddr, 1, 100);
-            HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, 0x43*2, data, 2, 100);
-            data[1] &=~0x80;
+            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, I2cExpAddr0, &Rd_RegAddr, 1, 100);
+            HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, I2cExpAddr0, &data, 1, 100);
+            data &=~0x80;
             if(state)
-                data[1] |=0x80;
-            Wr_RegAddr[1] = data[1];
-            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, 0x43*2, Wr_RegAddr, 2, 100);
+                data |=0x80;
+            Wr_RegAddr[1] = data;
+            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, I2cExpAddr0, Wr_RegAddr, 2, 100);
             break;
         }
     }

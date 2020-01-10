@@ -87,6 +87,7 @@ uint8_t distance_sensors_adapter_init(void) {
     // desabilita todos, independente de quantos vai usar
     for (int i = 0; i < DS_AMOUNT; i++) {
         vl53l1_turn_off(&(sensors[i]));
+
         // vl53l1_shield_control(i, 0);
     }
 
@@ -100,8 +101,9 @@ uint8_t distance_sensors_adapter_init(void) {
         VL53L1_Error status = VL53L1_ERROR_NONE;
         VL53L1_Dev_t* p_device = &(sensors[i]);
 
-        vl53l1_turn_on(&(sensors[i]));
+        // vl53l1_turn_on(p_device);
         // vl53l1_shield_control(i, 1);
+        status = vl53l1_wait_boot(p_device); // Trocar pelo turn on depois, peguei essa função da lib do vl53l0x mas teoricamente ela não é mais necessária
 
         if (status == VL53L1_ERROR_NONE) {
             status = VL53L1_SetDeviceAddress(p_device, i2c_addresses[i]);
@@ -161,28 +163,32 @@ uint16_t distance_sensors_adapter_get(distance_sensor_position_t sensor) {
 /**
  * Expander 0 i2c address[7..0] format
  */
-#define I2cExpAddr0 ((int)(0x43*2))
+#define I2cExpAddr0 ((int) (0x43 * 2))
+
 /**
  * Expander 1 i2c address[7..0] format
  */
-#define I2cExpAddr1 ((int)(0x42*2))
+#define I2cExpAddr1 ((int) (0x42 * 2))
+
 /** @} XNUCLEO53L1A1_I2CExpanders */
 
 /**
  * GPIO monitor pin state register
  * 16 bit register LSB at lowest offset (little endian)
  */
-#define GPMR    0x10
+#define GPMR 0x10
+
 /**
  * STMPE1600 GPIO set pin state register
  * 16 bit register LSB at lowest offset (little endian)
  */
-#define GPSR    0x12
+#define GPSR 0x12
+
 /**
  * STMPE1600 GPIO set pin direction register
  * 16 bit register LSB at lowest offset
  */
-#define GPDR    0x14
+#define GPDR 0x14
 
 /*****************************************
  * Shield Specific Function Definition
@@ -193,13 +199,17 @@ void vl53l1_shield_control(distance_sensor_position_t sensor, uint8_t state) {
     uint8_t data;
     uint8_t Wr_RegAddr[0x10];
     Wr_RegAddr[0] = GPSR + 1;
+
     switch (sensor) {
         case DS_FRONT_CENTER: {
             HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, I2cExpAddr1, &Rd_RegAddr, 1, 100);
             HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, I2cExpAddr1, &data, 1, 100);
-            data &=~0x80;
-            if(state)
-                data |=0x80;
+            data &= ~0x80;
+
+            if (state) {
+                data |= 0x80;
+            }
+
             Wr_RegAddr[1] = data;
             HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, I2cExpAddr1, Wr_RegAddr, 2, 100);
             break;
@@ -208,9 +218,12 @@ void vl53l1_shield_control(distance_sensor_position_t sensor, uint8_t state) {
         case DS_FRONT_LEFT: {
             HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, I2cExpAddr0, &Rd_RegAddr, 1, 100);
             HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, I2cExpAddr0, &data, 1, 100);
-            data &=~0x40;
-            if(state)
-                data |=0x40;
+            data &= ~0x40;
+
+            if (state) {
+                data |= 0x40;
+            }
+
             Wr_RegAddr[1] = data;
             HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, I2cExpAddr0, Wr_RegAddr, 2, 100);
             break;
@@ -219,9 +232,12 @@ void vl53l1_shield_control(distance_sensor_position_t sensor, uint8_t state) {
         case DS_FRONT_RIGHT: {
             HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, I2cExpAddr0, &Rd_RegAddr, 1, 100);
             HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, I2cExpAddr0, &data, 1, 100);
-            data &=~0x80;
-            if(state)
-                data |=0x80;
+            data &= ~0x80;
+
+            if (state) {
+                data |= 0x80;
+            }
+
             Wr_RegAddr[1] = data;
             HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, I2cExpAddr0, Wr_RegAddr, 2, 100);
             break;

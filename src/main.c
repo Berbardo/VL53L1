@@ -32,7 +32,8 @@ int main() {
     for (;;) {
         distance_sensors_adapter_update();
 
-        for (distance_sensor_position_t sensor_position = DS_FRONT_LEFT; sensor_position < DS_AMOUNT; sensor_position++) {
+        for (distance_sensor_position_t sensor_position = DS_FRONT_LEFT; sensor_position < DS_AMOUNT;
+             sensor_position++) {
             measured_distance[(int) sensor_position] = distance_sensors_adapter_get(sensor_position);
 
             printf("Sensor %d value: %d\r\n", sensor_position, measured_distance[(int) sensor_position]);

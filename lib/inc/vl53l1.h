@@ -55,6 +55,8 @@ void vl53l1_turn_off(VL53L1_Dev_t* p_device);
  */
 void vl53l1_turn_on(VL53L1_Dev_t* p_device);
 
+VL53L1_Error vl53l1_wait_boot(VL53L1_Dev_t* p_device);
+
 /**
  * @brief Update sensor range
  *

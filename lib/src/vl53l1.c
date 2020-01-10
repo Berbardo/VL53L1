@@ -47,10 +47,12 @@ VL53L1_Error vl53l1_init(VL53L1_Dev_t* p_device, VL53L1_DeviceInfo_t device_info
     VL53L1_Error Status = VL53L1_ERROR_NONE;
 
     // Wait Device Booted
-    VL53L1_WaitDeviceBooted(p_device);
+    Status = VL53L1_WaitDeviceBooted(p_device);
 
-    // Data initialization
-    Status = VL53L1_DataInit(p_device);
+    if (Status == VL53L1_ERROR_NONE) {
+        // Data initialization
+        Status = VL53L1_DataInit(p_device);
+    }
 
     if (Status == VL53L1_ERROR_NONE) {
         Status = VL53L1_GetDeviceInfo(p_device, &device_info);

@@ -27,7 +27,7 @@
 #define VL53L1_DEFAULT_COMM_SPEED_KHZ 100
 
 #define INIT_RESET_SLEEP_TIME_MS 10
-#define MAX_RANGE_MM 2000
+#define MAX_RANGE_MM 4000
 
 /*****************************************
  * Private Variables
@@ -71,8 +71,8 @@ static VL53L1_RangingMeasurementData_t sensors_measurement[DS_AMOUNT];
 static VL53L1_CalibrationData_t sensors_calibration[DS_AMOUNT];
 
 static uint16_t actual_range[] = {MAX_RANGE_MM, MAX_RANGE_MM, MAX_RANGE_MM};
-static const uint8_t used_sensors[] = {1, 0, 0};
-static const uint8_t i2c_addresses[] = {0x52 /** 0x30 **/, 0x34, 0x38};
+static const uint8_t used_sensors[] = {1, 1, 0};
+static const uint8_t i2c_addresses[] = {0x30, 0x34, 0x38};
 __attribute__((used)) static uint8_t sensors_status[] = {0, 0, 0};
 
 /*****************************************
@@ -101,9 +101,10 @@ uint8_t distance_sensors_adapter_init(void) {
         VL53L1_Error status = VL53L1_ERROR_NONE;
         VL53L1_Dev_t* p_device = &(sensors[i]);
 
-        // vl53l1_turn_on(p_device);
+        vl53l1_turn_on(p_device);
+
         // vl53l1_shield_control(i, 1);
-        status = vl53l1_wait_boot(p_device); // Trocar pelo turn on depois, peguei essa função da lib do vl53l0x mas teoricamente ela não é mais necessária
+        // status = vl53l1_wait_boot(p_device); // Trocar pelo turn on depois, peguei essa função da lib do vl53l0x mas teoricamente ela não é mais necessária
 
         if (status == VL53L1_ERROR_NONE) {
             status = VL53L1_SetDeviceAddress(p_device, i2c_addresses[i]);

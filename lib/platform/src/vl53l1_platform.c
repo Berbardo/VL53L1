@@ -38,7 +38,7 @@
 #include "vl53l1_platform_log.h"
 #include "vl53l1_api.h"
 
-#include "main.h"
+#include "main.h" // Coloquei pra ele incluir a main.h pra pegar tudo do uC
 #include <string.h>
 #include <time.h>
 #include <math.h>

@@ -66,7 +66,6 @@ static VL53L1_Dev_t sensors[] = {
     }
 };
 
-static VL53L1_DeviceInfo_t sensors_info[DS_AMOUNT];
 static VL53L1_RangingMeasurementData_t sensors_measurement[DS_AMOUNT];
 static VL53L1_CalibrationData_t sensors_calibration[DS_AMOUNT];
 
@@ -87,7 +86,6 @@ uint8_t distance_sensors_adapter_init(void) {
     // desabilita todos, independente de quantos vai usar
     for (int i = 0; i < DS_AMOUNT; i++) {
         vl53l1_turn_off(&(sensors[i]));
-        // vl53l1_shield_control(i, 0);
     }
 
     mcu_sleep(INIT_RESET_SLEEP_TIME_MS);
@@ -101,7 +99,6 @@ uint8_t distance_sensors_adapter_init(void) {
         VL53L1_Dev_t* p_device = &(sensors[i]);
 
         vl53l1_turn_on(p_device);
-        // vl53l1_shield_control(i, 1);
 
         if (status == VL53L1_ERROR_NONE) {
             status = VL53L1_SetDeviceAddress(p_device, i2c_addresses[i]);
@@ -109,7 +106,7 @@ uint8_t distance_sensors_adapter_init(void) {
 
         if (status == VL53L1_ERROR_NONE) {
             p_device->I2cDevAddr = i2c_addresses[i];
-            status = vl53l1_init(p_device, sensors_info[i], &sensors_calibration[i]);
+            status = vl53l1_init(p_device, &sensors_calibration[i]);
         }
 
         if (status == VL53L1_ERROR_NONE) {
@@ -136,7 +133,7 @@ uint8_t distance_sensors_adapter_update(void) {
         }
 
         sensors_status[i] =
-            vl53l1_update_range(&(sensors[i]), &(sensors_measurement[i]), &(actual_range[i]), MAX_RANGE_MM);
+            vl53l1_update_reading(&(sensors[i]), &(sensors_measurement[i]), &(actual_range[i]), MAX_RANGE_MM);
 
         if (sensors_status[i] != 0) {
             status |= 1 << (i + 1);
@@ -152,93 +149,4 @@ uint16_t distance_sensors_adapter_get(distance_sensor_position_t sensor) {
     }
 
     return -1;
-}
-
-/*****************************************
- * Shield Specific Constants
- *****************************************/
-
-/**
- * Expander 0 i2c address[7..0] format
- */
-#define I2cExpAddr0 ((int) (0x43 * 2))
-
-/**
- * Expander 1 i2c address[7..0] format
- */
-#define I2cExpAddr1 ((int) (0x42 * 2))
-
-/** @} XNUCLEO53L1A1_I2CExpanders */
-
-/**
- * GPIO monitor pin state register
- * 16 bit register LSB at lowest offset (little endian)
- */
-#define GPMR 0x10
-
-/**
- * STMPE1600 GPIO set pin state register
- * 16 bit register LSB at lowest offset (little endian)
- */
-#define GPSR 0x12
-
-/**
- * STMPE1600 GPIO set pin direction register
- * 16 bit register LSB at lowest offset
- */
-#define GPDR 0x14
-
-/*****************************************
- * Shield Specific Function Definition
- *****************************************/
-
-void vl53l1_shield_control(distance_sensor_position_t sensor, uint8_t state) {
-    uint8_t Rd_RegAddr = GPMR + 1;
-    uint8_t data;
-    uint8_t Wr_RegAddr[0x10];
-    Wr_RegAddr[0] = GPSR + 1;
-
-    switch (sensor) {
-        case DS_FRONT_CENTER: {
-            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, I2cExpAddr1, &Rd_RegAddr, 1, 100);
-            HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, I2cExpAddr1, &data, 1, 100);
-            data &= ~0x80;
-
-            if (state) {
-                data |= 0x80;
-            }
-
-            Wr_RegAddr[1] = data;
-            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, I2cExpAddr1, Wr_RegAddr, 2, 100);
-            break;
-        }
-
-        case DS_FRONT_LEFT: {
-            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, I2cExpAddr0, &Rd_RegAddr, 1, 100);
-            HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, I2cExpAddr0, &data, 1, 100);
-            data &= ~0x40;
-
-            if (state) {
-                data |= 0x40;
-            }
-
-            Wr_RegAddr[1] = data;
-            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, I2cExpAddr0, Wr_RegAddr, 2, 100);
-            break;
-        }
-
-        case DS_FRONT_RIGHT: {
-            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, I2cExpAddr0, &Rd_RegAddr, 1, 100);
-            HAL_I2C_Master_Receive(&TARGET_I2C_HANDLE, I2cExpAddr0, &data, 1, 100);
-            data &= ~0x80;
-
-            if (state) {
-                data |= 0x80;
-            }
-
-            Wr_RegAddr[1] = data;
-            HAL_I2C_Master_Transmit(&TARGET_I2C_HANDLE, I2cExpAddr0, Wr_RegAddr, 2, 100);
-            break;
-        }
-    }
 }

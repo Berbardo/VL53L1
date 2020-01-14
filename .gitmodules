@@ -1,3 +1,6 @@
 [submodule "SEGGER_RTT"]
 	path = lib/SEGGER_RTT
 	url = git@github.com:ThundeRatz/SEGGER_RTT.git
+[submodule "VL53L1"]
+	path = lib/VL53L1
+	url = https://github.com/ThundeRatz/VL53L1.git

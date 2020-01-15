@@ -25,6 +25,7 @@
  *****************************************/
 
 #define VL53L1_DEFAULT_COMM_SPEED_KHZ 100
+#define TIMING_BUDGET_US 50000
 
 #define INIT_RESET_SLEEP_TIME_MS 10
 #define MAX_RANGE_MM 4000
@@ -35,31 +36,19 @@
 
 static VL53L1_Dev_t sensors[] = {
     { // 0
-        .I2cDevAddr = VL53L1_DEFAULT_ADDRESS,
-        .comms_type = 1, // I2C
         .comms_speed_khz = VL53L1_DEFAULT_COMM_SPEED_KHZ,
-        .present = 0,
-        .calibrated = 0,
         .I2cHandle = &TARGET_I2C_HANDLE,
         .xshut_port = FIRST_SENSOR_GPIOx,
         .xshut_pin = FIRST_SENSOR_GPIO_PIN
     },
     { // 1
-        .I2cDevAddr = VL53L1_DEFAULT_ADDRESS,
-        .comms_type = 1, // I2C
         .comms_speed_khz = VL53L1_DEFAULT_COMM_SPEED_KHZ,
-        .present = 0,
-        .calibrated = 0,
         .I2cHandle = &TARGET_I2C_HANDLE,
         .xshut_port = SECOND_SENSOR_GPIOx,
         .xshut_pin = SECOND_SENSOR_GPIO_PIN
     },
     { // 2
-        .I2cDevAddr = VL53L1_DEFAULT_ADDRESS,
-        .comms_type = 1, // I2C
         .comms_speed_khz = VL53L1_DEFAULT_COMM_SPEED_KHZ,
-        .present = 0,
-        .calibrated = 0,
         .I2cHandle = &TARGET_I2C_HANDLE,
         .xshut_port = THIRD_SENSOR_GPIOx,
         .xshut_pin = THIRD_SENSOR_GPIO_PIN
@@ -73,6 +62,9 @@ static uint16_t actual_range[] = {MAX_RANGE_MM, MAX_RANGE_MM, MAX_RANGE_MM};
 static const uint8_t used_sensors[] = {1, 0, 1};
 static const uint8_t i2c_addresses[] = {0x30, 0x34, 0x38};
 __attribute__((used)) static uint8_t sensors_status[] = {0, 0, 0};
+
+static const VL53L1_DistanceModes sensor_distance_mode[] = {VL53L1_DISTANCEMODE_MEDIUM, VL53L1_DISTANCEMODE_MEDIUM, VL53L1_DISTANCEMODE_MEDIUM};
+static const uint32_t sensor_timing_budget_us[] = {TIMING_BUDGET_US, TIMING_BUDGET_US, TIMING_BUDGET_US};
 
 /*****************************************
  * Public Functions Bodies Definitions
@@ -97,6 +89,10 @@ uint8_t distance_sensors_adapter_init(void) {
 
         VL53L1_Error status = VL53L1_ERROR_NONE;
         VL53L1_Dev_t* p_device = &(sensors[i]);
+
+        vl53l1_set_default_config(p_device);
+        p_device->distance_mode = sensor_distance_mode[i];
+        p_device->timing_budget_us = sensor_timing_budget_us[i];
 
         vl53l1_turn_on(p_device);
 
